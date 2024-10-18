@@ -134,17 +134,24 @@ body, html{
     z-index: 0;
 }
 
-.title-container-active{
-    transition: all 1.5;
-
-}
-
 .title-subheader{
     font-size: 1.5em;
     font-family: 'Varela Round';
     font-style: normal;
     color: white;
     letter-spacing: 1.2px;
+}
+
+.container-hidden{
+    transition: all 0.7s;
+    opacity: 0;
+    transform: translate(-300px);
+}
+
+.container-shown{
+    transition: all 0.7s;
+    opacity: 1;
+    transform: translate(0px);  
 }
 
 .container-text-hidden{
@@ -164,14 +171,6 @@ body, html{
     padding-top: 200px;
 }
 
-.no-title{
-    transition: all 1s ;
-    top: 30vh;
-    padding: 40px 20px;
-}
-
-
-
 .text-highlight-orange{
     color: #F77F00;
 }
@@ -180,10 +179,10 @@ body, html{
     transition: all 1s;
     position: absolute;
     clip-path: polygon(12% 74%, 12% 100%, 0 100%, 0 80%);
+    background: none  no-repeat center;
     bottom: 0px;
     width: 100%;
     height: 40vh;
-    background-color: black;
     z-index: 1;
     padding-left: 5px;
 }
@@ -240,74 +239,150 @@ body, html{
 }
 
 
-.art-clippath-2{
+.artists-menu-container{
+    height: 20vh;
+    background-color: rgb(44, 44, 44);
+}
+
+.artists-menu{
+    background: rgba(131, 0, 0, 0.274);
+}
+
+[id^="menu-option"]{
     transition: all 1s;
-    position: absolute;
-    clip-path: polygon(100% 0, 100% 60%, 0 9%, 0 0);
+    position: relative;
+    border: 3px solid black;
+    width: 20%;
+    align-items: center;
+}
+
+[id^="menu-option"]:hover{
+    transition: all 1s;
+    width: 50%;
+}
+
+
+
+.renascimento {
+    transition: all 1s;
+    background-color: #f5dab66b;
+}
+
+.renascimento:hover {
+    background-color: #f5dab6;
+}
+
+.renascimento-hero-section-bg{
+    transition: opacity 1s;
+    background: url(images/raffaello/heroSectionBg-rs.jpg) no-repeat center/cover;
+    height: 100%;
     width: 100%;
-    height: 36vh;
-    z-index: 2;
-    background-color: black;
-    padding-left: 5px;
-
-}
-
-.art-clippath-2-img{
-    transition: all 1s;
-    position: absolute;
-    clip-path: polygon(100% 0, 100% 60%, 0 9%, 0 0);
-    width: 99.5%;
-    height: 36vh;
-    object-fit: cover;
-    object-position: 0 10%;
-    bottom: 5px;
-    z-index: 2;
-
-}
-
-.art-clippath-2-mask{
-    transition: all 1s;
-    background-color: #F77F00;
-    position: absolute;
-    clip-path: polygon(100% 0, 100% 60%, 0 10%, 0 0);
-    bottom: 0px;
-    width: 99.5%;
-    height: 37vh;
-    opacity: 1;
-    z-index: 3;
-}
-
-.art-clippath-2-active{
-    transition: 1.5s clip-path, 1s 0.5s height ;
-    clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 0);
-    height: 20vh;
-}
-
-.art-clippath-2-active-border{
-    transition: 1.5s clip-path, 1s 0.5s height ;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-    height: 20vh;
-}
-
-
-.art-clippath-2-shown{
-    transition: clip-path 1.5s, height 1s 0.5s, opacity 1s;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-    height: 20vh;
     opacity: 0;
+}
+
+.barroco {
+    transition: all 1;
+    background-color: #ffd9006b;
+}
+
+.barroco:hover {
+    background-color: #ffd900;
+}
+
+.barroco-hero-section-bg{
+    transition: opacity 1s;
+    background: url(images/caravaggio/heroSectionBg-caravaggio.jpg) no-repeat center/cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.active{
+    transition: opacity 1;
+    opacity: 1;
+}
+
+.neoclassicismo {
+    transition: all 0.5s;
+    background-color: #FFFFFF6b;
+}
+
+.neoclassicismo:hover {
+    background-color: #FFFFFF;
+}
+
+.romantismo {
+    transition: all 0.5s;
+    background-color: rgb(131, 0, 0);
+}
+
+.romantismo:hover {
+    background-color: rgb(191, 0, 0);
+}
+
+.impressionismo {
+    transition: all 0.5s;
+    background-color: #00B2E26b;
+}
+
+.impressionismo:hover {
+    background-color: #00B2E2;
+}
+
+.pos-impressionismo {
+    transition: all 0.5s;
+    background-color: #e5bd456b;
+}
+
+.pos-impressionismo:hover {
+    background-color: #e5bd45;
+}
+
+.modernismo {
+    transition: all 0.5s;
+    background-color: #FF6F206b;
+}
+
+.modernismo:hover {
+    background-color: #FF6F20;
+}
+
+.artists-menu-rafael{
+    background: url(images/raffaello/self-portrait-rs.jpg) no-repeat center ;
+    background-size: cover;
+}
+
+.artists-menu-caravaggio{
+    background: url(images/caravaggio/self-portrait-caravaggio.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.artists-menu-jacques{
+    background: url(images/Jacques-louis-david/self-portrait-david.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.artists-menu-goya{
+    background: url(images/goya/self-portrait-goya.jpg) no-repeat center ;
+    background-size: cover;
+}
+.artists-menu-monet{
+    background: url(images/monet/self-portrait-monet.jpg) no-repeat center;
+    background-size: cover; 
+}
+
+.artists-menu-vangogh{
+    background: url(images/van-gogh/self-portrait-vangogh.jpg) no-repeat center ;
+    background-size: cover;
+}
+
+.artists-menu-frida{
+    background: url(images/frida/self-portrait-frida.jpg) no-repeat center ;
+    background-size: cover;
 }
 
 .divider{
     background-color: #eeece0;
-}
-
-[id$="canvas-container"], [id$="canvas-container-second"]{
-    height: 100vh;
-}
-
-#first-bg{
-    background: url(images/van-gogh/van-gogh-first-bg.png) no-repeat fixed;
-    background-size: cover;
 }
 
 .button-min{
@@ -318,7 +393,6 @@ body, html{
     color: white;
     scale: 2;
 }
-
 
 [class^="artist-name"]{
     align-content: center;
@@ -608,10 +682,19 @@ body, html{
     rotate: -180deg;
 }
 
+
+[id$="canvas-container"], [id$="canvas-container-second"]{
+    height: 100vh;
+}
+
+#first-bg{
+    background: url(images/van-gogh/van-gogh-first-bg.png) no-repeat fixed;
+    background-size: cover;
+}
+
 [id^='canvas']{
     height: 80%;
 }
-
 
 [class^="moldura-first"]{
     height: 100%;

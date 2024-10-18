@@ -1,9 +1,5 @@
 const arte1 = document.getElementById('topArt1')
-const arte2 = document.getElementById('topArt2')
-const art1Img = document.getElementById('art-clippath-1-img')
-const art2Img = document.getElementById('art-clippath-2-img')
 const art1Mask = document.getElementById('first-mask')
-const art2Mask = document.getElementById('second-mask')
 const title = document.getElementById('main-title')
 const icon = document.getElementById('brand-icon')
 const navbar = document.getElementById('navbar')
@@ -30,7 +26,7 @@ window.addEventListener('load', () => {
 })
 
 
-/*
+
 //Função para que, quando o usuário der o primeiro scroll, ocorra as animações da barra de navegação primeiro.
 const heroSection = document.getElementById('pagina1')
 var scrollUnlocked = false
@@ -41,7 +37,6 @@ heroSection.addEventListener('wheel', (e) => {
         navbar.classList.add('position-fixed')
         art1Mask.classList.add('art-clippath-1-shown')
         arte1.classList.add('art-clippath-1-active-border')
-        art1Img.classList.add('art-clippath-1-active')
 
 
         // título -> barra de navegação aparece -> logo muda
@@ -54,11 +49,12 @@ heroSection.addEventListener('wheel', (e) => {
 
         // container que o titulo saiu diminui
         titleContainer.classList.remove('spaced')
-        titleContainer.classList.add('no-title')
-        titleContainer.classList.remove('title-container-active')
-        titleContainer.classList.add('title-container-active')
+        titleContainer.classList.remove('container-hidden')
+        titleContainer.classList.add('container-shown')
         containerText.classList.add('container-text-hidden')
         containerText.classList.remove('container-text-shown')
+        titleContainer.classList.add('container-hidden')
+        titleContainer.classList.remove('container-shown')
         setTimeout(() => {
             scrollUnlocked = true
         }, 1000);
@@ -75,7 +71,7 @@ function scrollHandle(evento){
     }
 }
 
-*/
+
 
 // Efeito do tringulo crescer ao carregar a página
 arte1.classList.add('art-clippath-1-grow')
@@ -93,18 +89,15 @@ window.addEventListener('scroll', () => {
 
 
         titleContainer.classList.add('spaced')
-        titleContainer.classList.remove('no-title')
-        titleContainer.classList.remove('title-container-active')
+        titleContainer.classList.remove('container-hidden')
+        titleContainer.classList.add('container-shown')
 
         containerText.classList.remove('container-text-hidden')
         containerText.classList.add('container-text-shown')
 
         // animações scroll arte 1
         art1Mask.classList.remove('art-clippath-1-shown')
-        art1Img.classList.remove('art-clippath-1-active')
         arte1.classList.remove('art-clippath-1-active-border')
-        art1Img.classList.remove('art-clippath-1-active')
-
     }
 
     if (scrollY > 0 && title.classList.contains('on-nav-2') == false){
@@ -112,7 +105,6 @@ window.addEventListener('scroll', () => {
         navbar.classList.add('position-fixed')
         art1Mask.classList.add('art-clippath-1-shown')
         arte1.classList.add('art-clippath-1-active-border')
-        art1Img.classList.add('art-clippath-1-active')
 
 
         // título -> barra de navegação aparece -> logo muda
@@ -126,8 +118,9 @@ window.addEventListener('scroll', () => {
         // container que o titulo saiu diminui
         titleContainer.classList.remove('spaced')
         titleContainer.classList.add('no-title')
-        titleContainer.classList.remove('title-container-active')
-        titleContainer.classList.add('title-container-active')
+
+        titleContainer.classList.add('container-hidden')
+        titleContainer.classList.remove('container-shown')
         containerText.classList.add('container-text-hidden')
         containerText.classList.remove('container-text-shown')
     }
@@ -794,4 +787,65 @@ window.addEventListener("load", () => {
         artist.dividerResponsive()
     })
 })
+
+// Código relacionado a primeira página "index"
+
+class heroSectionMenu{
+    constructor(){
+        this.heroSectionBg = document.getElementById('topArt1')
+        this.renascimento = document.getElementById('menu-option-rafael')
+        this.barroco = document.getElementById('menu-option-caravaggio')
+        this.neoclassicismo = document.getElementById('menu-option-jacques')
+        this.romantismo = document.getElementById('menu-option-goya')
+        this.impressionismo = document.getElementById('menu-option-monet')
+        this.posimpressionismo = document.getElementById('menu-option-vangogh')
+        this.modernismo = document.getElementById('menu-option-frida')
+        this.menuMovements = [this.renascimento, this.barroco, this.neoclassicismo, this.romantismo ,this.impressionismo, this.posimpressionismo, this.modernismo]
+    
+        this.movementsData = {
+            renascimento : {
+                "artistMenuOption" : this.renascimento,
+                "backgroundClass" : "renascimento-hero-section-bg"
+            },
+            barroco : {
+                "artistMenuOption" : this.barroco, 
+                "backgroundClass" : "barroco-hero-section-bg"
+            },
+            neoclassicismo : {
+                "artistMenuOption" : this.neoclassicismo, 
+                "background" : "i"
+            }
+        }
+    }
+
+    menuChangeBg(){
+        var heroBgDiv = document.createElement('div')
+        var afterBgDiv = document.createElement('div')
+        this.menuMovements.forEach(artist => {
+            artist.addEventListener('click', () => {
+                for (var movement in this.movementsData){
+                    if(artist === this.movementsData[movement]["artistMenuOption"]){
+                        if(this.heroSectionBg.lastElementChild.classList.contains('active')){
+                            heroBgDiv.className = ''
+                        }
+                        this.heroSectionBg.appendChild(heroBgDiv)
+                        heroBgDiv.classList.add(this.movementsData[movement]["backgroundClass"])
+                        setTimeout(() => {
+                            heroBgDiv.classList.add('active')
+                        }, 10);
+                    }
+                }
+            })
+        })
+    }
+
+
+    start(){
+        this.menuChangeBg()
+    }
+}
+
+var indexScript = new heroSectionMenu
+
+indexScript.start()
 
