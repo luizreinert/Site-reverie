@@ -1,130 +1,217 @@
-const arte1 = document.getElementById('topArt1')
-const art1Mask = document.getElementById('first-mask')
-const title = document.getElementById('main-title')
-const icon = document.getElementById('brand-icon')
-const navbar = document.getElementById('navbar')
-const navHyperlinks = document.getElementById('nav-hyperlinks')
+class heroSectionMenu{
+    constructor(){
+        this.heroSectionBg = document.getElementById('topArt1')
+        this.renascimento = document.getElementById('menu-option-rafael')
+        this.barroco = document.getElementById('menu-option-caravaggio')
+        this.neoclassicismo = document.getElementById('menu-option-jacques')
+        this.romantismo = document.getElementById('menu-option-goya')
+        this.impressionismo = document.getElementById('menu-option-monet')
+        this.posImpressionismo = document.getElementById('menu-option-vangogh')
+        this.modernismo = document.getElementById('menu-option-frida')
+        this.menuMovements = [this.renascimento, this.barroco, this.neoclassicismo, this.romantismo ,this.impressionismo, this.posImpressionismo, this.modernismo]
+    
+        this.movementsData = {
+            renascimento : {
+                "artistMenuOption" : this.renascimento,
+                "backgroundClass" : "renascimento-hero-section-bg",
+                "menuBackground" : "artists-menu-rafael"
+            },
+            barroco : {
+                "artistMenuOption" : this.barroco, 
+                "backgroundClass" : "barroco-hero-section-bg",
+                "menuBackground" : "artists-menu-caravaggio"
 
-const titleContainer = document.getElementById('title-container')
-const containerText = document.getElementById('container-text')
+            },
+            neoclassicismo : {
+                "artistMenuOption" : this.neoclassicismo, 
+                "backgroundClass" : "neoclassicismo-hero-section-bg",
+                "menuBackground" : "artists-menu-david"
 
-// Função para não bugar o título, caso o usuário dê refresh no meio da página
-window.addEventListener('load', () => {
-    if(scrollY > 0){
-        title.classList.add('on-nav-2')
-        navbar.classList.add('navbar-active')
-        icon.classList.toggle('brand-img-grown', false)
-        icon.classList.toggle('brand-img', true)
-        icon.src = "images/assets/logo-museum-white.png";
+            },
+            romantismo : {
+                "artistMenuOption" : this.romantismo, 
+                "backgroundClass" : "romantismo-hero-section-bg",
+                "menuBackground" : "artists-menu-goya"
 
-        navHyperlinks.classList.remove('visually-hidden')
-
-        titleContainer.classList.remove('spaced')
-        containerText.classList.add('container-text-hidden')
-        titleContainer.classList.add('title-container-active')
-    } 
-})
-
-
-
-//Função para que, quando o usuário der o primeiro scroll, ocorra as animações da barra de navegação primeiro.
-const heroSection = document.getElementById('pagina1')
-var scrollUnlocked = false
-heroSection.addEventListener('wheel', (e) => {
-    if (scrollY == 0 && e.deltaY > 0){
-        scrollHandle(e)
-        // animações scroll arte 1
-        navbar.classList.add('position-fixed')
-        art1Mask.classList.add('art-clippath-1-shown')
-        arte1.classList.add('art-clippath-1-active-border')
-
-
-        // título -> barra de navegação aparece -> logo muda
-        title.classList.add('on-nav')
-        icon.classList.toggle('brand-img-grown', false)
-        icon.classList.toggle('brand-img', true)
-        navbar.classList.add('navbar-active')
-        icon.src = "images/assets/logo-museum-white.png";
-        navHyperlinks.classList.remove('visually-hidden')
-
-        // container que o titulo saiu diminui
-        titleContainer.classList.remove('spaced')
-        titleContainer.classList.remove('container-hidden')
-        titleContainer.classList.add('container-shown')
-        containerText.classList.add('container-text-hidden')
-        containerText.classList.remove('container-text-shown')
-        titleContainer.classList.add('container-hidden')
-        titleContainer.classList.remove('container-shown')
-        setTimeout(() => {
-            scrollUnlocked = true
-        }, 1000);
-    } if (scrollY < 112 && e.deltaY < 0){
-        scrollUnlocked = false
-        console.log('lock!')
+            },
+            impressionismo : {
+                "artistMenuOption" : this.impressionismo, 
+                "backgroundClass" : "impressionismo-hero-section-bg",
+                "menuBackground" : "artists-menu-monet"
+            },
+            posImpressionismo : {
+                "artistMenuOption" : this.posImpressionismo, 
+                "backgroundClass" : "pos-impressionismo-hero-section-bg",
+                "menuBackground" : "artists-menu-vangogh"
+            },
+            modernismo : {
+                "artistMenuOption" : this.modernismo, 
+                "backgroundClass" : "modernismo-hero-section-bg",
+                "menuBackground" : "artists-menu-frida"
+            },
+        }
     }
 
-})
+    menuChangeBg(){
+        let titleContainer = document.getElementById('title-container')
+        let eventTypes = ['click', 'mouseenter']
+        let heroBgDiv = document.createElement('div')
+        this.menuMovements.forEach(artist => {
+            eventTypes.forEach((event) => {
+                artist.addEventListener(event, () => {
+                    for (let movement in this.movementsData){
+                        if(artist === this.movementsData[movement]["artistMenuOption"] && titleContainer.classList.contains('container-hidden')){
+                            if(this.heroSectionBg.lastElementChild.classList.contains('active') && this.heroSectionBg.lastElementChild.classList.contains(this.movementsData[movement]["backgroundClass"]) == false){
+                                heroBgDiv.className = ''
+                            } 
+                            heroBgDiv.classList.add("hero-bg-div-hidden")
+                            this.heroSectionBg.appendChild(heroBgDiv)
+                            heroBgDiv.classList.add(this.movementsData[movement]["backgroundClass"])
+                            artist.classList.add(movement)
+                            setTimeout(() => {
+                                heroBgDiv.classList.add('active')
+                            }, 10);
+                        } else if (titleContainer.classList.contains('container-hidden') == false){
+                            heroBgDiv.classList.toggle("hero-bg-div-hidden")
+                        }
+                    }
+                })
+            })
+        })
+    }
 
-function scrollHandle(evento){
-    if (scrollUnlocked == false){
-        evento.preventDefault()
+    start(){
+        this.menuChangeBg('normalLoad')
+    }
+}
+
+class heroSectionScrollEvents{
+    constructor(){
+        this.arte1 = document.getElementById('topArt1')
+        this.art1Mask = document.getElementById('first-mask')
+        this.title = document.getElementById('main-title')
+        this.icon = document.getElementById('brand-icon')
+        this.navbar = document.getElementById('navbar')
+        this.navHyperlinks = document.getElementById('nav-hyperlinks')
+        this.titleContainer = document.getElementById('title-container')
+        this.containerText = document.getElementById('container-text')
+        this.artistsContainer = document.getElementById('artists-menu-container')
+        this.heroSection = document.getElementById('pagina1')
+
+    }
+
+    // Função para não bugar o título, caso o usuário dê refresh no meio da página
+    middlePageRefreshFix(){
+        window.addEventListener('load', () => {   
+            // Efeito do tringulo crescer ao carregar a página
+            this.arte1.classList.add('art-clippath-1-grow')
+            if(scrollY > 0){
+                this.title.classList.add('on-nav-2')
+                this.navbar.classList.add('navbar-active')
+                this.icon.classList.toggle('brand-img-grown', false)
+                this.icon.classList.toggle('brand-img', true)
+                this.icon.src = "images/assets/logo-museum-white.png";
+
+                this.navHyperlinks.classList.remove('visually-hidden')
+
+                this.titleContainer.classList.remove('spaced')
+                this.containerText.classList.add('container-text-hidden')
+                this.titleContainer.classList.add('title-container-active')
+            } 
+        })
+    }
+
+
+    // Função para que, quando o usuário der o primeiro scroll, ocorra as animações da barra de navegação primeiro.
+    firstScrollLock(){
+        var scrollUnlocked = false
+        this.heroSection.addEventListener('wheel', (e) => {
+            if (scrollY == 0 && e.deltaY > 0){
+                scrollHandle(e)
+                // animações scroll arte 1
+                this.navbar.classList.add('position-fixed')
+                this.art1Mask.classList.add('art-clippath-1-shown')
+                this.arte1.classList.add('art-clippath-1-active-border')
+
+
+                // título -> barra de navegação aparece -> logo muda
+                this.title.classList.add('on-nav')
+                this.icon.classList.toggle('brand-img-grown', false)
+                this.icon.classList.toggle('brand-img', true)
+                this.navbar.classList.add('navbar-active')
+                this.icon.src = "images/assets/logo-museum-white.png";
+                this.navHyperlinks.classList.remove('visually-hidden')
+
+                // container que o titulo saiu diminui
+                this.titleContainer.classList.remove('spaced')
+                this.titleContainer.classList.remove('container-hidden')
+                this.titleContainer.classList.add('container-shown')
+                this.containerText.classList.add('container-text-hidden')
+                this.containerText.classList.remove('container-text-shown')
+                this.titleContainer.classList.add('container-hidden')
+                this.titleContainer.classList.remove('container-shown')
+
+                this.artistsContainer.classList.add('artists-menu-container-active')
+
+
+                setTimeout(() => {
+                    scrollUnlocked = true
+                }, 1000);
+            } if (scrollY < 112 && e.deltaY < 0){
+                scrollUnlocked = false
+                console.log('lock!')
+            }
+
+        })
+
+        function scrollHandle(evento){
+            if (scrollUnlocked == false){
+                evento.preventDefault()
+            }
+        }
+    }
+
+    scrollToTop(){
+        window.addEventListener('scroll', () => {
+            if (scrollY == 0){
+                this.title.classList.remove('on-nav')
+                this.title.classList.remove('on-nav-2')
+                this.navbar.classList.remove('navbar-active')
+                this.icon.classList.toggle('brand-img-grown', true)
+                this.icon.classList.toggle('brand-img', false)
+                this.icon.src = "images/assets/icon-museum.png";
+                this.navHyperlinks.classList.add('visually-hidden')
+
+                this.titleContainer.classList.add('spaced')
+                this.titleContainer.classList.remove('container-hidden')
+                this.titleContainer.classList.add('container-shown')
+
+                this.containerText.classList.remove('container-text-hidden')
+                this.containerText.classList.add('container-text-shown')
+
+                // animações scroll arte 1
+                this.art1Mask.classList.remove('art-clippath-1-shown')
+                this.arte1.classList.remove('art-clippath-1-active-border')
+                
+            }
+        })
+    }
+
+    start(){
+        this.middlePageRefreshFix()
+        this.firstScrollLock()
+        this.scrollToTop()
     }
 }
 
 
-
-// Efeito do tringulo crescer ao carregar a página
-arte1.classList.add('art-clippath-1-grow')
-
-window.addEventListener('scroll', () => {
-    if (scrollY == 0){
-        title.classList.remove('on-nav')
-        title.classList.remove('on-nav-2')
-        navbar.classList.remove('navbar-active')
-        icon.classList.toggle('brand-img-grown', true)
-        icon.classList.toggle('brand-img', false)
-        icon.src = "images/assets/icon-museum.png";
-        navHyperlinks.classList.add('visually-hidden')
+const heroSectionMenuFunctions = new heroSectionMenu
+const heroSectionScrollFunctions = new heroSectionScrollEvents
+heroSectionMenuFunctions.start()
+heroSectionScrollFunctions.start()
 
 
-
-        titleContainer.classList.add('spaced')
-        titleContainer.classList.remove('container-hidden')
-        titleContainer.classList.add('container-shown')
-
-        containerText.classList.remove('container-text-hidden')
-        containerText.classList.add('container-text-shown')
-
-        // animações scroll arte 1
-        art1Mask.classList.remove('art-clippath-1-shown')
-        arte1.classList.remove('art-clippath-1-active-border')
-    }
-
-    if (scrollY > 0 && title.classList.contains('on-nav-2') == false){
-        // animações scroll arte 1
-        navbar.classList.add('position-fixed')
-        art1Mask.classList.add('art-clippath-1-shown')
-        arte1.classList.add('art-clippath-1-active-border')
-
-
-        // título -> barra de navegação aparece -> logo muda
-        title.classList.add('on-nav')
-        icon.classList.toggle('brand-img-grown', false)
-        icon.classList.toggle('brand-img', true)
-        navbar.classList.add('navbar-active')
-        icon.src = "images/assets/logo-museum-white.png";
-        navHyperlinks.classList.remove('visually-hidden')
-
-        // container que o titulo saiu diminui
-        titleContainer.classList.remove('spaced')
-        titleContainer.classList.add('no-title')
-
-        titleContainer.classList.add('container-hidden')
-        titleContainer.classList.remove('container-shown')
-        containerText.classList.add('container-text-hidden')
-        containerText.classList.remove('container-text-shown')
-    }
-})
+//----------------------------------------------------------------//
 
 class Molduras{
     constructor(page, artist){
@@ -787,97 +874,3 @@ window.addEventListener("load", () => {
         artist.dividerResponsive()
     })
 })
-
-// Código relacionado a primeira página "index"
-
-class heroSectionMenu{
-    constructor(){
-        this.heroSectionBg = document.getElementById('topArt1')
-        this.renascimento = document.getElementById('menu-option-rafael')
-        this.barroco = document.getElementById('menu-option-caravaggio')
-        this.neoclassicismo = document.getElementById('menu-option-jacques')
-        this.romantismo = document.getElementById('menu-option-goya')
-        this.impressionismo = document.getElementById('menu-option-monet')
-        this.posImpressionismo = document.getElementById('menu-option-vangogh')
-        this.modernismo = document.getElementById('menu-option-frida')
-        this.menuMovements = [this.renascimento, this.barroco, this.neoclassicismo, this.romantismo ,this.impressionismo, this.posImpressionismo, this.modernismo]
-    
-        this.movementsData = {
-            renascimento : {
-                "artistMenuOption" : this.renascimento,
-                "backgroundClass" : "renascimento-hero-section-bg",
-                "menuBackground" : "artists-menu-rafael"
-            },
-            barroco : {
-                "artistMenuOption" : this.barroco, 
-                "backgroundClass" : "barroco-hero-section-bg",
-                "menuBackground" : "artists-menu-caravaggio"
-
-            },
-            neoclassicismo : {
-                "artistMenuOption" : this.neoclassicismo, 
-                "backgroundClass" : "neoclassicismo-hero-section-bg",
-                "menuBackground" : "artists-menu-david"
-
-            },
-            romantismo : {
-                "artistMenuOption" : this.romantismo, 
-                "backgroundClass" : "romantismo-hero-section-bg",
-                "menuBackground" : "artists-menu-goya"
-
-            },
-            impressionismo : {
-                "artistMenuOption" : this.impressionismo, 
-                "backgroundClass" : "impressionismo-hero-section-bg",
-                "menuBackground" : "artists-menu-monet"
-            },
-            posImpressionismo : {
-                "artistMenuOption" : this.posImpressionismo, 
-                "backgroundClass" : "pos-impressionismo-hero-section-bg",
-                "menuBackground" : "artists-menu-vangogh"
-            },
-            modernismo : {
-                "artistMenuOption" : this.modernismo, 
-                "backgroundClass" : "modernismo-hero-section-bg",
-                "menuBackground" : "artists-menu-frida"
-            },
-        }
-    }
-
-    menuChangeBg(){
-        let titleContainer = document.getElementById('title-container')
-        let eventTypes = ['click', 'mouseenter']
-        let heroBgDiv = document.createElement('div')
-        this.menuMovements.forEach(artist => {
-            eventTypes.forEach((event) => {
-                artist.addEventListener(event, () => {
-                    for (let movement in this.movementsData){
-                        if(artist === this.movementsData[movement]["artistMenuOption"] && titleContainer.classList.contains('container-hidden')){
-                            if(this.heroSectionBg.lastElementChild.classList.contains('active') && this.heroSectionBg.lastElementChild.classList.contains(this.movementsData[movement]["backgroundClass"]) == false){
-                                heroBgDiv.className = ''
-                            } 
-                            this.heroSectionBg.appendChild(heroBgDiv)
-                            heroBgDiv.classList.add(this.movementsData[movement]["backgroundClass"])
-                            artist.classList.add(movement)
-                            setTimeout(() => {
-                                heroBgDiv.classList.add('active')
-                            }, 10);
-                        } else if (titleContainer.classList.contains('container-hidden') == false){
-                            
-                        }
-                    }
-                })
-            })
-        })
-    }
-
-
-    start(){
-        this.menuChangeBg()
-    }
-}
-
-var indexScript = new heroSectionMenu
-
-indexScript.start()
-

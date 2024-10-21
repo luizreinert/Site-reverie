@@ -239,9 +239,16 @@ body, html{
     opacity: 0.2;
 }
 
-
 .artists-menu-container{
     height: 10vh;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.artists-menu-container-active{
+    transition: opacity 1s 1s;
+    opacity: 1;
+    visibility: visible;
 }
 
 [id^="menu-option"]{
@@ -256,6 +263,10 @@ body, html{
 
 .artists-menu{
     transition: all 0.5s;
+}
+
+.hero-bg-div-hidden{
+    background-color: #000000;
 }
 
 .renascimento {
