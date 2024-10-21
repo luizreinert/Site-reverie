@@ -224,9 +224,10 @@ body, html{
 }
 
 .art-clippath-1-active-border{
-    transition: 1.5s clip-path, 1s 0.5s height ;
+    transition: 1.5s clip-path, 1s 0.5s height, 1s 2s background-color ;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
     height: 100vh;
+    background-color: #000000;
 }
 
 
@@ -240,37 +241,28 @@ body, html{
 
 
 .artists-menu-container{
-    height: 20vh;
-    background-color: rgb(44, 44, 44);
-}
-
-.artists-menu{
-    background: rgba(131, 0, 0, 0.274);
+    height: 10vh;
 }
 
 [id^="menu-option"]{
-    transition: all 1s;
+    transition: all 0.5s;
     position: relative;
     border: 3px solid black;
     width: 20%;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.507);
+    color: white;
 }
 
-[id^="menu-option"]:hover{
-    transition: all 1s;
-    width: 50%;
+.artists-menu{
+    transition: all 0.5s;
 }
-
-
 
 .renascimento {
-    transition: all 1s;
-    background-color: #f5dab66b;
-}
-
-.renascimento:hover {
+    transition: all 0.5s;
     background-color: #f5dab6;
 }
+
 
 .renascimento-hero-section-bg{
     transition: opacity 1s;
@@ -281,8 +273,7 @@ body, html{
 }
 
 .barroco {
-    transition: all 1;
-    background-color: #ffd9006b;
+    transition: all 0.5s;
 }
 
 .barroco:hover {
@@ -297,54 +288,84 @@ body, html{
     opacity: 0;
 }
 
-.active{
-    transition: opacity 1;
-    opacity: 1;
-}
-
 .neoclassicismo {
     transition: all 0.5s;
-    background-color: #FFFFFF6b;
 }
 
 .neoclassicismo:hover {
-    background-color: #FFFFFF;
+    background-color: #636363;
+}
+
+.neoclassicismo-hero-section-bg{
+    transition: opacity 1s;
+    background: url(images/Jacques-louis-david/heroSectionBg-david.jpg) no-repeat center/cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
 }
 
 .romantismo {
     transition: all 0.5s;
-    background-color: rgb(131, 0, 0);
 }
 
 .romantismo:hover {
     background-color: rgb(191, 0, 0);
 }
 
+.romantismo-hero-section-bg{
+    transition: opacity 1s;
+    background: url(images/goya/heroSectionBg-goya.jpg) no-repeat center/cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
 .impressionismo {
     transition: all 0.5s;
-    background-color: #00B2E26b;
 }
 
 .impressionismo:hover {
     background-color: #00B2E2;
 }
 
+.impressionismo-hero-section-bg{
+    transition: opacity 1s;
+    background: url(images/monet/heroSectionBg-monet.jpg) no-repeat center/cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
 .pos-impressionismo {
     transition: all 0.5s;
-    background-color: #e5bd456b;
 }
 
 .pos-impressionismo:hover {
     background-color: #e5bd45;
 }
 
+.pos-impressionismo-hero-section-bg{
+    transition: opacity 1s;
+    background: url(images/van-gogh/heroSectionBg-vangogh.jpg) no-repeat center/cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
 .modernismo {
     transition: all 0.5s;
-    background-color: #FF6F206b;
 }
 
 .modernismo:hover {
     background-color: #FF6F20;
+}
+
+.modernismo-hero-section-bg{
+    transition: opacity 1s;
+    background: url(images/frida/heroSectionBg-frida.webp) no-repeat center/cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
 }
 
 .artists-menu-rafael{
@@ -379,6 +400,11 @@ body, html{
 .artists-menu-frida{
     background: url(images/frida/self-portrait-frida.jpg) no-repeat center ;
     background-size: cover;
+}
+
+.active{
+    transition: opacity 1;
+    opacity: 1;
 }
 
 .divider{

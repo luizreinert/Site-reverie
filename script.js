@@ -798,43 +798,75 @@ class heroSectionMenu{
         this.neoclassicismo = document.getElementById('menu-option-jacques')
         this.romantismo = document.getElementById('menu-option-goya')
         this.impressionismo = document.getElementById('menu-option-monet')
-        this.posimpressionismo = document.getElementById('menu-option-vangogh')
+        this.posImpressionismo = document.getElementById('menu-option-vangogh')
         this.modernismo = document.getElementById('menu-option-frida')
-        this.menuMovements = [this.renascimento, this.barroco, this.neoclassicismo, this.romantismo ,this.impressionismo, this.posimpressionismo, this.modernismo]
+        this.menuMovements = [this.renascimento, this.barroco, this.neoclassicismo, this.romantismo ,this.impressionismo, this.posImpressionismo, this.modernismo]
     
         this.movementsData = {
             renascimento : {
                 "artistMenuOption" : this.renascimento,
-                "backgroundClass" : "renascimento-hero-section-bg"
+                "backgroundClass" : "renascimento-hero-section-bg",
+                "menuBackground" : "artists-menu-rafael"
             },
             barroco : {
                 "artistMenuOption" : this.barroco, 
-                "backgroundClass" : "barroco-hero-section-bg"
+                "backgroundClass" : "barroco-hero-section-bg",
+                "menuBackground" : "artists-menu-caravaggio"
+
             },
             neoclassicismo : {
                 "artistMenuOption" : this.neoclassicismo, 
-                "background" : "i"
-            }
+                "backgroundClass" : "neoclassicismo-hero-section-bg",
+                "menuBackground" : "artists-menu-david"
+
+            },
+            romantismo : {
+                "artistMenuOption" : this.romantismo, 
+                "backgroundClass" : "romantismo-hero-section-bg",
+                "menuBackground" : "artists-menu-goya"
+
+            },
+            impressionismo : {
+                "artistMenuOption" : this.impressionismo, 
+                "backgroundClass" : "impressionismo-hero-section-bg",
+                "menuBackground" : "artists-menu-monet"
+            },
+            posImpressionismo : {
+                "artistMenuOption" : this.posImpressionismo, 
+                "backgroundClass" : "pos-impressionismo-hero-section-bg",
+                "menuBackground" : "artists-menu-vangogh"
+            },
+            modernismo : {
+                "artistMenuOption" : this.modernismo, 
+                "backgroundClass" : "modernismo-hero-section-bg",
+                "menuBackground" : "artists-menu-frida"
+            },
         }
     }
 
     menuChangeBg(){
-        var heroBgDiv = document.createElement('div')
-        var afterBgDiv = document.createElement('div')
+        let titleContainer = document.getElementById('title-container')
+        let eventTypes = ['click', 'mouseenter']
+        let heroBgDiv = document.createElement('div')
         this.menuMovements.forEach(artist => {
-            artist.addEventListener('click', () => {
-                for (var movement in this.movementsData){
-                    if(artist === this.movementsData[movement]["artistMenuOption"]){
-                        if(this.heroSectionBg.lastElementChild.classList.contains('active')){
-                            heroBgDiv.className = ''
+            eventTypes.forEach((event) => {
+                artist.addEventListener(event, () => {
+                    for (let movement in this.movementsData){
+                        if(artist === this.movementsData[movement]["artistMenuOption"] && titleContainer.classList.contains('container-hidden')){
+                            if(this.heroSectionBg.lastElementChild.classList.contains('active') && this.heroSectionBg.lastElementChild.classList.contains(this.movementsData[movement]["backgroundClass"]) == false){
+                                heroBgDiv.className = ''
+                            } 
+                            this.heroSectionBg.appendChild(heroBgDiv)
+                            heroBgDiv.classList.add(this.movementsData[movement]["backgroundClass"])
+                            artist.classList.add(movement)
+                            setTimeout(() => {
+                                heroBgDiv.classList.add('active')
+                            }, 10);
+                        } else if (titleContainer.classList.contains('container-hidden') == false){
+                            
                         }
-                        this.heroSectionBg.appendChild(heroBgDiv)
-                        heroBgDiv.classList.add(this.movementsData[movement]["backgroundClass"])
-                        setTimeout(() => {
-                            heroBgDiv.classList.add('active')
-                        }, 10);
                     }
-                }
+                })
             })
         })
     }
