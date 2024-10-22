@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="page1" id="pagina1">
+    <div class="page1 col-12" id="pagina1">
       <header>
         <div class="d-flex z-3 position-fixed container-fluid col-12 py-3 px-3 px-sm-5 align-items-center navbar navbar-expand-xxl" id="navbar">
           <a href="#" class="d-flex justify-content-between text-decoration-none">
@@ -27,15 +27,19 @@
               <li><a class="nav-item navbar-link h5" href="#">Contato</a></li>
             </ul>
           </div>
-      </div>
-    </header>
+        </div>
+      </header>
+      <div class="page-1-2 col-12">
         <div class="title-container z-2 spaced ms-0 ms-md-5 col-xxl-5 col-xl-6 col-11" id="title-container">
-            <p class="title-subheader" id="container-text">
-                <span class="text-highlight-orange" >Um espaço dedicado à arte.</span> Conheça a vida e a obra de cinco pintores que marcaram a história da arte até hoje. Cada um deles trazendo uma visão única e inovadora, refletindo as complexidades de suas épocas e influenciando gerações futuras. </p> 
-            </p>
+          <p class="title-subheader" id="container-text">
+            <span class="text-highlight-orange" >Um espaço dedicado à arte.</span> Conheça a vida e a obra de cinco pintores que marcaram a história da arte até hoje. Cada um deles trazendo uma visão única e inovadora, refletindo as complexidades de suas épocas e influenciando gerações futuras. </p> 
+          </p>
         </div>
         <div class="art-clippath-1 align-content-center hero-bg-div-hidden" id="topArt1">
-            <div class="art-clippath-1-mask" id="first-mask"></div>
+          <div class="art-clippath-1-mask" id="first-mask"></div>
+        </div>
+        <div class="d-flex hero-section-info-container position-absolute col-5" id="hero-section-info-container">
+          //
         </div>
         <div class="d-flex artists-menu-container align-items-end  position-absolute bottom-0 z-3 flex-row col-12" id="artists-menu-container"> 
           <button class="d-flex justify-content-center artists-menu" id="menu-option-rafael">
@@ -74,6 +78,7 @@
             </h4>
           </button>
         </div>  
+      </div>
     </div>
     <div class="divider position-relative d-flex flex-lg-row flex-column column-gap-4 col-12 justify-content-between py-3" id="divider-vg">
       <div class="artist-name-vg text-center text-lg-start" id="square">

@@ -57,36 +57,41 @@ class heroSectionMenu{
     menuChangeBg(){
         let eventTypes = ['mouseenter', 'touchstart']
         let heroBgDiv = document.createElement('div')
+        heroBgDiv.id = 'hero-bg-div'
         this.menuMovements.forEach(artist => {
             eventTypes.forEach((event) => {
                 artist.addEventListener(event, () => {
-                    for (let movement in this.movementsData){
-                        if(artist === this.movementsData[movement]["artistMenuOption"] && this.titleContainer.classList.contains('container-hidden')){
-                            if(this.heroSectionBg.lastElementChild.classList.contains('bg-active') && this.heroSectionBg.lastElementChild.classList.contains(this.movementsData[movement]["backgroundClass"]) == false){
-                                heroBgDiv.className = ''
-                            }
-                            heroBgDiv.classList.add("hero-bg-div-hidden")
-                            this.heroSectionBg.appendChild(heroBgDiv)
-                            heroBgDiv.classList.add(this.movementsData[movement]["backgroundClass"])
-                            artist.classList.add(movement)
-                            heroBgDiv.classList.add('bg-active')
-                            this.showChosenArtistInfo()
-                        } else if (artist != this.movementsData[movement]["artistMenuOption"]){
-                            this.menuMovements.forEach((teste) => {
-                                if (teste != artist){
-                                    teste.classList.remove(movement)
+                    const mouseEntersButton = setTimeout(() => {
+                        for (let movement in this.movementsData){
+                            if(artist === this.movementsData[movement]["artistMenuOption"] && artist.classList.contains(movement) == false && this.titleContainer.classList.contains('container-hidden')){
+                                if(this.heroSectionBg.lastElementChild.classList.contains('bg-active') && this.heroSectionBg.lastElementChild.classList.contains(this.movementsData[movement]["backgroundClass"]) == false){
+                                    heroBgDiv.className = ''
                                 }
-                            })
-                        }
-                    }
+                                this.heroSectionBg.appendChild(heroBgDiv)
+                                heroBgDiv.classList.add(this.movementsData[movement]["backgroundClass"])
+                                artist.classList.add(movement)
+                                heroBgDiv.classList.add('bg-active')
+                                this.showChosenArtistInfo()
+                            } else if (artist != this.movementsData[movement]["artistMenuOption"]){
+                                this.menuMovements.forEach((teste) => {
+                                    if (teste != artist){
+                                        teste.classList.remove(movement)
+                                    }
+                                })
+                            }
+                        }    
+                    }, 350);
+                    artist.addEventListener('mouseleave', () => {
+                        clearTimeout(mouseEntersButton)
+                    })
                 })
             })
         })
     }
 
     showChosenArtistInfo(){
-        const heroSectionInfoDiv = document.createElement('div')
-        heroSectionInfoDiv.classList.add('hero-section-info-div')
+        const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
+        heroSectionInfoContainer.classList.add('hero-section-info-shown')
     }
 
     start(){
@@ -126,6 +131,16 @@ class heroSectionScrollEvents{
                 this.titleContainer.classList.remove('spaced')
                 this.containerText.classList.add('container-text-hidden')
                 this.titleContainer.classList.add('title-container-active')
+
+                try{
+                    const cururu = document.getElementById('hero-bg-div')
+                    cururu.classList.remove('bg-active')      
+                    cururu.classList.add('bg-inactive')  
+                    const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
+                    heroSectionInfoContainer.classList.add('hero-section-info-shown')  
+                } catch(e){
+                    //
+                }
             } 
         })
     }
@@ -162,6 +177,15 @@ class heroSectionScrollEvents{
 
                 this.artistsContainer.classList.add('artists-menu-container-active')
 
+                try{
+                    const cururu = document.getElementById('hero-bg-div')
+                    cururu.classList.add('bg-active')  
+                    cururu.classList.remove('bg-inactive')
+                    const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
+                    heroSectionInfoContainer.classList.add('hero-section-info-shown')  
+                } catch(e){
+                    //
+                }
 
                 setTimeout(() => {
                     scrollUnlocked = true
@@ -204,6 +228,15 @@ class heroSectionScrollEvents{
 
                 this.artistsContainer.classList.remove('artists-menu-container-active')
 
+                try{
+                    const cururu = document.getElementById('hero-bg-div')
+                    cururu.classList.remove('bg-active')
+                    cururu.classList.add('bg-inactive') 
+                    const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
+                    heroSectionInfoContainer.classList.remove('hero-section-info-shown')
+                } catch(e){
+                    //
+                }
                 
             }
         })
