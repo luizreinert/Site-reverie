@@ -1,5 +1,6 @@
 class heroSectionMenu{
     constructor(){
+        this.titleContainer = document.getElementById('title-container')
         this.heroSectionBg = document.getElementById('topArt1')
         this.renascimento = document.getElementById('menu-option-rafael')
         this.barroco = document.getElementById('menu-option-caravaggio')
@@ -11,40 +12,41 @@ class heroSectionMenu{
         this.menuMovements = [this.renascimento, this.barroco, this.neoclassicismo, this.romantismo ,this.impressionismo, this.posImpressionismo, this.modernismo]
     
         this.movementsData = {
-            renascimento : {
+            renascimento: {
                 "artistMenuOption" : this.renascimento,
                 "backgroundClass" : "renascimento-hero-section-bg",
                 "menuBackground" : "artists-menu-rafael"
             },
-            barroco : {
+            barroco: {
                 "artistMenuOption" : this.barroco, 
                 "backgroundClass" : "barroco-hero-section-bg",
                 "menuBackground" : "artists-menu-caravaggio"
 
             },
-            neoclassicismo : {
+            neoclassicismo: {
                 "artistMenuOption" : this.neoclassicismo, 
                 "backgroundClass" : "neoclassicismo-hero-section-bg",
                 "menuBackground" : "artists-menu-david"
 
             },
-            romantismo : {
+            romantismo: {
                 "artistMenuOption" : this.romantismo, 
                 "backgroundClass" : "romantismo-hero-section-bg",
                 "menuBackground" : "artists-menu-goya"
 
             },
-            impressionismo : {
+            impressionismo: {
                 "artistMenuOption" : this.impressionismo, 
                 "backgroundClass" : "impressionismo-hero-section-bg",
                 "menuBackground" : "artists-menu-monet"
             },
-            posImpressionismo : {
+            
+            posimpressionismo: {
                 "artistMenuOption" : this.posImpressionismo, 
                 "backgroundClass" : "pos-impressionismo-hero-section-bg",
                 "menuBackground" : "artists-menu-vangogh"
             },
-            modernismo : {
+            modernismo: {
                 "artistMenuOption" : this.modernismo, 
                 "backgroundClass" : "modernismo-hero-section-bg",
                 "menuBackground" : "artists-menu-frida"
@@ -53,26 +55,28 @@ class heroSectionMenu{
     }
 
     menuChangeBg(){
-        let titleContainer = document.getElementById('title-container')
-        let eventTypes = ['click', 'mouseenter']
+        let eventTypes = ['mouseenter', 'touchstart']
         let heroBgDiv = document.createElement('div')
         this.menuMovements.forEach(artist => {
             eventTypes.forEach((event) => {
                 artist.addEventListener(event, () => {
                     for (let movement in this.movementsData){
-                        if(artist === this.movementsData[movement]["artistMenuOption"] && titleContainer.classList.contains('container-hidden')){
-                            if(this.heroSectionBg.lastElementChild.classList.contains('active') && this.heroSectionBg.lastElementChild.classList.contains(this.movementsData[movement]["backgroundClass"]) == false){
+                        if(artist === this.movementsData[movement]["artistMenuOption"] && this.titleContainer.classList.contains('container-hidden')){
+                            if(this.heroSectionBg.lastElementChild.classList.contains('bg-active') && this.heroSectionBg.lastElementChild.classList.contains(this.movementsData[movement]["backgroundClass"]) == false){
                                 heroBgDiv.className = ''
-                            } 
+                            }
                             heroBgDiv.classList.add("hero-bg-div-hidden")
                             this.heroSectionBg.appendChild(heroBgDiv)
                             heroBgDiv.classList.add(this.movementsData[movement]["backgroundClass"])
                             artist.classList.add(movement)
-                            setTimeout(() => {
-                                heroBgDiv.classList.add('active')
-                            }, 10);
-                        } else if (titleContainer.classList.contains('container-hidden') == false){
-                            heroBgDiv.classList.toggle("hero-bg-div-hidden")
+                            heroBgDiv.classList.add('bg-active')
+                            this.showChosenArtistInfo()
+                        } else if (artist != this.movementsData[movement]["artistMenuOption"]){
+                            this.menuMovements.forEach((teste) => {
+                                if (teste != artist){
+                                    teste.classList.remove(movement)
+                                }
+                            })
                         }
                     }
                 })
@@ -80,8 +84,13 @@ class heroSectionMenu{
         })
     }
 
+    showChosenArtistInfo(){
+        const heroSectionInfoDiv = document.createElement('div')
+        heroSectionInfoDiv.classList.add('hero-section-info-div')
+    }
+
     start(){
-        this.menuChangeBg('normalLoad')
+        this.menuChangeBg()
     }
 }
 
@@ -192,6 +201,9 @@ class heroSectionScrollEvents{
                 // animações scroll arte 1
                 this.art1Mask.classList.remove('art-clippath-1-shown')
                 this.arte1.classList.remove('art-clippath-1-active-border')
+
+                this.artistsContainer.classList.remove('artists-menu-container-active')
+
                 
             }
         })
