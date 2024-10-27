@@ -1,66 +1,114 @@
+console.log(window.innerWidth)
+
 class heroSectionMenu{
     constructor(){
         this.titleContainer = document.getElementById('title-container')
         this.heroSectionBg = document.getElementById('topArt1')
+        this.heroSectionInfoContainer = document.getElementById('hero-section-info-container')
         this.renascimento = document.getElementById('menu-option-rafael')
         this.barroco = document.getElementById('menu-option-caravaggio')
         this.neoclassicismo = document.getElementById('menu-option-jacques')
         this.romantismo = document.getElementById('menu-option-goya')
         this.impressionismo = document.getElementById('menu-option-monet')
         this.posImpressionismo = document.getElementById('menu-option-vangogh')
-        this.modernismo = document.getElementById('menu-option-frida')
-        this.menuMovements = [this.renascimento, this.barroco, this.neoclassicismo, this.romantismo ,this.impressionismo, this.posImpressionismo, this.modernismo]
+        this.cubismo = document.getElementById('menu-option-picasso')
+        this.menuMovements = [this.renascimento, this.barroco, this.neoclassicismo, this.romantismo ,this.impressionismo, this.posImpressionismo, this.cubismo]
     
         this.movementsData = {
             renascimento: {
                 "artistMenuOption" : this.renascimento,
                 "backgroundClass" : "renascimento-hero-section-bg",
-                "menuBackground" : "artists-menu-rafael"
+                "menuBackground" : "artists-menu-rafael",
+                "mainColor" : "#BFA15F",
+                "movementName" : "Renascimento",
+                "artistName" : "Rafael Sanzio",
+                "informationText1" : "O Renascimento marcou o renascimento da cultura clássica e a valorização do conhecimento humano, centrando-se no humanismo e na redescoberta da arte greco-romana.",
+                "informationText2" : "Rafael Sanzio encarnou esses ideais com seu domínio técnico e sua busca pela perfeição harmônica. Suas composições equilibradas e a beleza idealizada de suas figuras simbolizam a visão otimista do Renascimento, que celebrava o potencial humano e o retorno à racionalidade e proporção."
+                
             },
             barroco: {
                 "artistMenuOption" : this.barroco, 
                 "backgroundClass" : "barroco-hero-section-bg",
-                "menuBackground" : "artists-menu-caravaggio"
-
+                "menuBackground" : "artists-menu-caravaggio",
+                "mainColor" : "#3c332f",
+                "movementName" : "Barroco",
+                "artistName" : "Caravaggio",
+                "informationText1" : "O Barroco, nascido no contexto da Reforma e Contra-Reforma, usou a arte como uma ferramenta poderosa de emoção e espiritualidade.",
+                "informationText2" : "Caravaggio foi um dos maiores expoentes desse movimento, utilizando o claro-escuro para criar contrastes dramáticos que intensificavam o realismo e o impacto emocional de suas obras. O Barroco, com seu dinamismo e teatralidade, se refletiu perfeitamente na obra de Caravaggio, que dava vida a temas religiosos e cotidianos com um vigor quase cinematográfico."
+                
             },
             neoclassicismo: {
                 "artistMenuOption" : this.neoclassicismo, 
                 "backgroundClass" : "neoclassicismo-hero-section-bg",
-                "menuBackground" : "artists-menu-david"
-
+                "menuBackground" : "artists-menu-david",
+                "mainColor" : "#A1B2C9",
+                "movementName" : "Neoclassicismo",
+                "artistName" : "Jacques-Louis David",
+                "informationText1" : "O Neoclassicismo surgiu como uma reação ao Rococó, buscando uma volta à simplicidade e ao rigor da arte clássica greco-romana.",
+                "informationText2" : "Em meio à Revolução Francesa, Jacques-Louis David utilizou esse estilo para expressar ideais de virtude, disciplina e sacrifício pela pátria. Suas obras, caracterizadas pela clareza formal e temas heroicos, não apenas homenageavam a Antiguidade, mas também serviam como um manifesto político e moral em tempos de mudança."
+                
             },
             romantismo: {
                 "artistMenuOption" : this.romantismo, 
                 "backgroundClass" : "romantismo-hero-section-bg",
-                "menuBackground" : "artists-menu-goya"
+                "menuBackground" : "artists-menu-goya",
+                "mainColor" : "",
+                "movementName" : "Romantismo",
+                "artistName" : "Francisco de Goya",
+                "informationText1" : "O Romantismo surgiu como uma reação ao Neoclassicismo e à Revolução Industrial, e exaltava a emoção, a subjetividade e o poder do indivíduo em meio à crescente industrialização e turbulência política.",
+                "informationText2" : "Francisco de Goya, embora tenha começado sua carreira sob a influência das normas clássicas, tornou-se uma figura central do Romantismo ao explorar temas sombrios e psicológicos em suas obras. Goya foi pioneiro em expressar a fragilidade da vida e a loucura, mostrando a complexidade das emoções humanas em um contexto de guerra e sofrimento."
 
             },
             impressionismo: {
                 "artistMenuOption" : this.impressionismo, 
                 "backgroundClass" : "impressionismo-hero-section-bg",
-                "menuBackground" : "artists-menu-monet"
+                "menuBackground" : "artists-menu-monet",
+                "mainColor" : "#8DB596",
+                "movementName" : "Impressionismo",
+                "artistName" : "Claude Monet",
+                "informationText1" : "O Impressionismo, surgido na segunda metade do século XIX, representou uma ruptura com a arte acadêmica tradicional, desafiando as convenções com sua ênfase em capturar os efeitos fugazes da luz e da atmosfera. ",
+                "informationText2" : "Claude Monet, como líder do movimento, foi pioneiro em retratar a natureza de forma subjetiva e inovadora. Suas pinceladas rápidas e paisagens vibrantes, ao mesmo tempo que revolucionaram a pintura, refletiram a modernidade e as transformações sociais de seu tempo, encapsulando a sensação de movimento e mudança constante."
+                
             },
             
             posimpressionismo: {
                 "artistMenuOption" : this.posImpressionismo, 
                 "backgroundClass" : "pos-impressionismo-hero-section-bg",
-                "menuBackground" : "artists-menu-vangogh"
+                "menuBackground" : "artists-menu-vangogh",
+                "mainColor" : "",
+                "movementName" : "Pós-impressionismo",
+                "artistName" : "Vincent Van Gogh",
+                "informationText1" : "O Pós-impressionismo nasceu como uma reação ao Impressionismo, buscando formas mais emocionais e simbólicas de expressão. Vincent van Gogh, com suas pinceladas intensas e paleta de cores vibrantes, deu forma a essa nova abordagem, imbuindo suas obras com uma profundidade emocional única.",
+                "informationText2" : "O movimento Pós-impressionista explorava não só a percepção visual, mas também a subjetividade interna do artista, e Van Gogh foi um dos maiores expoentes dessa introspecção, influenciando profundamente a arte moderna."
+                
             },
-            modernismo: {
-                "artistMenuOption" : this.modernismo, 
-                "backgroundClass" : "modernismo-hero-section-bg",
-                "menuBackground" : "artists-menu-frida"
+
+            cubismo: {
+                "artistMenuOption" : this.cubismo, 
+                "backgroundClass" : "cubismo-hero-section-bg",
+                "menuBackground" : "artists-menu-picasso",
+                "mainColor" : "#FF6F20",
+                "movementName" : "Cubismo",
+                "artistName" : "Pablo Picasso",
+                "informationText1" : "O Cubismo foi uma revolução na forma de representar a realidade, fragmentando objetos e figuras em formas geométricas para mostrar múltiplos ângulos simultaneamente.",
+                "informationText2" : " Pablo Picasso foi pioneiro nessa abordagem, transformando a maneira como enxergamos o mundo. Suas obras cubistas, com linhas angulosas e sobreposição de planos, exploram uma visão complexa e multifacetada da realidade. Com sua ousadia criativa, deu ao Cubismo um impacto duradouro, fazendo com que a arte refletisse a fragmentação e a profundidade do mundo moderno."
+                
             },
         }
     }
 
     menuChangeBg(){
+
         let eventTypes = ['mouseenter', 'touchstart']
         let heroBgDiv = document.createElement('div')
         heroBgDiv.id = 'hero-bg-div'
         this.menuMovements.forEach(artist => {
             eventTypes.forEach((event) => {
                 artist.addEventListener(event, () => {
+                    let smDevice = window.matchMedia('(max-width: 1199.98px)')
+                    if(smDevice.matches){
+                        console.log('mobile')
+                    }
                     const mouseEntersButton = setTimeout(() => {
                         for (let movement in this.movementsData){
                             if(artist === this.movementsData[movement]["artistMenuOption"] && artist.classList.contains(movement) == false && this.titleContainer.classList.contains('container-hidden')){
@@ -71,7 +119,7 @@ class heroSectionMenu{
                                 heroBgDiv.classList.add(this.movementsData[movement]["backgroundClass"])
                                 artist.classList.add(movement)
                                 heroBgDiv.classList.add('bg-active')
-                                this.showChosenArtistInfo()
+                                this.showChosenArtistInfo(this.movementsData[movement], movement)
                             } else if (artist != this.movementsData[movement]["artistMenuOption"]){
                                 this.menuMovements.forEach((teste) => {
                                     if (teste != artist){
@@ -89,9 +137,54 @@ class heroSectionMenu{
         })
     }
 
-    showChosenArtistInfo(){
-        const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
-        heroSectionInfoContainer.classList.add('hero-section-info-shown')
+    showChosenArtistInfo(targetArtist, targetArtistMovement){
+        this.heroSectionInfoContainer.classList.add('hero-section-info-shown')
+        let movementName = document.getElementById('movement-title-name')
+        let artistName = document.getElementById('movement-artist-name')
+        let artistText1 = document.getElementById('movement-artist-text-1')
+        let artistText2 = document.getElementById('movement-artist-text-2')
+        let articleBtn = document.getElementById('open-article-btn')
+        let infoContainerElements = [movementName, artistName, artistText1, artistText2, articleBtn]
+
+        // Troca a cor do botão "Saiba mais", de acordo com a cor designada ao movimento/artista
+        this.changeButtonBgColor(targetArtistMovement)
+
+        // Troca as informações de acordo com o movimento escolhido
+        movementName.innerText = targetArtist.movementName
+        artistName.innerText = targetArtist.artistName
+        artistName.style.color = `var(--${targetArtistMovement}-main-color)`
+        artistText1.innerText = targetArtist.informationText1
+        artistText2.innerText = targetArtist.informationText2
+
+
+        // Adiciona as classes de transição para os elementos, removendo-as após 1 segundo
+        infoContainerElements.forEach((element) => {
+            switch (element){
+                case artistText1:
+                case artistText2:
+                    element.classList.add('hero-section-info-text-shown')
+                    break
+                case artistName:
+                case articleBtn:
+                    element.classList.add('article-btn-shown')
+                    break
+            }
+
+        })
+        setTimeout(() => {
+            infoContainerElements.forEach((element) => {
+                element.classList.remove('hero-section-info-text-shown')
+                element.classList.remove('article-btn-shown')
+            })
+        }, 1000);
+    }
+
+    changeButtonBgColor(targetArtistMovement){
+        var cssVariables = document.querySelector(':root');
+        // Obtém o valor da variável CSS correspondente
+        var colorValue = getComputedStyle(cssVariables).getPropertyValue(`--${targetArtistMovement}-main-color`);
+        // Define o valor da variável usada para o background
+        cssVariables.style.setProperty('--used-color', colorValue);
     }
 
     start(){
@@ -186,10 +279,9 @@ class heroSectionScrollEvents{
                 } catch(e){
                     //
                 }
-
                 setTimeout(() => {
                     scrollUnlocked = true
-                }, 1000);
+                }, 2000);
             } if (scrollY < 112 && e.deltaY < 0){
                 scrollUnlocked = false
                 console.log('lock!')
