@@ -34,7 +34,7 @@ class heroSectionMenu{
                 "movementName" : "Barroco",
                 "artistName" : "Caravaggio",
                 "informationText1" : "O Barroco, nascido no contexto da Reforma e Contra-Reforma, usou a arte como uma ferramenta poderosa de emoção e espiritualidade.",
-                "informationText2" : "Caravaggio foi um dos maiores expoentes desse movimento, utilizando o claro-escuro para criar contrastes dramáticos que intensificavam o realismo e o impacto emocional de suas obras. O Barroco, com seu dinamismo e teatralidade, se refletiu perfeitamente na obra de Caravaggio, que dava vida a temas religiosos e cotidianos com um vigor quase cinematográfico."
+                "informationText2" : "Caravaggio foi um dos maiores expoentes desse movimento, utilizando o chiaroscuro para criar contrastes dramáticos que intensificavam o realismo e o impacto emocional de suas obras. O Barroco, com seu dinamismo e teatralidade, se refletiu perfeitamente na obra de Caravaggio, que dava vida a temas religiosos e cotidianos com um vigor quase cinematográfico."
                 
             },
             neoclassicismo: {
@@ -92,23 +92,18 @@ class heroSectionMenu{
                 "artistName" : "Pablo Picasso",
                 "informationText1" : "O Cubismo foi uma revolução na forma de representar a realidade, fragmentando objetos e figuras em formas geométricas para mostrar múltiplos ângulos simultaneamente.",
                 "informationText2" : " Pablo Picasso foi pioneiro nessa abordagem, transformando a maneira como enxergamos o mundo. Suas obras cubistas, com linhas angulosas e sobreposição de planos, exploram uma visão complexa e multifacetada da realidade. Com sua ousadia criativa, deu ao Cubismo um impacto duradouro, fazendo com que a arte refletisse a fragmentação e a profundidade do mundo moderno."
-                
             },
         }
     }
 
     menuChangeBg(){
-
         let eventTypes = ['mouseenter', 'touchstart']
         let heroBgDiv = document.createElement('div')
         heroBgDiv.id = 'hero-bg-div'
         this.menuMovements.forEach(artist => {
             eventTypes.forEach((event) => {
                 artist.addEventListener(event, () => {
-                    let smDevice = window.matchMedia('(max-width: 1199.98px)')
-                    if(smDevice.matches){
-                        console.log('mobile')
-                    }
+                    this.mobileCase() == true ? this.menuSlide(undefined, 'slideOff') : '';
                     const mouseEntersButton = setTimeout(() => {
                         for (let movement in this.movementsData){
                             if(artist === this.movementsData[movement]["artistMenuOption"] && artist.classList.contains(movement) == false && this.titleContainer.classList.contains('container-hidden')){
@@ -187,8 +182,21 @@ class heroSectionMenu{
         cssVariables.style.setProperty('--used-color', colorValue);
     }
 
+    mobileCase(){
+        const breakpointHandler = window.matchMedia('(max-width: 767.98px')
+        return breakpointHandler.matches
+    }
+
+    menuSlide(target, option){
+        switch (option){
+            case 'slideOff':
+
+        }
+    }
+
     start(){
         this.menuChangeBg()
+        this.mobileCase()
     }
 }
 
