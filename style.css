@@ -20,10 +20,6 @@ body, html{
 
 }
 
-.nav-bg{
-    background-color: #EAE2B7;
-}
-
 .brand-img{
     transition: all 1s;
     max-width: 60px;
@@ -36,70 +32,21 @@ body, html{
     max-height: 90px;
 }
 
-#mainsearch{
-    background-color: #ffffffbb;
-    outline: none;
-    text-indent: 4%;
-    min-width: 330px;
-    height: 38px;
-}
 
-
-#mainsearch:focus{
-    transition: all 0.5s;
-    background-color: white;
-}
-
-.navbar li{
-    border-bottom: 2px solid rgba(255, 255, 255, 0);
-}
-
-.navbar li:hover{
-    transition: border-color 0.3s;
-    border-color: rgb(255, 255, 255);
-}
-
-.navbar li:not(:hover){
-    transition: border-color 0.3s;
-    border-color: rgba(255, 255, 255, 0);
-}
-
-.navbar-link{
-    color: white;
-    text-decoration: none;
-    font-weight: 300;
-}
-
-.nav-item{
-    color: white;
-    padding: 0px 10px;
-    margin: 0px 10px;
-}
-
-
-.navbar-active{
-    transition: all 1s;
-    background-color: #000000b4;
-}
-
-.page1, .page-1-2{
+.viewport{
     background-color: #EAE2B7;
     width: 100vw;
     height: 100vh;
 }
 
 
-.unactive{
-    display: none;
-}
-
 .title-header{
     transition: top 1s, font-size 1s;
     text-decoration: none;
     position: relative;
-    right: 30px;
+    right: calc(2vw + 3vh);
     top: 22vh;
-    font-size: 8rem;
+    font-size: calc(3vw + 8vh);
     font-family: 'Fustat';
     font-style: normal;
     font-weight: 400;
@@ -139,32 +86,38 @@ body, html{
     transition: all 1s;
     position: relative;
     top: 22vh;
-    flex-direction: column;
     background-color: #002f49;
     align-self: center;
     border: 4px solid black;
-    padding: 20px;
     z-index: 0;
 }
 
+.title-space{
+    font-size: calc(3vw + 8vh);
+}
+
 .title-subheader{
-    font-size: 1.5em;
+    position: relative;
+    font-size: 1.3rem;
     font-family: 'Varela Round';
     font-style: normal;
     color: white;
     letter-spacing: 1.2px;
+    line-height: 35px;
 }
 
 .container-hidden{
     transition: all 0.7s;
     opacity: 0;
     transform: translate(-300px);
+    visibility: hidden;
 }
 
 .container-shown{
     transition: all 0.7s;
     opacity: 1;
     transform: translate(0px);  
+    visibility: visible;
 }
 
 .container-text-hidden{
@@ -177,11 +130,6 @@ body, html{
     transition: all 0.6s;
     opacity: 1;
     visibility: visible;
-}
-
-.spaced{
-    transition: all 1s;
-    padding-top: 200px;
 }
 
 .text-highlight-orange{
@@ -1428,22 +1376,23 @@ body, html{
 }
 
 @media (max-width: 767.98px){
-    .menu-slide-off{
-        animation: slideOff 1.5s forwards ease-out;
+    .slide-off{
+        animation: slide-off-anim 1s 0.6s forwards;
     }
 
-    .menu-slide-on{
-        animation: slideOn 1s forwards ease-out;
+    .slide-on{
+        animation: slide-on-anim 1s forwards;
     }
 
-    @keyframes slideOn {
-        from{translate: -600px 0px;}
-        to{translate: 0px;}
+    @keyframes slide-off-anim {
+        from{translate: 0px 0px}
+        to{translate: -500px 0px}
     }
 
-    @keyframes slideOff {
-        from{translate: 0px;}
-        to{translate: -600px 0px;}
+    
+    @keyframes slide-on-anim {
+        from{translate: -500px 0px}
+        to{translate: 0px 0px}
     }
 
     .hero-section-info-container{
@@ -1456,6 +1405,7 @@ body, html{
         overflow-y: scroll;
         overflow-x: hidden;
         bottom: 15%;
+        visibility: hidden;
     }
     
     .hero-section-info-container hr{
@@ -1469,20 +1419,17 @@ body, html{
         transition: all 1s 1s;
         opacity: 1;
         transform: translate(0px);
+        visibility: visible;
     }
     
     .hero-section-info-text-shown{
-        animation: fadeUpAnim 1s forwards;
+        animation: fadeUpAnim 1s 1s forwards;
     }
     
     
     @keyframes fadeUpAnim{
        from{opacity: 0; translate: 0 30px;}
        to{opacity: 1; translate: 0 0px}
-    }
-    
-    .test{
-        z-index: 100;
     }
 
     #movement-title-name{
@@ -1553,11 +1500,12 @@ body, html{
     }
 
     .menu-back-btn-container{
-        transition: opacity 1s 1s;
+        transition: all 0.3s;
         position: absolute;
         z-index: 100;
         bottom: 2%;
         opacity: 0;
+        visibility: hidden;
     }
 
     .menu-back-btn{
@@ -1566,14 +1514,13 @@ body, html{
         border: none;
         font-size: calc(5vh + 4vw);
         line-height: 35pt;
+
     }
 
     .menu-back-btn-shown{
-        animation: btnAppear 1s forwards;
-    }
+        transition: all 1s 1s;
+        opacity: 1;
+        visibility: visible;
 
-    @keyframes btnAppear {
-        from{translate: 40px 0px; opacity: 0;}
-        to{translate: 0px; opacity: 1;}
     }
 }

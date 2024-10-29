@@ -103,7 +103,7 @@ class heroSectionMenu{
         this.menuMovements.forEach(artist => {
             eventTypes.forEach((event) => {
                 artist.addEventListener(event, () => {
-                    this.mobileCase() == true ? this.menuSlide(undefined, 'slideOff') : '';
+                    this.mobileCase() == true ? this.menuSlide(artist, 'slideOff') : '';
                     const mouseEntersButton = setTimeout(() => {
                         for (let movement in this.movementsData){
                             if(artist === this.movementsData[movement]["artistMenuOption"] && artist.classList.contains(movement) == false && this.titleContainer.classList.contains('container-hidden')){
@@ -133,7 +133,7 @@ class heroSectionMenu{
     }
 
     showChosenArtistInfo(targetArtist, targetArtistMovement){
-        this.heroSectionInfoContainer.classList.add('hero-section-info-shown')
+        this.mobileCase() ? undefined : this.heroSectionInfoContainer.classList.add('hero-section-info-shown') 
         let movementName = document.getElementById('movement-title-name')
         let artistName = document.getElementById('movement-artist-name')
         let artistText1 = document.getElementById('movement-artist-text-1')
@@ -188,8 +188,27 @@ class heroSectionMenu{
     }
 
     menuSlide(target, option){
+        const container = this.heroSectionInfoContainer
+        const menuOptionsList = this.menuMovements
+        const menuOptionContainer = document.getElementById('artists-menu-container')
+        const menuBackBtn = document.getElementById('menu-back-btn-container')
         switch (option){
             case 'slideOff':
+            container.classList.remove('d-none')
+            const changeOption = setTimeout( function(){
+                container.classList.add('hero-section-info-shown')
+                menuBackBtn.classList.add('menu-back-btn-shown')
+                menuOptionContainer.classList.remove('slide-on')
+                menuOptionContainer.classList.add('slide-off')
+            }, 100)
+
+            menuBackBtn.addEventListener('click', () => {
+                container.classList.remove('hero-section-info-shown')
+                menuOptionContainer.classList.remove('slide-off')
+                menuOptionContainer.classList.add('slide-on')
+                menuBackBtn.classList.remove('menu-back-btn-shown')
+
+            })
 
         }
     }
@@ -211,7 +230,7 @@ class heroSectionScrollEvents{
         this.titleContainer = document.getElementById('title-container')
         this.containerText = document.getElementById('container-text')
         this.artistsContainer = document.getElementById('artists-menu-container')
-        this.heroSection = document.getElementById('pagina1')
+        this.heroSection = document.getElementById('hero-section')
 
     }
 
@@ -227,9 +246,6 @@ class heroSectionScrollEvents{
                 this.icon.classList.toggle('brand-img', true)
                 this.icon.src = "images/assets/logo-museum-white.png";
 
-                this.navHyperlinks.classList.remove('visually-hidden')
-
-                this.titleContainer.classList.remove('spaced')
                 this.containerText.classList.add('container-text-hidden')
                 this.titleContainer.classList.add('title-container-active')
 
@@ -265,10 +281,9 @@ class heroSectionScrollEvents{
                 this.icon.classList.toggle('brand-img', true)
                 this.navbar.classList.add('navbar-active')
                 this.icon.src = "images/assets/logo-museum-white.png";
-                this.navHyperlinks.classList.remove('visually-hidden')
 
                 // container que o titulo saiu diminui
-                this.titleContainer.classList.remove('spaced')
+
                 this.titleContainer.classList.remove('container-hidden')
                 this.titleContainer.classList.add('container-shown')
                 this.containerText.classList.add('container-text-hidden')
@@ -283,7 +298,7 @@ class heroSectionScrollEvents{
                     cururu.classList.add('bg-active')  
                     cururu.classList.remove('bg-inactive')
                     const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
-                    heroSectionInfoContainer.classList.add('hero-section-info-shown')  
+                    //heroSectionInfoContainer.classList.add('hero-section-info-shown')  
                 } catch(e){
                     //
                 }
@@ -313,9 +328,7 @@ class heroSectionScrollEvents{
                 this.icon.classList.toggle('brand-img-grown', true)
                 this.icon.classList.toggle('brand-img', false)
                 this.icon.src = "images/assets/icon-museum.png";
-                this.navHyperlinks.classList.add('visually-hidden')
 
-                this.titleContainer.classList.add('spaced')
                 this.titleContainer.classList.remove('container-hidden')
                 this.titleContainer.classList.add('container-shown')
 
