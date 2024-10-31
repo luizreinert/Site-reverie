@@ -133,7 +133,7 @@ class heroSectionMenu{
     }
 
     showChosenArtistInfo(targetArtist, targetArtistMovement){
-        this.mobileCase() ? undefined : this.heroSectionInfoContainer.classList.add('hero-section-info-shown') 
+        this.mobileCase() ? undefined : this.heroSectionInfoContainer.classList.remove('d-none'); this.heroSectionInfoContainer.classList.add('hero-section-info-shown') 
         let movementName = document.getElementById('movement-title-name')
         let artistName = document.getElementById('movement-artist-name')
         let artistText1 = document.getElementById('movement-artist-text-1')
@@ -265,53 +265,103 @@ class heroSectionScrollEvents{
 
     // Função para que, quando o usuário der o primeiro scroll, ocorra as animações da barra de navegação primeiro.
     firstScrollLock(){
+        const mobile = window.matchMedia('(max-width: 767.98px)')
         var scrollUnlocked = false
-        this.heroSection.addEventListener('wheel', (e) => {
-            if (scrollY == 0 && e.deltaY > 0){
-                scrollHandle(e)
-                // animações scroll arte 1
-                this.navbar.classList.add('position-fixed')
-                this.art1Mask.classList.add('art-clippath-1-shown')
-                this.arte1.classList.add('art-clippath-1-active-border')
+        var touchStartedPos
+        var touchEndedPos
+        switch (mobile.matches){
+            case true:
+                this.heroSection.addEventListener('touchstart', (e) => {
+                    touchStartedPos = e.touches[0].pageY
+                })
+                this.heroSection.addEventListener('touchend', (e) => {
+                    touchEndedPos = e.changedTouches[0].pageY
+                    console.log(touchEndedPos - touchStartedPos)
+                    if (touchEndedPos - touchStartedPos < -0){
+                        this.navbar.classList.add('position-fixed')
+                        this.art1Mask.classList.add('art-clippath-1-shown')
+                        this.arte1.classList.add('art-clippath-1-active-border')
+        
+        
+                        // título -> barra de navegação aparece -> logo muda
+                        this.title.classList.add('on-nav')
+                        this.icon.classList.toggle('brand-img-grown', false)
+                        this.icon.classList.toggle('brand-img', true)
+                        this.navbar.classList.add('navbar-active')
+                        this.icon.src = "images/assets/logo-museum-white.png";
+        
+                        // container que o titulo saiu diminui
+        
+                        this.titleContainer.classList.remove('container-hidden')
+                        this.titleContainer.classList.add('container-shown')
+                        this.containerText.classList.add('container-text-hidden')
+                        this.containerText.classList.remove('container-text-shown')
+                        this.titleContainer.classList.add('container-hidden')
+                        this.titleContainer.classList.remove('container-shown')
+        
+                        this.artistsContainer.classList.add('artists-menu-container-active')
+        
+                        try{
+                            const cururu = document.getElementById('hero-bg-div')
+                            cururu.classList.add('bg-active')  
+                            cururu.classList.remove('bg-inactive')
+                            const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
+                            //heroSectionInfoContainer.classList.add('hero-section-info-shown')  
+                        } catch(e){
+                            //
+                        }
+                    }
+                })
 
-
-                // título -> barra de navegação aparece -> logo muda
-                this.title.classList.add('on-nav')
-                this.icon.classList.toggle('brand-img-grown', false)
-                this.icon.classList.toggle('brand-img', true)
-                this.navbar.classList.add('navbar-active')
-                this.icon.src = "images/assets/logo-museum-white.png";
-
-                // container que o titulo saiu diminui
-
-                this.titleContainer.classList.remove('container-hidden')
-                this.titleContainer.classList.add('container-shown')
-                this.containerText.classList.add('container-text-hidden')
-                this.containerText.classList.remove('container-text-shown')
-                this.titleContainer.classList.add('container-hidden')
-                this.titleContainer.classList.remove('container-shown')
-
-                this.artistsContainer.classList.add('artists-menu-container-active')
-
-                try{
-                    const cururu = document.getElementById('hero-bg-div')
-                    cururu.classList.add('bg-active')  
-                    cururu.classList.remove('bg-inactive')
-                    const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
-                    //heroSectionInfoContainer.classList.add('hero-section-info-shown')  
-                } catch(e){
-                    //
-                }
-                setTimeout(() => {
-                    scrollUnlocked = true
-                }, 2000);
-            } if (scrollY < 112 && e.deltaY < 0){
-                scrollUnlocked = false
-                console.log('lock!')
-            }
-
-        })
-
+                break
+            case false:
+                this.heroSection.addEventListener('wheel', (e) => {
+                    if (scrollY == 0 && e.deltaY > 0){
+                        scrollHandle(e)
+                        // animações scroll arte 1
+                        this.navbar.classList.add('position-fixed')
+                        this.art1Mask.classList.add('art-clippath-1-shown')
+                        this.arte1.classList.add('art-clippath-1-active-border')
+        
+        
+                        // título -> barra de navegação aparece -> logo muda
+                        this.title.classList.add('on-nav')
+                        this.icon.classList.toggle('brand-img-grown', false)
+                        this.icon.classList.toggle('brand-img', true)
+                        this.navbar.classList.add('navbar-active')
+                        this.icon.src = "images/assets/logo-museum-white.png";
+        
+                        // container que o titulo saiu diminui
+        
+                        this.titleContainer.classList.remove('container-hidden')
+                        this.titleContainer.classList.add('container-shown')
+                        this.containerText.classList.add('container-text-hidden')
+                        this.containerText.classList.remove('container-text-shown')
+                        this.titleContainer.classList.add('container-hidden')
+                        this.titleContainer.classList.remove('container-shown')
+        
+                        this.artistsContainer.classList.add('artists-menu-container-active')
+        
+                        try{
+                            const cururu = document.getElementById('hero-bg-div')
+                            cururu.classList.add('bg-active')  
+                            cururu.classList.remove('bg-inactive')
+                            const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
+                            //heroSectionInfoContainer.classList.add('hero-section-info-shown')  
+                        } catch(e){
+                            //
+                        }
+                        setTimeout(() => {
+                            scrollUnlocked = true
+                        }, 2000);
+                    } if (scrollY < 112 && e.deltaY < 0){
+                        scrollUnlocked = false
+                        console.log('lock!')
+                    }
+        
+                })
+                break
+        }
         function scrollHandle(evento){
             if (scrollUnlocked == false){
                 evento.preventDefault()

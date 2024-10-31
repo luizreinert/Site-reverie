@@ -20,6 +20,10 @@ body, html{
 
 }
 
+#navbar{
+    z-index: 100;
+}
+
 .brand-img{
     transition: all 1s;
     max-width: 60px;
@@ -52,7 +56,7 @@ body, html{
     font-weight: 400;
     color: #FFFFFF;
     text-shadow: 7px 8px 0px #000000;
-    z-index: 1;
+
 }
 
 .on-nav{
