@@ -11,7 +11,7 @@
   <body>
     <div class="col-12" id="hero-section">
       <header>
-        <div class="d-flex z-3 position-fixed container-fluid col-12 py-3 px-3 px-sm-5 align-items-center navbar navbar-expand-xxl" id="navbar">
+        <div class="d-flex z-3 position-fixed container-fluid col-12 py-3 px-3 px-sm-5 align-items-center" id="navbar">
           <a href="#" class="d-flex justify-content-between text-decoration-none">
               <img class="brand-img-grown" src="images\assets\icon-museum.png" id="brand-icon">
               <h1 class="title-header" id="main-title">Reverie</h1>
@@ -28,7 +28,7 @@
         <div class="art-clippath-1 align-content-center hero-bg-div-hidden" id="topArt1">
           <div class="art-clippath-1-mask" id="first-mask"></div>
         </div>
-        <div class="d-none d-flex flex-column align-items-center hero-section-info-container position-absolute justify-content-evenly col-12 col-lg-8 col-xl-7 col-xxl-5 " id="hero-section-info-container">
+        <div class="d-none d-flex flex-column align-items-center hero-section-info-container z-3 justify-content-start justify-content-md-evenly col-12 col-lg-8 col-xl-7 col-xxl-5 " id="hero-section-info-container">
           <span id="movement-title-name">Renascimento</span>
           <h1 id="movement-artist-name">Rafael Sanzio</h1>
           <hr>
@@ -44,7 +44,7 @@
             <ion-icon name="arrow-back-circle-outline"></ion-icon>
           </button>
         </div>
-        <div class="d-flex artists-menu-container align-items-end position-absolute bottom-0 z-3 flex-column flex-lg-row col-12" id="artists-menu-container"> 
+        <div class="d-flex artists-menu-container align-items-end position-absolute z-3 flex-column flex-lg-row col-12" id="artists-menu-container"> 
           <button class="d-flex justify-content-center artists-menu col-12 col-lg" id="menu-option-rafael">
             <h4 class="artist-movement text-center">
               Renascimento
@@ -83,6 +83,7 @@
         </div>  
       </div>
     </div>
+    <div id="article-container"></div>
     <button class="back-arrow" id="back-arrow">
       <ion-icon name="arrow-up-outline"></ion-icon>
     </button>

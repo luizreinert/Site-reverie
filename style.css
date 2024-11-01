@@ -15,9 +15,8 @@
 
 body, html{
     min-width: 100vw;
-    min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: hidden;
-
 }
 
 #navbar{
@@ -26,8 +25,8 @@ body, html{
 
 .brand-img{
     transition: all 1s;
-    max-width: 60px;
-    max-height: 60px;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 .brand-img-grown{
@@ -40,7 +39,7 @@ body, html{
 .viewport{
     background-color: #EAE2B7;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
 }
 
 
@@ -84,7 +83,6 @@ body, html{
 .title-header-space{
     font-size: 9em;
 }
-
 
 .title-container{
     transition: all 1s;
@@ -185,13 +183,13 @@ body, html{
 .art-clippath-1-active{
     transition: 1.5s clip-path, 1s 0.5s height ;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-    height: 100vh;
+    height: 100dvh;
 }
 
 .art-clippath-1-active-border{
     transition: 1.5s clip-path, 1s 0.5s height, 1s 2s background-color ;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     background-color: #000000;
 }
@@ -200,27 +198,9 @@ body, html{
 .art-clippath-1-shown{
     transition: clip-path 1.5s, height 1s 0.5s, opacity 1s, background-color 1s;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-    height: 100vh;
+    height: 100dvh;
     background-color: transparent;
     opacity: 0.2;
-}
-
-.artists-menu-container{
-    transition: opacity 1s, transform 0.6s, visibility 1s;
-    height: 7vh;
-    transform: translateY(100px);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1;
-}
-
-.artists-menu-container-active{
-    transition: opacity 1s 1s, transform 0.6s 1s;
-    transform: translateY(0px);
-    height: 7vh;
-    opacity: 1;
-    z-index: 1;
-    visibility: visible;
 }
 
 @keyframes change-bg-animation {
@@ -252,7 +232,7 @@ body, html{
 
 .renascimento-hero-section-bg{
     background: url(images/raffaello/heroSectionBg-rs.jpg) no-repeat center/cover;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     animation: change-bg-animation 1s forwards ease-out;
 }
@@ -266,7 +246,7 @@ body, html{
 
 .barroco-hero-section-bg{
     background: url(images/caravaggio/heroSectionBg-caravaggio.jpg) no-repeat center/cover;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     animation: change-bg-animation 1s forwards ease-out;
 }
@@ -280,7 +260,7 @@ body, html{
 
 .neoclassicismo-hero-section-bg{
     background: url(images/Jacques-louis-david/heroSectionBg-david.jpg) no-repeat center/cover;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     animation: change-bg-animation 1s forwards ease-out;
 }
@@ -294,7 +274,7 @@ body, html{
 
 .romantismo-hero-section-bg{
     background: url(images/goya/heroSectionBg-goya.jpg) no-repeat center/cover;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     animation: change-bg-animation 1s forwards ease-out;
 }
@@ -308,7 +288,7 @@ body, html{
 
 .impressionismo-hero-section-bg{
     background: url(images/monet/heroSectionBg-monet.jpg) no-repeat center/cover;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     animation: change-bg-animation 1s forwards ease-out;
 }
@@ -323,7 +303,7 @@ body, html{
 
 .pos-impressionismo-hero-section-bg{
     background: url(images/van-gogh/heroSectionBg-vangogh.jpg) no-repeat center/cover;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     animation: change-bg-animation 1s forwards ease-out;
 }
@@ -337,7 +317,7 @@ body, html{
 
 .cubismo-hero-section-bg{
     background: url(images/picasso/heroSectionBg-picasso.jpg) no-repeat center/cover;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     animation: change-bg-animation 1s forwards ease-out;
 }
@@ -390,11 +370,6 @@ body, html{
     to{opacity: 0;}
 }
 
-@media (max-width: 1199.98px) {
-    .artists-menu-container{
-        height: auto;
-    }
-}
 
 .divider{
     background-color: #eeece0;
@@ -700,7 +675,7 @@ body, html{
 
 
 [id$="canvas-container"], [id$="canvas-container-second"]{
-    height: 100vh;
+    height: 100dvh;
 }
 
 #first-bg{
@@ -1253,7 +1228,29 @@ body, html{
 }
 
 @media (min-width: 767.98px) {
+    
+    .artists-menu-container{
+        transition: opacity 1s, transform 0.6s, visibility 1s;
+        position: absolute;
+        bottom: 0;
+        height: 7vh;
+        transform: translateY(100px);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+    }
+
+    .artists-menu-container-active{
+        transition: opacity 1s 1s, transform 0.6s 1s;
+        transform: translateY(0px);
+        height: 7vh;
+        opacity: 1;
+        z-index: 1;
+        visibility: visible;
+    }
+
     .hero-section-info-container{
+        position: absolute;
         transition: all 0.6s;
         right: 0;
         top: 14vh;
@@ -1380,6 +1377,24 @@ body, html{
 }
 
 @media (max-width: 767.98px){
+    .artists-menu-container{
+        transition: opacity 1s, transform 0.6s, visibility 1s;
+        height: 7vh;
+        transform: translateX(-0px);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+    }
+    
+    .artists-menu-container-active{
+        transition: opacity 1s 1s, transform 0.6s 1s;
+        transform: translateX(0px);
+        bottom: 50%;
+        opacity: 1;
+        z-index: 1;
+        visibility: visible;
+    }
+
     .slide-off{
         animation: slide-off-anim 1s 0.6s forwards;
     }
@@ -1401,14 +1416,15 @@ body, html{
 
     .hero-section-info-container{
         transition: all 0.6s;
+        position: relative;
         z-index: 100;
         opacity: 0;
         transform: translate(300px);
         background-color: #000000a1;
-        max-height: 70vh;
+        max-height: 64vh;
         overflow-y: scroll;
         overflow-x: hidden;
-        bottom: 15%;
+        bottom: 30vh;
         visibility: hidden;
     }
     

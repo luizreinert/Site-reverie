@@ -56,8 +56,8 @@ class heroSectionMenu{
                 "movementName" : "Romantismo",
                 "artistName" : "Francisco de Goya",
                 "informationText1" : "O Romantismo surgiu como uma reação ao Neoclassicismo e à Revolução Industrial, e exaltava a emoção, a subjetividade e o poder do indivíduo em meio à crescente industrialização e turbulência política.",
-                "informationText2" : "Francisco de Goya, embora tenha começado sua carreira sob a influência das normas clássicas, tornou-se uma figura central do Romantismo ao explorar temas sombrios e psicológicos em suas obras. Goya foi pioneiro em expressar a fragilidade da vida e a loucura, mostrando a complexidade das emoções humanas em um contexto de guerra e sofrimento."
-
+                "informationText2" : "Francisco de Goya, embora tenha começado sua carreira sob a influência das normas clássicas, tornou-se uma figura central do Romantismo ao explorar temas sombrios e psicológicos em suas obras. Goya foi pioneiro em expressar a fragilidade da vida e a loucura, mostrando a complexidade das emoções humanas em um contexto de guerra e sofrimento.",
+                "articleHTML" : "goya.html"
             },
             impressionismo: {
                 "artistMenuOption" : this.impressionismo, 
@@ -79,8 +79,8 @@ class heroSectionMenu{
                 "movementName" : "Pós-impressionismo",
                 "artistName" : "Vincent Van Gogh",
                 "informationText1" : "O Pós-impressionismo nasceu como uma reação ao Impressionismo, buscando formas mais emocionais e simbólicas de expressão. Vincent van Gogh, com suas pinceladas intensas e paleta de cores vibrantes, deu forma a essa nova abordagem, imbuindo suas obras com uma profundidade emocional única.",
-                "informationText2" : "O movimento Pós-impressionista explorava não só a percepção visual, mas também a subjetividade interna do artista, e Van Gogh foi um dos maiores expoentes dessa introspecção, influenciando profundamente a arte moderna."
-                
+                "informationText2" : "O movimento Pós-impressionista explorava não só a percepção visual, mas também a subjetividade interna do artista, e Van Gogh foi um dos maiores expoentes dessa introspecção, influenciando profundamente a arte moderna.",
+                "articleHTML" : "van-gogh.html"
             },
 
             cubismo: {
@@ -97,7 +97,7 @@ class heroSectionMenu{
     }
 
     menuChangeBg(){
-        let eventTypes = ['mouseenter', 'touchstart']
+        let eventTypes = ['click']
         let heroBgDiv = document.createElement('div')
         heroBgDiv.id = 'hero-bg-div'
         this.menuMovements.forEach(artist => {
@@ -123,10 +123,7 @@ class heroSectionMenu{
                                 })
                             }
                         }    
-                    }, 350);
-                    artist.addEventListener('mouseleave', () => {
-                        clearTimeout(mouseEntersButton)
-                    })
+                    }, 100);
                 })
             })
         })
@@ -150,7 +147,9 @@ class heroSectionMenu{
         artistName.style.color = `var(--${targetArtistMovement}-main-color)`
         artistText1.innerText = targetArtist.informationText1
         artistText2.innerText = targetArtist.informationText2
-
+        articleBtn.addEventListener('click', () => {
+            this.openArticle(targetArtist.articleHTML)
+        })
 
         // Adiciona as classes de transição para os elementos, removendo-as após 1 segundo
         infoContainerElements.forEach((element) => {
@@ -172,6 +171,27 @@ class heroSectionMenu{
                 element.classList.remove('article-btn-shown')
             })
         }, 1000);
+    }
+
+    openArticle(targetArtistHtml){
+        var articleContainer = document.getElementById('article-container')
+        fetch(targetArtistHtml)
+            .then(r => r.text())
+            .then(html => {
+                articleContainer.innerHTML = html
+                try{
+                    switch(articleContainer.innerHTML.includes('div')){
+                        case true:
+                            break
+                        case false:
+                            articleContainer.innerHTML = ''
+                    }
+                } catch (e){
+                    //
+                }
+            })
+        
+
     }
 
     changeButtonBgColor(targetArtistMovement){
