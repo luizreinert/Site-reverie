@@ -22,7 +22,8 @@ class heroSectionMenu{
                 "movementName" : "Renascimento",
                 "artistName" : "Rafael Sanzio",
                 "informationText1" : "O Renascimento marcou o renascimento da cultura clássica e a valorização do conhecimento humano, centrando-se no humanismo e na redescoberta da arte greco-romana.",
-                "informationText2" : "Rafael Sanzio encarnou esses ideais com seu domínio técnico e sua busca pela perfeição harmônica. Suas composições equilibradas e a beleza idealizada de suas figuras simbolizam a visão otimista do Renascimento, que celebrava o potencial humano e o retorno à racionalidade e proporção."
+                "informationText2" : "Rafael Sanzio encarnou esses ideais com seu domínio técnico e sua busca pela perfeição harmônica. Suas composições equilibradas e a beleza idealizada de suas figuras simbolizam a visão otimista do Renascimento, que celebrava o potencial humano e o retorno à racionalidade e proporção.",
+                "articleHTML" : "rafael-sanzio.html"
                 
             },
             barroco: {
@@ -914,6 +915,7 @@ function createTargetArtistObjects(targetArtist){
         case 'Francisco de Goya':
             createObjects(assetsGoya)
             break
+
     }
 
     function createObjects(artist){
@@ -1064,6 +1066,52 @@ function createTargetArtistObjects(targetArtist){
                         "paintingLegend" : "A obra, profundamente enigmática e melancólica, mostra apenas a cabeça de um cão parcialmente submersa em um fundo desolado, transmitindo uma sensação de abandono e impotência."
 
                     }
+                },
+
+                rs : {
+                    madonna : {
+                        "painting" : "madona",
+                        "paintingUrl" : "images/rafael-sanzio/article-images/madona.jpg",
+                        "paintingTitle" : "Madona com o Menino (1504-1505)",
+                        "paintingLegend" : "Uma obra de serenidade e espiritualidade, capturando o laço sagrado entre mãe e filho. As feições delicadas e o uso suave de cores revelam a habilidade de Rafael em humanizar temas sacros."
+                    },
+
+                    escolaAtenas : {
+                        "painting" : "escola-atenas",
+                        "paintingUrl" : "images/rafael-sanzio/article-images/escola-atenas.jpg",
+                        "paintingTitle" : "Escola de Atenas (1510-1511)",
+                        "paintingLegend" : "Tributo aos pensadores da Grécia Antiga, onde Rafael harmoniza filosofia e arquitetura. Neste afresco monumental, as figuras simbolizam a busca pelo conhecimento e a perfeição do pensamento clássico."
+                    },
+
+                    disputa : {
+                        "painting" : "disputa",
+                        "paintingUrl" : "images/rafael-sanzio/article-images/disputa.jpg",
+                        "paintingTitle" : "A Disputa do Santíssimo Sacramento (1509-1510)",
+                        "paintingLegend" : "Uma composição que une o celestial e o terreno. Rafael representa santos, teólogos e Cristo em uma disposição hierárquica, elevando a experiência espiritual."
+                    },
+
+                    retratoBaldassere : {
+                        "painting" : "retrato-baldassere",
+                        "paintingUrl" : "images/rafael-sanzio/article-images/retrato-baldassere.jpg",
+                        "paintingTitle" : "Retrato de Baldassare Castiglione (1514-1515)",
+                        "paintingLegend" : "Neste retrato, Rafael transmite a dignidade e introspecção do intelectual renascentista, equilibrando vivacidade e idealização."
+                    },
+
+                    retratoPapa : {
+                        "painting" : "retrato-papa",
+                        "paintingUrl" : "images/rafael-sanzio/article-images/retrato-papa.jpg",
+                        "paintingTitle" : "Retrato do Papa Leão X com Dois Cardeais (1518-1519)",
+                        "paintingLegend" : "Rafael capta a autoridade e a opulência papal com detalhes ricos. O Papa e seus cardeais, em trajes requintados, refletem a complexidade do poder eclesiástico."
+                    },
+
+                    transfiguração : {
+                        "painting" : "transfiguração",
+                        "paintingUrl" : "images/rafael-sanzio/article-images/transfiguração.jpg",
+                        "paintingTitle" : "A Transfiguração (1517-1520)",
+                        "paintingLegend" : "Última obra-prima de Rafael, que explora o divino com intensidade espiritual. Luz e sombra contrastam para expressar o encontro entre o celestial e o terreno."
+                    },
+
+
                 }
             }
         }
@@ -1128,6 +1176,7 @@ function createTargetArtistObjects(targetArtist){
     
     var informacoesVanGogh = new ArtistInformations('vg')
     var informacoesGoya = new ArtistInformations('fg')
+    var informacoesRafael = new ArtistInformations('rs')
     var informacoesArtists = [informacoesVanGogh, informacoesGoya]
     
     
@@ -1137,6 +1186,9 @@ function createTargetArtistObjects(targetArtist){
             break
         case 'Francisco de Goya':
             informacoesGoya.main()
+            break
+        case 'Rafael Sanzio':
+            informacoesRafael.main()
             break
     }
     
