@@ -231,7 +231,7 @@ body, html{
 
 
 .renascimento-hero-section-bg{
-    background: url(images/raffaello/heroSectionBg-rs.jpg) no-repeat center/cover;
+    background: url(images/rafael-sanzio/heroSectionBg-rs.jpg) no-repeat center/cover;
     height: 100dvh;
     width: 100vw;
     animation: change-bg-animation 1s forwards ease-out;
@@ -323,7 +323,7 @@ body, html{
 }
 
 .artists-menu-rafael{
-    background: url(images/raffaello/self-portrait-rs.jpg) no-repeat center ;
+    background: url(images/rafael-sanzio/heroSectionBg-rs.jpg) no-repeat center ;
     background-size: cover;
 }
 
@@ -398,7 +398,14 @@ body, html{
 }
 
 .artist-name-fg h1{
-    background: rgb(131, 0, 0);
+    background: var(--romantismo-main-color);
+}
+
+.artist-name-rs{
+    align-self: center;
+    height: 50%;
+    padding: 50px;
+    background: var(--renascimento-main-color);
 }
 
 [class^="artist-text"]{
@@ -435,7 +442,11 @@ body, html{
 }
 
 .expand-main-fg{
-    background-color: rgb(131, 0, 0);
+    background-color: var(--romantismo-main-color);
+}
+
+.expand-main-rs{
+    background-color: var(--renascimento-main-color);
 }
 
 .expand-disabled ion-icon{
@@ -480,9 +491,12 @@ body, html{
 }
 
 .artist-picture-left-fg{
-    transform: scaleX(-1);
     background: url(images/goya/goya-divider-paint.png) no-repeat -30px 200px;
+}
 
+.artist-picture-left-rs{
+    transform: scaleX(-1);
+    background: url(images/rafael-sanzio/rafael-divider-paint.png) no-repeat -50px 200px;
 }
 
 [class^=artist-info-subtitle]{
