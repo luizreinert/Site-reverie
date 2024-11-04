@@ -561,13 +561,20 @@ body, html{
     padding: 10px 10px 0px 10px;
 }
 
-.card-title{
+[class^="card-title"]{
+    font-size: 1.2em;
+}
+
+.card-title-vg{
     color: rgb(32, 12, 143);
-    text-wrap: wrap;
+}
+
+.card-title-fg{
+    color: rgb(255, 102, 0);
 }
 
 .card-text {
-    font-size: 14pt;
+    font-size: 0.9em;
     font-weight: 600;
     text-align: left;
     text-wrap: wrap;
