@@ -4,7 +4,7 @@
 
 :root{
     --renascimento-main-color: #BFA15F;
-    --barroco-main-color: #3C2F2F;
+    --barroco-main-color: #4b3c3c;
     --neoclassicismo-main-color: #A1B2C9;
     --romantismo-main-color: #830000;
     --impressionismo-main-color: #8DB596;
@@ -408,6 +408,15 @@ body, html{
     background: var(--renascimento-main-color);
 }
 
+.artist-name-cr{
+    background: var(--barroco-main-color);
+}
+
+.artist-name-jd{
+    background: var(--neoclassicismo-main-color);
+    word-spacing: normal!important;
+}
+
 [class^="artist-text"]{
     align-self: center;
     row-gap: 30px;
@@ -447,6 +456,14 @@ body, html{
 
 .expand-main-rs{
     background-color: var(--renascimento-main-color);
+}
+
+.expand-main-cr{
+    background-color: var(--barroco-main-color);
+}
+
+.expand-main-jd{
+    background-color: var(--neoclassicismo-main-color);
 }
 
 .expand-disabled ion-icon{
@@ -499,6 +516,14 @@ body, html{
     background: url(images/rafael-sanzio/rafael-divider-paint.png) no-repeat -50px 200px;
 }
 
+.artist-picture-right-cr{
+    background: url(images/caravaggio/caravaggio-divider-paint.png) no-repeat -120px 200px;
+}
+
+.artist-picture-right-jd{
+    background: url(images/Jacques-louis-david/jacques-louis-david-divider-paint.png) no-repeat -80px 200px;
+}
+
 [class^=artist-info-subtitle]{
     font-size: 25pt;
     margin-bottom: 15px;
@@ -532,6 +557,14 @@ body, html{
 
 .first-letter-rs{
     color: var(--renascimento-main-color);
+}
+
+.first-letter-cr{
+    color: var(--barroco-main-color);
+}
+
+.first-letter-jd{
+    color: var(--neoclassicismo-main-color);
 }
 
 .first-paragraph{
@@ -585,6 +618,25 @@ body, html{
     color: rgb(71, 38, 15);
 }
 
+[id^="cr-card-btn"]{
+    transition: color 0.6s;
+    color: var(--barroco-main-color);
+}
+
+[id^="cr-card-btn"]:hover{
+    transition: color 0.6s;
+    color: rgb(146, 32, 24);
+}
+
+[id^="jd-card-btn"]{
+    transition: color 0.6s;
+    color: var(--neoclassicismo-main-color);
+}
+
+[id^="jd-card-btn"]:hover{
+    transition: color 0.6s;
+    color:  #5f6b7c;
+}
 
 .card-img-top{
     max-height: 500px;
@@ -606,6 +658,14 @@ body, html{
 
 .card-title-rs{
     color: rgb(71, 38, 15);;
+}
+
+.card-title-cr{
+    color: rgb(146, 32, 24);
+}
+
+.card-title-jd{
+    color: #5f6b7c;
 }
 
 .card-text {
@@ -633,6 +693,14 @@ body, html{
 
 .more-artworks-container-rs{
     background-color: var(--renascimento-main-color);
+}
+
+.more-artworks-container-cr{
+    background-color: var(--barroco-main-color);
+}
+
+.more-artworks-container-jd{
+    background-color: var(--neoclassicismo-main-color);
 }
 
 @keyframes bgArtAnim{
@@ -1102,8 +1170,9 @@ body, html{
 @media (min-width: 991.98px){
     [class^="artist-name"] h1{
         font-size: calc(3.5vw + 5vh);
-        word-spacing: 1000px;
     }
+
+
 }
 
 /* Médio */

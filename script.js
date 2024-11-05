@@ -26,6 +26,7 @@ class heroSectionMenu{
                 "articleHTML" : "rafael-sanzio.html"
                 
             },
+
             barroco: {
                 "artistMenuOption" : this.barroco, 
                 "backgroundClass" : "barroco-hero-section-bg",
@@ -34,9 +35,10 @@ class heroSectionMenu{
                 "movementName" : "Barroco",
                 "artistName" : "Caravaggio",
                 "informationText1" : "O Barroco, nascido no contexto da Reforma e Contra-Reforma, usou a arte como uma ferramenta poderosa de emoção e espiritualidade.",
-                "informationText2" : "Caravaggio foi um dos maiores expoentes desse movimento, utilizando o chiaroscuro para criar contrastes dramáticos que intensificavam o realismo e o impacto emocional de suas obras. O Barroco, com seu dinamismo e teatralidade, se refletiu perfeitamente na obra de Caravaggio, que dava vida a temas religiosos e cotidianos com um vigor quase cinematográfico."
-                
+                "informationText2" : "Caravaggio foi um dos maiores expoentes desse movimento, utilizando o chiaroscuro para criar contrastes dramáticos que intensificavam o realismo e o impacto emocional de suas obras. O Barroco, com seu dinamismo e teatralidade, se refletiu perfeitamente na obra de Caravaggio, que dava vida a temas religiosos e cotidianos com um vigor quase cinematográfico.",
+                "articleHTML" : "caravaggio.html"
             },
+            
             neoclassicismo: {
                 "artistMenuOption" : this.neoclassicismo, 
                 "backgroundClass" : "neoclassicismo-hero-section-bg",
@@ -45,8 +47,8 @@ class heroSectionMenu{
                 "movementName" : "Neoclassicismo",
                 "artistName" : "Jacques-Louis David",
                 "informationText1" : "O Neoclassicismo surgiu como uma reação ao Rococó, buscando uma volta à simplicidade e ao rigor da arte clássica greco-romana.",
-                "informationText2" : "Em meio à Revolução Francesa, Jacques-Louis David utilizou esse estilo para expressar ideais de virtude, disciplina e sacrifício pela pátria. Suas obras, caracterizadas pela clareza formal e temas heroicos, não apenas homenageavam a Antiguidade, mas também serviam como um manifesto político e moral em tempos de mudança."
-                
+                "informationText2" : "Em meio à Revolução Francesa, Jacques-Louis David utilizou esse estilo para expressar ideais de virtude, disciplina e sacrifício pela pátria. Suas obras, caracterizadas pela clareza formal e temas heroicos, não apenas homenageavam a Antiguidade, mas também serviam como um manifesto político e moral em tempos de mudança.",
+                "articleHTML" : "jacques-louis-david.html"
             },
             romantismo: {
                 "artistMenuOption" : this.romantismo, 
@@ -1110,9 +1112,130 @@ function createTargetArtistObjects(targetArtist){
                         "paintingTitle" : "A Transfiguração (1517-1520)",
                         "paintingLegend" : "Última obra-prima de Rafael, que explora o divino com intensidade espiritual. Luz e sombra contrastam para expressar o encontro entre o celestial e o terreno."
                     },
+                },
 
+                cr : {
+                    rapazCesto : {
+                        "painting" : "rapaz-cesto",
+                        "paintingUrl" : "images/caravaggio/article-images/rapaz-cesto.jpg",
+                        "paintingTitle" : "Rapaz com Cesto de Frutas (1593)",
+                        "paintingLegend" : "Retrata um jovem segurando frutas maduras com precisão realista, destacando o domínio de Caravaggio na representação de texturas e detalhes."
+                    },
 
+                    trapaceiros : {
+                        "painting" : "trapaceiros",
+                        "paintingUrl" : "images/caravaggio/article-images/trapaceiros.jpg",
+                        "paintingTitle" : "Os Trapaceiros (1595)",
+                        "paintingLegend" : "Retrata uma cena de trapaça e engano entre jogadores de cartas, capturando com precisão as expressões e gestos dos personagens."
+                    },
+
+                    medusa : {
+                        "painting" : "medusa",
+                        "paintingUrl" : "images/caravaggio/article-images/medusa.jpg",
+                        "paintingTitle" : "Medusa (1597-1598)",
+                        "paintingLegend" : "O momento aterrador da decapitação de Medusa, capturando seu olhar de horror e dor enquanto o sangue escorre de sua cabeça. A obra explora o terror e a intensidade das emoções humanas através do uso dramático de luz e sombra."
+                    },
+
+                    juditeHolofernes : {
+                        "painting" : "judite-holofernes",
+                        "paintingUrl" : "images/caravaggio/article-images/judite-holofernes.jpg",
+                        "paintingTitle" : "Judite e Holofernes (1598-1599)",
+                        "paintingLegend" : "Judite, com expressão de determinação e horror, enquanto decapita Holofernes em uma cena de tensão brutal, onde luz e sombra intensificam o drama e o impacto emocional do momento."
+                    },
+
+                    vocacaoMateus : {
+                        "painting" : "vocacao-mateus",
+                        "paintingUrl" : "images/caravaggio/article-images/vocacao-mateus.jpg",
+                        "paintingTitle" : "A Vocação de São Mateus (1599-1600)",
+                        "paintingLegend" : "Ilumina São Mateus em meio à escuridão, capturando o momento em que ele é chamado por Cristo, com um uso dramático da luz e da sombra."
+                    },
+
+                    daviGolias : {
+                        "painting" : "davi-golias",
+                        "paintingUrl" : "images/caravaggio/article-images/davi-golias.jpg",
+                        "paintingTitle" : "Davi com a Cabeça de Golias (1610)",
+                        "paintingLegend" : "Davi segura a cabeça de Golias com uma expressão de pesar, enquanto o rosto de Golias, possivelmente um autorretrato de Caravaggio, reflete derrota e arrependimento, trazendo um tom sombrio e introspectivo à obra."
+                    },
+
+                    salome : {
+                        "painting" : "salome",
+                        "paintingUrl" : "images/caravaggio/article-images/salome.jpg",
+                        "paintingTitle" : "Salomé com a Cabeça de João Batista (1609) ",
+                        "paintingLegend" : "Com uma expressão de frieza e desolação, Salomé segura a cabeça de João Batista, enquanto o jogo de luz e sombra acentua o peso sombrio do momento, refletindo a crueldade e a resignação presentes na cena."
+                    },
+
+                    decapitacao : {
+                        "painting" : "decapitacao",
+                        "paintingUrl" : "images/caravaggio/article-images/decapitacao.jpg",
+                        "paintingTitle" : "A Decapitação de São João Batista (1608)",
+                        "paintingLegend" : "Captura o momento sombrio do martírio de São João, evidenciando a brutalidade do ato com um jogo intenso de luz e sombra, que ressalta o drama e a fragilidade da vida humana."
+                    }
+                },
+
+                jd : {
+                    belisario : {
+                        "painting" : "belisario",
+                        "paintingUrl" : "images/Jacques-louis-david/article-images/belisario.jpg",
+                        "paintingTitle" : "Belisário Pedindo Esmola (1781)",
+                        "paintingLegend" : "O general Belisário, agora cego e desamparado, implora por ajuda. David expressa a tragédia da queda e a compaixão em um cenário austero."
+                    },
+
+                    andromaca : {
+                        "painting": "andromaca",
+                        "paintingUrl": "images/Jacques-louis-david/article-images/andromaca.jpg",
+                        "paintingTitle": "Andrômaca Chorando sobre o Corpo de Heitor (1783)",
+                        "paintingLegend": "Andrômaca lamenta a morte de Heitor, em uma cena onde o luto e a perda são representados com dignidade e emoção contida."
+                    },
+
+                    juramentoHoracios: {
+                        "painting": "juramento-horacios",
+                        "paintingUrl": "images/Jacques-louis-david/article-images/juramento-horacios.jpg",
+                        "paintingTitle": "Juramento dos Horácios (1784)",
+                        "paintingLegend": "Três irmãos juram lutar por Roma, em uma cena que exalta a lealdade e o dever cívico com uma composição simétrica e solene."
+                    },
+
+                    brutus: {
+                        "painting": "brutus",
+                        "paintingUrl": "images/Jacques-louis-david/article-images/brutus.jpg",
+                        "paintingTitle": "Brutus Recebendo os Corpos de Seus Filhos (1789)",
+                        "paintingLegend": "Brutus encara o sacrifício ao receber os corpos dos filhos traidores, representando o conflito entre o dever e o afeto."
+                    },
+
+                    marat: {
+                        "painting": "marat",
+                        "paintingUrl": "images/Jacques-louis-david/article-images/marat.jpg",
+                        "paintingTitle": "A Morte de Marat (1793)",
+                        "paintingLegend": "Marat, assassinado em sua banheira, é retratado como mártir revolucionário, em uma cena de serenidade trágica e simbólica."
+                    },
+                    napoleaoAlpes : {
+                        "painting": "napoleao-alpes",
+                        "paintingUrl": "images/Jacques-louis-david/article-images/napoleao-alpes.jpg",
+                        "paintingTitle": "Napoleão Cruzando os Alpes (1801)",
+                        "paintingLegend": "Napoleão é representado como um líder heroico e determinado, desafiando os Alpes em um gesto de coragem e força."
+                    },
+
+                    napoleaoCoroacao: {
+                        "painting": "napoleao-coroacao",
+                        "paintingUrl": "images/Jacques-louis-david/article-images/napoleao-coroacao.jpg",
+                        "paintingTitle": "A Coroação de Napoleão (1807)",
+                        "paintingLegend": "A obra retrata o momento da coroação de Napoleão Bonaparte como Imperador da França na Catedral de Notre-Dame de Paris, onde David captura o esplendor e a formalidade do Império."
+                    },
+
+                    amorPsique: {
+                        "painting": "amor-psique",
+                        "paintingUrl": "images/Jacques-louis-david/article-images/amor-psique.jpg",
+                        "paintingTitle": "Amor e Psiquê (1817)",
+                        "paintingLegend": "David representa a cena com uma beleza idealizada, ressaltando a inocência e a pureza desse amor mitológico."
+                    },
+
+                    marteVenus : {
+                        "painting": "marte-venus",
+                        "paintingUrl": "images/Jacques-louis-david/article-images/marte-venus.jpg",
+                        "paintingTitle": "Marte Desarmado por Vênus(1824)",
+                        "paintingLegend": "Marte rende-se à paz e ao amor, desarmado por Vênus, em uma obra final que exalta a harmonia e serenidade."
+                    }
                 }
+
             }
         }
     
@@ -1174,10 +1297,11 @@ function createTargetArtistObjects(targetArtist){
         }
     }
     
-    var informacoesVanGogh = new ArtistInformations('vg')
-    var informacoesGoya = new ArtistInformations('fg')
-    var informacoesRafael = new ArtistInformations('rs')
-    var informacoesArtists = [informacoesVanGogh, informacoesGoya]
+    const informacoesVanGogh = new ArtistInformations('vg')
+    const informacoesGoya = new ArtistInformations('fg')
+    const informacoesRafael = new ArtistInformations('rs')
+    const informacoesCaravaggio = new ArtistInformations('cr')
+    const informacoesJacquesDavid = new ArtistInformations('jd')
     
     
     switch (targetArtist){
@@ -1189,6 +1313,12 @@ function createTargetArtistObjects(targetArtist){
             break
         case 'Rafael Sanzio':
             informacoesRafael.main()
+            break
+        case 'Caravaggio':
+            informacoesCaravaggio.main()
+            break
+        case 'Jacques-Louis David':
+            informacoesJacquesDavid.main()
             break
     }
     
