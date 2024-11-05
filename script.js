@@ -69,7 +69,8 @@ class heroSectionMenu{
                 "movementName" : "Impressionismo",
                 "artistName" : "Claude Monet",
                 "informationText1" : "O Impressionismo, surgido na segunda metade do século XIX, representou uma ruptura com a arte acadêmica tradicional, desafiando as convenções com sua ênfase em capturar os efeitos fugazes da luz e da atmosfera. ",
-                "informationText2" : "Claude Monet, como líder do movimento, foi pioneiro em retratar a natureza de forma subjetiva e inovadora. Suas pinceladas rápidas e paisagens vibrantes, ao mesmo tempo que revolucionaram a pintura, refletiram a modernidade e as transformações sociais de seu tempo, encapsulando a sensação de movimento e mudança constante."
+                "informationText2" : "Claude Monet, como líder do movimento, foi pioneiro em retratar a natureza de forma subjetiva e inovadora. Suas pinceladas rápidas e paisagens vibrantes, ao mesmo tempo que revolucionaram a pintura, refletiram a modernidade e as transformações sociais de seu tempo, encapsulando a sensação de movimento e mudança constante.",
+                "articleHTML" : "monet.html"
                 
             },
             
@@ -1234,8 +1235,51 @@ function createTargetArtistObjects(targetArtist){
                         "paintingTitle": "Marte Desarmado por Vênus(1824)",
                         "paintingLegend": "Marte rende-se à paz e ao amor, desarmado por Vênus, em uma obra final que exalta a harmonia e serenidade."
                     }
-                }
+                },
 
+                cm : {
+                    nenufares : {
+                        "painting": "nenufares",
+                        "paintingUrl": "images/monet/article-images/nenufares.jpg",
+                        "paintingTitle": "Nenúfares com reflexos de um salgueiro (1916-1919)",
+                        "paintingLegend": "Nenúfares flutuam sobre a água em um momento sereno, destacando a habilidade de Monet em capturar reflexos e tranquilidade na natureza."
+                    },
+
+                    estacaoTrem: {
+                        "painting": "estacao-trem",
+                        "paintingUrl": "images/monet/article-images/estacao-trem.jpg",
+                        "paintingTitle": "A Estação de Trem de Saint-Lazare (1877)",
+                        "paintingLegend": "A movimentação dos trens e a atmosfera vaporosa envolvem a cena, capturando a energia e a modernidade da vida urbana do século XIX."
+                    },
+
+                    jardimArtista: {
+                        "painting": "jardim-artista",
+                        "paintingUrl": "images/monet/article-images/jardim-artista.jpg",
+                        "paintingTitle": "O Jardim do Artista em Giverny (1900)",
+                        "paintingLegend": "Uma representação vibrante do jardim de Claude Monet em Giverny, onde as cores e as formas dançam em harmonia sob a luz do sol."
+                    },
+
+                    mulherGuardaSol: {
+                        "painting": "mulher-guarda-sol",
+                        "paintingUrl": "images/monet/article-images/mulher-guarda-sol.jpg",
+                        "paintingTitle": "A Mulher com Guarda-Sol (1875)",
+                        "paintingLegend": "Uma mulher caminha sob a luz do sol, segurando um guarda-sol, enquanto a luz e a sombra dançam sobre sua figura, capturando um instante efêmero de graça."
+                    },
+
+                    nascerSol: {
+                        "painting": "nascer-sol",
+                        "paintingUrl": "images/monet/article-images/nascer-sol.jpg",
+                        "paintingTitle": "Impressão, Nascer do Sol (1872)",
+                        "paintingLegend": "Uma cena matinal no porto de Le Havre, onde a luz e a atmosfera se entrelaçam, dando nome ao movimento Impressionista."
+                    },
+
+                    catedralRouen: {
+                        "painting": "catedral-rouen",
+                        "paintingUrl": "images/monet/article-images/catedral-rouen.jpg",
+                        "paintingTitle": "A Catedral de Rouen (1893)",
+                        "paintingLegend": "A fachada da catedral é revelada em uma variedade de luzes e sombras, mostrando a habilidade de Monet em capturar a mudança de atmosfera em diferentes momentos do dia."
+                    }
+                }
             }
         }
     
@@ -1302,6 +1346,7 @@ function createTargetArtistObjects(targetArtist){
     const informacoesRafael = new ArtistInformations('rs')
     const informacoesCaravaggio = new ArtistInformations('cr')
     const informacoesJacquesDavid = new ArtistInformations('jd')
+    const informacoesMonet = new ArtistInformations('cm')
     
     
     switch (targetArtist){
@@ -1319,6 +1364,10 @@ function createTargetArtistObjects(targetArtist){
             break
         case 'Jacques-Louis David':
             informacoesJacquesDavid.main()
+            break
+
+        case 'Claude Monet':
+            informacoesMonet.main()
             break
     }
     
