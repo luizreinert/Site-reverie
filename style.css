@@ -420,6 +420,10 @@ body, html{
     background-color: var(--impressionismo-main-color);
 }
 
+.artist-name-pp{
+    background-color: var(--cubismo-main-color);
+}
+
 [class^="artist-text"]{
     align-self: center;
     row-gap: 30px;
@@ -471,6 +475,10 @@ body, html{
 
 .expand-main-cm{
     background-color: var(--impressionismo-main-color);
+}
+
+.expand-main-pp{
+    background-color: var(--cubismo-main-color);
 }
 
 .expand-disabled ion-icon{
@@ -536,6 +544,10 @@ body, html{
     background: url(images/monet/monet-divider-paint.png) no-repeat -50px 100px;
 }
 
+.artist-picture-right-pp{
+    background: url(images/picasso/picaso-divider-paint.png) no-repeat -50px 200px;
+}
+
 [class^=artist-info-subtitle]{
     font-size: 25pt;
     margin-bottom: 15px;
@@ -551,6 +563,22 @@ body, html{
 
 .artist-info-subtitle-rs{
     color: var(--renascimento-main-color);
+}
+
+.artist-info-subtitle-cm{
+    color: var(--impressionismo-main-color);
+}
+
+.artist-picture-left-jd{
+    color: var(--neoclassicismo-main-color);
+}
+
+.artist-info-subtitle-cg{
+    color: var(--barroco-main-color);
+}
+
+.artist-info-subtitle-pp{
+    color: var(--cubismo-main-color);
 }
 
 [class^=first-letter]{
@@ -581,6 +609,10 @@ body, html{
 
 .first-letter-cm{
     color: var(--impressionismo-main-color);
+}
+
+.first-letter-pp{
+    color: var(--cubismo-main-color);
 }
 
 .first-paragraph{
@@ -664,6 +696,16 @@ body, html{
     color:  #3c6145;
 }
 
+[id^="pp-card-btn"]{
+    transition: color 0.6s;
+    color: var(--cubismo-main-color);
+}
+
+[id^="pp-card-btn"]:hover{
+    transition: color 0.6s;
+    color:  #6961a8;
+}
+
 .card-img-top{
     max-height: 500px;
     object-fit: contain;
@@ -695,7 +737,11 @@ body, html{
 }
 
 .card-title-cm{
-    color:  #3c6145;
+    color: #3c6145;
+}
+
+.card-title-pp{
+    color: #6961a8;
 }
 
 .card-text {
@@ -735,6 +781,10 @@ body, html{
 
 .more-artworks-container-cm{
     background-color: var(--impressionismo-main-color);
+}
+
+.more-artworks-container-pp{
+    background-color: var(--cubismo-main-color);
 }
 
 @keyframes bgArtAnim{

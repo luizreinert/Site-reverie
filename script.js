@@ -94,8 +94,10 @@ class heroSectionMenu{
                 "movementName" : "Cubismo",
                 "artistName" : "Pablo Picasso",
                 "informationText1" : "O Cubismo foi uma revolução na forma de representar a realidade, fragmentando objetos e figuras em formas geométricas para mostrar múltiplos ângulos simultaneamente.",
-                "informationText2" : " Pablo Picasso foi pioneiro nessa abordagem, transformando a maneira como enxergamos o mundo. Suas obras cubistas, com linhas angulosas e sobreposição de planos, exploram uma visão complexa e multifacetada da realidade. Com sua ousadia criativa, deu ao Cubismo um impacto duradouro, fazendo com que a arte refletisse a fragmentação e a profundidade do mundo moderno."
+                "informationText2" : "Pablo Picasso foi pioneiro nessa abordagem, transformando a maneira como enxergamos o mundo. Suas obras cubistas, com linhas angulosas e sobreposição de planos, exploram uma visão complexa e multifacetada da realidade. Com sua ousadia criativa, deu ao Cubismo um impacto duradouro, fazendo com que a arte refletisse a fragmentação e a profundidade do mundo moderno.",
+                "articleHTML" : "picasso.html"
             },
+
         }
     }
 
@@ -1279,7 +1281,74 @@ function createTargetArtistObjects(targetArtist){
                         "paintingTitle": "A Catedral de Rouen (1893)",
                         "paintingLegend": "A fachada da catedral é revelada em uma variedade de luzes e sombras, mostrando a habilidade de Monet em capturar a mudança de atmosfera em diferentes momentos do dia."
                     }
+                },
+
+                pp : {
+                    laVie: {
+                        "painting": "la-vie",
+                        "paintingUrl": "images/picasso/article-images/la-vie.jpg",
+                        "paintingTitle": "La Vie (1903)",
+                        "paintingLegend": "Uma obra profunda que simboliza a tristeza e complexidade da existência humana, marcando o ápice do Período Azul."
+                    },
+                
+                    velhoGuitarrista: {
+                        "painting": "velho-guitarrista",
+                        "paintingUrl": "images/picasso/article-images/velho-guitarrista.jpg",
+                        "paintingTitle": "Velho Guitarrista Cego (1903-1904)",
+                        "paintingLegend": "Em tons de azul melancólicos, um homem frágil toca sua guitarra, evocando solidão. Essa obra reflete o sentimento de desolação do Período Azul de Picasso."
+                    },
+                
+                    acrobata: {
+                        "painting": "acrobata",
+                        "paintingUrl": "images/picasso/article-images/acrobata.jpg",
+                        "paintingTitle": "Acrobata e Jovem Arlequim (1905)",
+                        "paintingLegend": "Esta pintura explora a vulnerabilidade e fragilidade das figuras circenses, características do Período Rosa de Picasso."
+                    },
+                
+                    lesDemoiselles: {
+                        "painting": "les-demoiselles",
+                        "paintingUrl": "images/picasso/article-images/les-demoiselles.jpg",
+                        "paintingTitle": "Les Demoiselles d'Avignon (1907)",
+                        "paintingLegend": "Com traços angulares e olhares penetrantes, cinco figuras femininas se fragmentam em formas ousadas. Picasso rompe a tradição, inaugurando o Cubismo e desafiando a representação clássica do corpo humano."
+                    },
+                
+                    doraMaar: {
+                        "painting": "dora-maar",
+                        "paintingUrl": "images/picasso/article-images/dora-maar.jpg",
+                        "paintingTitle": "Cabeça de Mulher - Dora Maar (1941)",
+                        "paintingLegend": "Picasso usa planos assimétricos e cores vibrantes para retratar sua musa, Dora Maar, misturando intensidade e mistério em uma imagem de tristeza e contemplação."
+                    },
+                
+                    mulherChorando: {
+                        "painting": "mulher-chorando",
+                        "paintingUrl": "images/picasso/article-images/mulher-chorando.jpg",
+                        "paintingTitle": "A Mulher que Chora (1937)",
+                        "paintingLegend": "O rosto anguloso e as lágrimas cristalizadas expressam uma dor profunda. Picasso captura o luto em linhas fraturadas, simbolizando o impacto emocional da guerra civil."
+                    },
+                
+                    retratoAmbroise: {
+                        "painting": "retrato-ambroise",
+                        "paintingUrl": "images/picasso/article-images/retrato-ambroise.jpg",
+                        "paintingTitle": "Retrato de Ambroise Vollard (1910)",
+                        "paintingLegend": "Uma obra cubista que desconstrói a figura de Vollard, influente marchand de Picasso, em fragmentos geométricos complexos."
+                    },
+                
+                    violino: {
+                        "painting": "violino",
+                        "paintingUrl": "images/picasso/article-images/violino.jpg",
+                        "paintingTitle": "Violino e Uvas (1912)",
+                        "paintingLegend": "Pintura cubista que decompõe o violino em formas abstratas, explorando a geometria e perspectiva fragmentada."
+                    },
+
+                    guernica : {
+                        "painting": "guernica",
+                        "paintingUrl": "images/picasso/article-images/guernica.jpg",
+                        "paintingTitle": "Guernica (1937)",
+                        "paintingLegend": "Em tons de preto, branco e cinza, Guernica expressa o horror da guerra e a angústia do bombardeio sobre a cidade basca. As figuras distorcidas e as expressões de desespero denunciam a violência e a opressão.<"
+
+                    }
                 }
+                
             }
         }
     
@@ -1347,6 +1416,7 @@ function createTargetArtistObjects(targetArtist){
     const informacoesCaravaggio = new ArtistInformations('cr')
     const informacoesJacquesDavid = new ArtistInformations('jd')
     const informacoesMonet = new ArtistInformations('cm')
+    const informacoesPicasso = new ArtistInformations('pp')
     
     
     switch (targetArtist){
@@ -1365,9 +1435,11 @@ function createTargetArtistObjects(targetArtist){
         case 'Jacques-Louis David':
             informacoesJacquesDavid.main()
             break
-
         case 'Claude Monet':
             informacoesMonet.main()
+            break
+        case 'Pablo Picasso':
+            informacoesPicasso.main()
             break
     }
     
