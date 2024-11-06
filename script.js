@@ -61,6 +61,7 @@ class heroSectionMenu{
                 "informationText2" : "Francisco de Goya, embora tenha começado sua carreira sob a influência das normas clássicas, tornou-se uma figura central do Romantismo ao explorar temas sombrios e psicológicos em suas obras. Goya foi pioneiro em expressar a fragilidade da vida e a loucura, mostrando a complexidade das emoções humanas em um contexto de guerra e sofrimento.",
                 "articleHTML" : "goya.html"
             },
+            
             impressionismo: {
                 "artistMenuOption" : this.impressionismo, 
                 "backgroundClass" : "impressionismo-hero-section-bg",
@@ -168,7 +169,6 @@ class heroSectionMenu{
                     element.classList.add('article-btn-shown')
                     break
             }
-
         })
         setTimeout(() => {
             infoContainerElements.forEach((element) => {
@@ -180,22 +180,16 @@ class heroSectionMenu{
 
     openArticle(targetArtistHtml, targetArtist){
         var articleContainer = document.getElementById('article-container')
+
         fetch(targetArtistHtml)
             .then(r => r.text())
             .then(html => {
                 articleContainer.innerHTML = html
                 createTargetArtistObjects(targetArtist)
-                try{
-                    switch(articleContainer.innerHTML.includes('div')){
-                        case true:
-                            break
-                        case false:
-                            articleContainer.innerHTML = ''
-                    }
-                } catch (e){
-                    //
-                }
             })
+        setTimeout(() => {
+            window.scrollTo(0, 1000)
+        }, 200);
 
     }
 
@@ -275,9 +269,9 @@ class heroSectionScrollEvents{
                 this.titleContainer.classList.add('title-container-active')
 
                 try{
-                    const cururu = document.getElementById('hero-bg-div')
-                    cururu.classList.remove('bg-active')      
-                    cururu.classList.add('bg-inactive')  
+                    const heroBgDiv = document.getElementById('hero-bg-div')
+                    heroBgDiv.classList.remove('bg-active')      
+                    heroBgDiv.classList.add('bg-inactive')  
                     const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
                     heroSectionInfoContainer.classList.add('hero-section-info-shown')  
                 } catch(e){
@@ -326,9 +320,9 @@ class heroSectionScrollEvents{
                         this.artistsContainer.classList.add('artists-menu-container-active')
         
                         try{
-                            const cururu = document.getElementById('hero-bg-div')
-                            cururu.classList.add('bg-active')  
-                            cururu.classList.remove('bg-inactive')
+                            const heroBgDiv = document.getElementById('hero-bg-div')
+                            heroBgDiv.classList.add('bg-active')  
+                            heroBgDiv.classList.remove('bg-inactive')
                             const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
                             //heroSectionInfoContainer.classList.add('hero-section-info-shown')  
                         } catch(e){
@@ -367,9 +361,9 @@ class heroSectionScrollEvents{
                         this.artistsContainer.classList.add('artists-menu-container-active')
         
                         try{
-                            const cururu = document.getElementById('hero-bg-div')
-                            cururu.classList.add('bg-active')  
-                            cururu.classList.remove('bg-inactive')
+                            const heroBgDiv = document.getElementById('hero-bg-div')
+                            heroBgDiv.classList.add('bg-active')  
+                            heroBgDiv.classList.remove('bg-inactive')
                             const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
                             //heroSectionInfoContainer.classList.add('hero-section-info-shown')  
                         } catch(e){
@@ -415,9 +409,9 @@ class heroSectionScrollEvents{
                 this.artistsContainer.classList.remove('artists-menu-container-active')
 
                 try{
-                    const cururu = document.getElementById('hero-bg-div')
-                    cururu.classList.remove('bg-active')
-                    cururu.classList.add('bg-inactive') 
+                    const heroBgDiv = document.getElementById('hero-bg-div')
+                    heroBgDiv.classList.remove('bg-active')
+                    heroBgDiv.classList.add('bg-inactive') 
                     const heroSectionInfoContainer = document.getElementById('hero-section-info-container')
                     heroSectionInfoContainer.classList.remove('hero-section-info-shown')
                 } catch(e){
@@ -431,7 +425,8 @@ class heroSectionScrollEvents{
     start(){
         this.middlePageRefreshFix()
         this.firstScrollLock()
-        this.scrollToTop()
+
+
     }
 }
 
@@ -592,11 +587,11 @@ function createTargetArtistObjects(targetArtist){
                 },
                 
                 fg : {
-                    firstBg : "url('images/goya/goya-first-bg.jpg') no-repeat fixed center / cover",
+                    firstBg : "url('images/goya/artworks-images/goya-first-bg.jpg') no-repeat fixed center / cover",
     
                     moldura1 : {
                         "element" : this.moldura1,
-                        "imageUrl" : "url('images/goya/voo-das-bruxas.jpg')",
+                        "imageUrl" : "url('images/goya/artworks-images/voo-das-bruxas.jpg')",
                         "bgColor" : "#745516",
                         "title": "O Voo Das Bruxas",
                         "date": "1798",
@@ -610,7 +605,7 @@ function createTargetArtistObjects(targetArtist){
     
                     moldura2 : {
                         "element" : this.moldura2,
-                        "imageUrl" : "url('images/goya/sabá-bruxas.jpg') ",
+                        "imageUrl" : "url('images/goya/artworks-images/sabá-bruxas.jpg') ",
                         "bgColor" : "#576a52",
                         "title": "Sabá das Bruxas",
                         "date": "1798",
@@ -625,7 +620,7 @@ function createTargetArtistObjects(targetArtist){
     
                     moldura3 : {
                         "element" : this.moldura3,
-                        "imageUrl" : "url('images/goya/feitiço.jpg')",
+                        "imageUrl" : "url('images/goya/artworks-images/feitiço.jpg')",
                         "bgColor" : "#3b4851",
                         "title": "O Feitiço",
                         "date": "1798",
@@ -639,7 +634,7 @@ function createTargetArtistObjects(targetArtist){
     
                     moldura4 : {
                         "element" : this.moldura4,
-                        "imageUrl" : "url('images/goya/saturno.jpg')",
+                        "imageUrl" : "url('images/goya/artworks-images/saturno.jpg')",
                         "bgColor" : '#921d00',
                         "title": "Saturno Devorando um Filho",
                         "date": "1820-1823",
@@ -650,7 +645,307 @@ function createTargetArtistObjects(targetArtist){
                         "firstP": "A composição é centrada na figura grotesca de Saturno, um deus romano, representado como uma figura idosa e monstruosa, devorando um de seus filhos. Na mitologia romana, Saturno (ou Cronos na mitologia grega) devorava seus filhos por medo de ser destronado por eles, conforme a profecia. Goya retrata Saturno não como um deus poderoso e temível, mas como uma figura grotesca e desesperada, refletindo talvez a inevitabilidade do tempo e a futilidade da luta contra ele.",
                         "secondP": "Goya pintou essa obra em um período de sua vida marcado por doenças físicas e mentais, além de uma profunda desilusão com a política e a sociedade da época. A série das Pinturas Negras como um todo revela suas preocupações com a mortalidade, a decadência e a corrupção da humanidade."
                     },
-                }
+                },
+
+                rs : {
+                    firstBg : "url('images/rafael-sanzio/artworks-images/rs-first-bg.jpeg') no-repeat fixed center / cover",
+    
+                    moldura1: {
+                        "element": this.moldura1,
+                        "imageUrl": "url('images/rafael-sanzio/artworks-images/madona-sistina.jpg')",
+                        "bgColor": "#1e4218",
+                        "title": "Madona Sistina",
+                        "date": "1512",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "265 x 196 cm",
+                        "localization": "Pinacoteca dos Mestres Antigos, Dresden, Alemanha",
+                        "citation": "Criada para o altar da Igreja de San Sisto, em Piacenza, encomendada pelo Papa Júlio II.",
+                        "firstP": "A Madona Sistina é uma das obras mais reverenciadas de Rafael, retratando a Virgem Maria carregando o Menino Jesus em uma postura de serenidade, enquanto olha diretamente para o espectador. Ao seu lado, estão São Sixto e Santa Bárbara, ambos figuras de devoção na Igreja Católica. Rafael consegue capturar a suavidade e compaixão de Maria com um detalhamento meticuloso e uma paleta de cores sublime, que reforça a atmosfera celestial da pintura.",
+                        "secondP": "Abaixo da Virgem e do Menino, dois querubins repousam, apoiando-se no parapeito com expressões pensativas, adicionando uma camada de contemplação à cena. Estes anjos, apesar de pequenos, ganharam fama própria e são amplamente reproduzidos na cultura popular. A composição equilibrada de Rafael e o uso magistral do espaço criam um fluxo visual que guia o olhar do observador ao centro da obra, destacando a figura da Madona e o menino Jesus como símbolos de fé e esperança."
+                    },
+                    
+                    moldura2: {
+                        "element": this.moldura2,
+                        "imageUrl": "url('images/rafael-sanzio/artworks-images/visao-ezequiel.jpg')",
+                        "bgColor": "#464d7a",
+                        "title": "Visão de Ezequiel",
+                        "date": "1518",
+                        "technique": "Óleo sobre painel",
+                        "dimensions": "40 x 30 cm",
+                        "localization": "Palazzo Pitti, Florença, Itália",
+                        "citation": "Inspirada pelo Livro de Ezequiel, que descreve a visão de um trono celeste, encomendado pela família Medici.",
+                        "firstP": "A obra retrata a grandiosa visão do profeta Ezequiel, uma passagem bíblica onde ele vê a glória de Deus rodeado por querubins e anjos. Deus aparece como uma figura imponente no centro, elevado sobre um carro de fogo. Ao seu redor, criaturas celestiais carregam-no em uma tempestade luminosa, representando a magnitude e o mistério divino.",
+                        "secondP": "A técnica de Rafael destaca a luz divina que envolve o grupo central, simbolizando a presença espiritual que transcende o humano. Os detalhes dos rostos, as poses dramáticas e as cores profundas refletem a influência do Renascimento sobre o artista, que enfatiza o poder místico da experiência espiritual de Ezequiel."
+                    },
+    
+                    moldura3: {
+                        "element": this.moldura3,
+                        "imageUrl": "url('images/rafael-sanzio/artworks-images/sao-jorge.jpg')",
+                        "bgColor": "#346b29",
+                        "title": "São Jorge e o Dragão",
+                        "date": "1505",
+                        "technique": "Óleo sobre madeira",
+                        "dimensions": "28.5 x 21.5 cm",
+                        "localization": "Museu do Louvre, Paris, França",
+                        "citation": "Possivelmente uma encomenda da corte de Urbino, simbolizando a luta entre o bem e o mal.",
+                        "firstP": "Nesta obra, São Jorge aparece em plena batalha contra o dragão, um símbolo clássico do mal, armado com uma lança e montado em um cavalo branco. O cenário é de grande tensão, com o dragão curvando-se ao chão e São Jorge em um movimento decisivo, prestes a vencê-lo. Rafael aplica detalhes cuidadosos na armadura do santo e nas escamas do dragão, criando um contraste entre o herói e a fera.",
+                        "secondP": "O fundo da obra, com tons verdes e azulados, remete a uma paisagem serena, que contrasta com a ação violenta do primeiro plano. Esta composição cria uma narrativa visual que celebra a coragem e a virtude, qualidades personificadas por São Jorge, que, segundo a lenda, salvou uma cidade da ameaça do dragão."
+                    },
+    
+                    moldura4: {
+                        "element": this.moldura4,
+                        "imageUrl": "url('images/rafael-sanzio/artworks-images/casamento-virgem.jpg')",
+                        "bgColor": "#a38d5a",
+                        "title": "Casamento da Virgem",
+                        "date": "1504",
+                        "technique": "Óleo sobre madeira",
+                        "dimensions": "170 x 117 cm",
+                        "localization": "Pinacoteca de Brera, Milão, Itália",
+                        "citation": "Criada para a Igreja de San Francesco em Città di Castello, marcando o estilo clássico e harmonioso de Rafael.",
+                        "firstP": "O 'Casamento da Virgem' é uma obra-prima que retrata o momento em que José e Maria se casam, abençoado por um sacerdote ao centro da cena. Atrás do casal, um templo com uma cúpula circular cria profundidade, destacando-se como símbolo de unidade espiritual e terrena. Rafael utiliza a perspectiva de forma exemplar, organizando figuras em camadas que dão à cena uma sensação de harmonia e equilíbrio.",
+                        "secondP": "A atenção aos detalhes no vestuário dos personagens e a expressão serena da Virgem revelam a habilidade do artista em transmitir emoções sutis e a importância do momento. A escolha das cores suaves, com tons terrosos e dourados, intensifica a atmosfera sagrada e serena da obra, estabelecendo Rafael como um mestre na fusão entre arquitetura e narrativa visual."
+                    },
+                },
+
+                cr : {
+                    firstBg : "url('images/caravaggio/artworks-images/first-bg-cr.jpg') no-repeat fixed top / cover",
+    
+                    moldura1: {
+                        "element": this.moldura1,
+                        "imageUrl": "url('images/rafael-sanzio/artworks-images/madona-sistina.jpg')",
+                        "bgColor": "#1e4218",
+                        "title": "Madona Sistina",
+                        "date": "1512",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "265 x 196 cm",
+                        "localization": "Pinacoteca dos Mestres Antigos, Dresden, Alemanha",
+                        "citation": "Criada para o altar da Igreja de San Sisto, em Piacenza, encomendada pelo Papa Júlio II.",
+                        "firstP": "A Madona Sistina é uma das obras mais reverenciadas de Rafael, retratando a Virgem Maria carregando o Menino Jesus em uma postura de serenidade, enquanto olha diretamente para o espectador. Ao seu lado, estão São Sixto e Santa Bárbara, ambos figuras de devoção na Igreja Católica. Rafael consegue capturar a suavidade e compaixão de Maria com um detalhamento meticuloso e uma paleta de cores sublime, que reforça a atmosfera celestial da pintura.",
+                        "secondP": "Abaixo da Virgem e do Menino, dois querubins repousam, apoiando-se no parapeito com expressões pensativas, adicionando uma camada de contemplação à cena. Estes anjos, apesar de pequenos, ganharam fama própria e são amplamente reproduzidos na cultura popular. A composição equilibrada de Rafael e o uso magistral do espaço criam um fluxo visual que guia o olhar do observador ao centro da obra, destacando a figura da Madona e o menino Jesus como símbolos de fé e esperança."
+                    },
+                    
+                    moldura2: {
+                        "element": this.moldura2,
+                        "imageUrl": "url('images/rafael-sanzio/artworks-images/visao-ezequiel.jpg')",
+                        "bgColor": "#464d7a",
+                        "title": "Visão de Ezequiel",
+                        "date": "1518",
+                        "technique": "Óleo sobre painel",
+                        "dimensions": "40 x 30 cm",
+                        "localization": "Palazzo Pitti, Florença, Itália",
+                        "citation": "Inspirada pelo Livro de Ezequiel, que descreve a visão de um trono celeste, encomendado pela família Medici.",
+                        "firstP": "A obra retrata a grandiosa visão do profeta Ezequiel, uma passagem bíblica onde ele vê a glória de Deus rodeado por querubins e anjos. Deus aparece como uma figura imponente no centro, elevado sobre um carro de fogo. Ao seu redor, criaturas celestiais carregam-no em uma tempestade luminosa, representando a magnitude e o mistério divino.",
+                        "secondP": "A técnica de Rafael destaca a luz divina que envolve o grupo central, simbolizando a presença espiritual que transcende o humano. Os detalhes dos rostos, as poses dramáticas e as cores profundas refletem a influência do Renascimento sobre o artista, que enfatiza o poder místico da experiência espiritual de Ezequiel."
+                    },
+    
+                    moldura3: {
+                        "element": this.moldura3,
+                        "imageUrl": "url('images/rafael-sanzio/artworks-images/sao-jorge.jpg')",
+                        "bgColor": "#346b29",
+                        "title": "São Jorge e o Dragão",
+                        "date": "1505",
+                        "technique": "Óleo sobre madeira",
+                        "dimensions": "28.5 x 21.5 cm",
+                        "localization": "Museu do Louvre, Paris, França",
+                        "citation": "Possivelmente uma encomenda da corte de Urbino, simbolizando a luta entre o bem e o mal.",
+                        "firstP": "Nesta obra, São Jorge aparece em plena batalha contra o dragão, um símbolo clássico do mal, armado com uma lança e montado em um cavalo branco. O cenário é de grande tensão, com o dragão curvando-se ao chão e São Jorge em um movimento decisivo, prestes a vencê-lo. Rafael aplica detalhes cuidadosos na armadura do santo e nas escamas do dragão, criando um contraste entre o herói e a fera.",
+                        "secondP": "O fundo da obra, com tons verdes e azulados, remete a uma paisagem serena, que contrasta com a ação violenta do primeiro plano. Esta composição cria uma narrativa visual que celebra a coragem e a virtude, qualidades personificadas por São Jorge, que, segundo a lenda, salvou uma cidade da ameaça do dragão."
+                    },
+    
+                    moldura4: {
+                        "element": this.moldura4,
+                        "imageUrl": "url('images/rafael-sanzio/artworks-images/casamento-virgem.jpg')",
+                        "bgColor": "#a38d5a",
+                        "title": "Casamento da Virgem",
+                        "date": "1504",
+                        "technique": "Óleo sobre madeira",
+                        "dimensions": "170 x 117 cm",
+                        "localization": "Pinacoteca de Brera, Milão, Itália",
+                        "citation": "Criada para a Igreja de San Francesco em Città di Castello, marcando o estilo clássico e harmonioso de Rafael.",
+                        "firstP": "O 'Casamento da Virgem' é uma obra-prima que retrata o momento em que José e Maria se casam, abençoado por um sacerdote ao centro da cena. Atrás do casal, um templo com uma cúpula circular cria profundidade, destacando-se como símbolo de unidade espiritual e terrena. Rafael utiliza a perspectiva de forma exemplar, organizando figuras em camadas que dão à cena uma sensação de harmonia e equilíbrio.",
+                        "secondP": "A atenção aos detalhes no vestuário dos personagens e a expressão serena da Virgem revelam a habilidade do artista em transmitir emoções sutis e a importância do momento. A escolha das cores suaves, com tons terrosos e dourados, intensifica a atmosfera sagrada e serena da obra, estabelecendo Rafael como um mestre na fusão entre arquitetura e narrativa visual."
+                    },
+                },
+
+                jd : {
+                    firstBg : "url('images/Jacques-louis-david/artworks-images/first-bg-jd.jpg') no-repeat fixed center / cover",
+    
+                    moldura1: {
+                        "element": this.moldura1,
+                        "imageUrl": "url('images/jacques-louis-david/artworks-images/imperador-napoleao.jpg')",
+                        "bgColor": "#3a3f48",
+                        "title": "O Imperador Napoleão em seu Gabinete de Trabalho",
+                        "date": "1812",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "203 x 125 cm",
+                        "localization": "National Gallery of Art, Washington, D.C., EUA",
+                        "citation": "Retrato icônico encomendado por um colaborador próximo de Napoleão, com o intuito de reforçar sua imagem como líder incansável.",
+                        "firstP": "Nesta obra, Napoleão é retratado em seu gabinete, vestido com um uniforme militar e segurando uma pena. A cena simboliza sua dedicação incansável ao trabalho em prol da França, evidenciada pelos papéis e documentos espalhados pela mesa. O relógio ao fundo, marcando as quatro da manhã, sugere que o imperador trabalhava longas horas para o bem de seu país.",
+                        "secondP": "David utiliza o claro-escuro para destacar a figura de Napoleão, contrastando sua figura com o fundo escuro e criando uma aura de seriedade e poder. A postura resoluta e o olhar determinado do imperador transmitem a força de um líder que governa com disciplina e controle, reforçando sua imagem de estadista firme e dedicado."
+                    },
+                    
+                    moldura2: {
+                        "element": this.moldura2,
+                        "imageUrl": "url('images/jacques-louis-david/artworks-images/leonidas.jpg')",
+                        "bgColor": "#5b463a",
+                        "title": "Leônidas em Termópilas",
+                        "date": "1814",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "395 x 531 cm",
+                        "localization": "Museu do Louvre, Paris, França",
+                        "citation": "Encomendada pelo rei Luís XVIII, a obra exalta a coragem e o sacrifício dos guerreiros espartanos.",
+                        "firstP": "A pintura retrata o momento em que Leônidas, rei de Esparta, lidera seus homens nas Termópilas, em um ato de resistência heroica contra as forças persas. O herói espartano está ao centro, armado e preparado para o combate, cercado por guerreiros prontos para sacrificar suas vidas. David compõe a cena com precisão, criando um ambiente solene que evoca a nobreza do sacrifício e a honra espartana.",
+                        "secondP": "A utilização de cores quentes e terrenas reflete a dureza do cenário de batalha. A grandiosidade das figuras e os gestos heroicos revelam a influência clássica na obra de David, que celebra a virtude da bravura e a lealdade, atributos fundamentais dos espartanos e representativos dos valores revolucionários franceses que o artista prezava."
+                    },
+    
+                    moldura3: {
+                        "element": this.moldura3,
+                        "imageUrl": "url('images/jacques-louis-david/artworks-images/apolo-diana.jpg')",
+                        "bgColor": "#8b6e62",
+                        "title": "Apolo e Diana Castigam Níobe Matando seus Filhos",
+                        "date": "1772",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "180 x 220 cm",
+                        "localization": "Palácio de Versalhes, Versalhes, França",
+                        "citation": "Obra inspirada na mitologia grega, ilustrando o castigo divino imposto a Níobe por sua arrogância.",
+                        "firstP": "A cena mitológica ilustra o momento trágico em que Apolo e Diana, em resposta ao orgulho de Níobe, castigam-na matando seus filhos. David capta o horror da mãe enquanto vê seus filhos caindo, atingidos por flechas dos deuses. O desespero e a dor de Níobe são expressos em seu gesto protetor, enquanto seus filhos, em diferentes estágios de agonia, reforçam a intensidade da tragédia.",
+                        "secondP": "O contraste entre o corpo divino de Apolo e o caos mortal abaixo representa a separação entre os mundos divino e humano. David usa luz e sombra para acentuar a tensão emocional da cena, explorando temas de orgulho e punição, bem como a impotência humana diante da vontade divina."
+                    },
+                    
+                    moldura4: {
+                        "element": this.moldura4,
+                        "imageUrl": "url('images/jacques-louis-david/artworks-images/lavoisier.jpg')",
+                        "bgColor": "#5d5a56",
+                        "title": "Retrato de Antoine Lavoisier e Sua Mulher",
+                        "date": "1788",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "259 x 194 cm",
+                        "localization": "Museu Metropolitano de Arte, Nova Iorque, EUA",
+                        "citation": "Pintura que celebra Lavoisier, considerado o pai da química moderna, e sua esposa Marie-Anne, uma mulher culta e sua colaboradora.",
+                        "firstP": "Nesta obra, Lavoisier e sua esposa Marie-Anne são retratados em um ambiente de estudo. Lavoisier, rodeado por equipamentos científicos, é representado em um momento de pausa, com sua esposa ao lado, olhando diretamente para o espectador. Marie-Anne, que frequentemente colaborava com seu marido em suas pesquisas, é representada como uma figura importante, ao lado de um homem que revolucionou a ciência.",
+                        "secondP": "David utiliza uma composição serena e cores suaves para capturar a intelectualidade e o status social do casal. Os objetos no fundo e a postura dos personagens transmitem o respeito pelo conhecimento científico e a importância do trabalho colaborativo. Este retrato é não só uma representação do casal, mas também um tributo ao avanço da ciência e ao papel das mulheres na esfera intelectual."
+                    }
+                }, 
+
+                cm : {
+                    firstBg : "url('images/monet/artworks-images/first-bg-cm.jpg') no-repeat fixed center / cover",
+    
+                    moldura1: {
+                        "element": this.moldura1,
+                        "imageUrl": "url('images/monet/artworks-images/madame-monet.jpg')",
+                        "bgColor": "#c25757",
+                        "title": "Madame Monet Trajando um Kimono",
+                        "date": "1875",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "231 x 142 cm",
+                        "localization": "Museum of Fine Arts, Boston, EUA",
+                        "citation": "Exemplo do fascínio pela cultura oriental que influenciou muitos artistas impressionistas, incluindo Monet.",
+                        "firstP": "Nesta obra, Camille Monet, esposa do artista, é representada usando um exuberante quimono japonês. O fundo, coberto por um painel de leques orientais, realça o exotismo e o apelo estético da cultura japonesa que influenciou Monet e muitos de seus contemporâneos. A escolha de cores vivas e o padrão floral do quimono criam uma composição vibrante e rica em detalhes.",
+                        "secondP": "A postura de Madame Monet, combinada com o contexto exótico, sugere o interesse do casal pela moda e cultura orientais, que estavam em voga na época. Monet explora aqui um estilo mais detalhado e uma técnica cuidadosa para acentuar a complexidade das texturas, destacando seu talento para representar superfícies delicadas e padrões decorativos."
+                    },
+                    
+                    moldura2: {
+                        "element": this.moldura2,
+                        "imageUrl": "url('images/monet/artworks-images/pourville.jpg')",
+                        "bgColor": "#8bb6e1",
+                        "title": "A Caminhada do Penhasco em Pourville",
+                        "date": "1882",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "65 x 81 cm",
+                        "localization": "Museu de Arte de São Paulo, São Paulo, Brasil",
+                        "citation": "Pintura realizada durante o verão em Pourville, um dos locais favoritos de Monet para observar a natureza e o mar.",
+                        "firstP": "Neste cenário costeiro, Monet retrata o topo de um penhasco em Pourville, com uma jovem caminhando à beira do precipício, em meio à brisa marinha e ao céu claro. A obra capta a serenidade e a vastidão do ambiente, e a técnica de Monet transmite a leveza e a textura do gramado sob a influência do vento.",
+                        "secondP": "As pinceladas fluidas e a paleta de cores suaves destacam o movimento das nuvens e do mar, criando um efeito etéreo que evoca o encanto das paisagens costeiras. A simplicidade da composição, com o penhasco e o céu ocupando a maior parte da tela, intensifica o sentimento de liberdade e introspecção que Monet buscava capturar ao pintar ao ar livre."
+                    },
+    
+                    moldura3: {
+                        "element": this.moldura3,
+                        "imageUrl": "url('images/monet/artworks-images/jardim-sainte.jpg')",
+                        "bgColor": "#b3b055",
+                        "title": "Jardim em Sainte-Adresse",
+                        "date": "1867",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "98 x 130 cm",
+                        "localization": "Museu Metropolitano de Arte, Nova Iorque, EUA",
+                        "citation": "Paisagem inspirada pelo jardim da casa de familiares em Sainte-Adresse, onde Monet passou verões em sua juventude.",
+                        "firstP": "A pintura mostra um jardim elegante à beira-mar, com figuras relaxando sob a luz suave do verão. Monet explora aqui o jogo de luz e sombra sobre as flores e folhagens, criando uma sensação de harmonia e tranquilidade. As bandeiras ao fundo, agitadas pela brisa, acrescentam uma leve sensação de movimento à cena serena.",
+                        "secondP": "O olhar de Monet para os detalhes florais e a textura das plantas transmite a beleza da vida ao ar livre, enfatizando o prazer da companhia e do ócio. A escolha de uma paleta colorida e brilhante reflete a leveza do momento e é um prenúncio de seu estilo impressionista que se consolidaria nos anos seguintes."
+                    },
+                    
+                    moldura4: {
+                        "element": this.moldura4,
+                        "imageUrl": "url('images/monet/artworks-images/rua-montorgueil.jpg')",
+                        "bgColor": "#9e1b1e",
+                        "title": "A rua Montorgueil, Paris, celebração de 30 de junho de 1878",
+                        "date": "1878",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "81 x 50 cm",
+                        "localization": "Museu de Orsay, Paris, França",
+                        "citation": "Pintura criada em homenagem às festividades republicanas em Paris, capturando a energia da multidão e do momento histórico.",
+                        "firstP": "Nesta vibrante celebração na Rua Montorgueil, Monet pinta uma multidão sob uma profusão de bandeiras tricolores que cobrem o céu, exaltando o patriotismo e a unidade nacional. A rua está repleta de pessoas em festa, enquanto o jogo de cores e luzes cria uma atmosfera de euforia e movimento.",
+                        "secondP": "Monet utiliza pinceladas rápidas e uma paleta audaciosa para dar vida à agitação da cena, retratando o dinamismo e a energia das celebrações republicanas. A composição densa e as cores vibrantes destacam o entusiasmo dos parisienses, tornando-se um testemunho pictórico do espírito revolucionário e da força do movimento impressionista."
+                    },
+                }, 
+
+                pp : {
+                    firstBg : "url('images/picasso/heroSectionBg-picasso.jpg') no-repeat fixed center / cover",
+    
+                    moldura1: {
+                        "element": this.moldura1,
+                        "imageUrl": "url('images/picasso/artworks-images/primeira-comunhao.jpg')",
+                        "bgColor": "#636569",
+                        "title": "Primeira Comunhão",
+                        "date": "1896",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "166 x 118 cm",
+                        "localization": "Museu Picasso, Barcelona, Espanha",
+                        "citation": "Uma das primeiras obras acadêmicas de Picasso, retratando sua irmã Lola em um momento de devoção religiosa.",
+                        "firstP": "Neste retrato de inspiração religiosa, Picasso pinta sua irmã Lola ajoelhada para receber a comunhão, cercada de um cenário clássico e solene. A precisão técnica e os detalhes cuidadosos na vestimenta e nos gestos são um exemplo de sua formação acadêmica na época.",
+                        "secondP": "Apesar de jovem, Picasso já demonstra habilidade em capturar a intensidade emocional de momentos significativos. A iluminação suave e o simbolismo cristão refletem o estilo tradicional que ele dominaria antes de abraçar as inovações modernistas que definiriam sua carreira."
+                    },
+    
+                    moldura2: {
+                        "element": this.moldura2,
+                        "imageUrl": "url('images/picasso/artworks-images/autorretrato.jpg')",
+                        "bgColor": "#3a5981",
+                        "title": "Autorretrato",
+                        "date": "1901",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "81 x 60 cm",
+                        "localization": "Museu Picasso, Paris, França",
+                        "citation": "Uma obra introspectiva, pintada durante o início do Período Azul de Picasso, marcada por tons sombrios e temas melancólicos.",
+                        "firstP": "Neste autorretrato de 1901, Picasso se retrata com um semblante melancólico e paleta dominada por tons de azul. Esse uso de cores frias reflete o início de seu Período Azul, marcado por uma fase de tristeza pessoal e introspecção.",
+                        "secondP": "O olhar direto e sério do artista, emoldurado por pinceladas densas, expressa uma sensação de solidão e inquietude. Esse autorretrato é um exemplo notável de como Picasso usava a própria imagem para explorar emoções e estados de espírito, destacando seu talento para transmitir profundidade psicológica através de técnicas minimalistas."
+                    },
+
+                    moldura3: {
+                        "element": this.moldura3,
+                        "imageUrl": "url('images/picasso/artworks-images/ator.jpg')",
+                        "bgColor": "#b9a1a1",
+                        "title": "O Ator",
+                        "date": "1904-1905",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "196 x 115 cm",
+                        "localization": "Museu Metropolitano de Arte, Nova Iorque, EUA",
+                        "citation": "Pintado durante o Período Rosa, a obra reflete a fascinação de Picasso pelas artes teatrais e pela vida circense.",
+                        "firstP": "Nesta pintura, um jovem ator é retratado em pose dramática, com movimentos que sugerem graça e introspecção. Os tons rosados e terrosos refletem o Período Rosa de Picasso, quando ele se voltou a temas de circo e teatro, representando artistas e acrobatas com uma melancolia delicada.",
+                        "secondP": "A leveza na paleta e os traços sutis indicam a empatia de Picasso pelos indivíduos marginalizados e as emoções que permeiam a vida artística. A pose alongada do ator e o pano de fundo sugerem uma performance, enquanto seu olhar distante parece refletir um sentimento de solidão e introspecção."
+                    },
+                    
+                    moldura4: {
+                        "element": this.moldura4,
+                        "imageUrl": "url('images/picasso/artworks-images/mulher-espelho.jpg')",
+                        "bgColor": "#d88589",
+                        "title": "Mulher com Espelho",
+                        "date": "1932",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "162 x 130 cm",
+                        "localization": "Museu de Arte Moderna, Nova Iorque, EUA",
+                        "citation": "Obra emblemática do Cubismo e da exploração da identidade feminina, inspirada na companheira de Picasso, Marie-Thérèse Walter.",
+                        "firstP": "Nesta obra vibrante e complexa, Picasso retrata uma mulher diante de um espelho, simbolizando a dualidade e as facetas da identidade feminina. O uso de formas geométricas e o desdobramento da imagem no espelho refletem o estilo cubista do artista e seu fascínio pela desconstrução da forma humana.",
+                        "secondP": "A mulher observa a própria imagem com um olhar inquisitivo, enquanto o espelho reflete uma versão alterada e simbólica de si mesma. A paleta de cores vivas e as linhas sinuosas conferem uma sensualidade e profundidade à composição, ilustrando a complexidade psicológica das figuras femininas de Picasso."
+                    }
+                }, 
             }    
         }
     
@@ -752,7 +1047,7 @@ function createTargetArtistObjects(targetArtist){
                 for(var elementos of molduras){
                     if (item === elementos.element){
                         titleBackground.style.backgroundColor = elementos.bgColor
-                        item.style.border = `2px solid ${elementos.bgColor}`
+                        item.style.border = `4px solid ${elementos.bgColor}`
                         document.getElementById(`title-${this.page}-${this.artist}`).innerHTML = elementos.title
                         document.getElementById(`date-${this.page}-${this.artist}`).innerHTML = elementos.date
                         document.getElementById(`technique-${this.page}-${this.artist}`).innerHTML = elementos.technique
@@ -908,10 +1203,26 @@ function createTargetArtistObjects(targetArtist){
     const segundaPaginaVanGogh = new Molduras(2, 'vg')
     const primeiraPaginaGoya = new Molduras(1, 'fg')
     const segundaPaginaGoya = new Molduras(2, 'fg')
+    const primeiraPaginaRafael = new Molduras(1, 'rs')
+    const segundaPaginaRafael = new Molduras(2, 'rs')
+    const primeiraPaginaCaravaggio = new Molduras(1, 'cr')
+    const segundaPaginaCaravaggio = new Molduras(2, 'cr')
+    const primeiraPaginaJacques = new Molduras(1, 'jd')
+    const segundaPaginaJacques = new Molduras(2, 'jd')
+    const primeiraPaginaMonet = new Molduras(1, 'cm')
+    const segundaPaginaMonet = new Molduras(2, 'cm')
+    const primeiraPaginaPicasso = new Molduras(1, 'pp')
+    const segundaPaginaPicasso = new Molduras(2, 'pp')
     
+
     // Organiza as páginas de cada artista, criando todas as primeiras páginas ao inicializar e as segundas ao clicar no botão de slide //
     const assetsVanGogh = [primeiraPaginaVanGogh, segundaPaginaVanGogh]
     const assetsGoya = [primeiraPaginaGoya, segundaPaginaGoya]
+    const assetsRafael = [primeiraPaginaRafael, segundaPaginaRafael]
+    const assetsCaravaggio = [primeiraPaginaCaravaggio, segundaPaginaCaravaggio]
+    const assetsJacques = [primeiraPaginaJacques, segundaPaginaJacques]
+    const assetsMonet = [primeiraPaginaMonet, segundaPaginaMonet]
+    const assetsPicasso = [primeiraPaginaPicasso, segundaPaginaPicasso]
 
     switch (targetArtist){
         case 'Vincent Van Gogh':
@@ -920,7 +1231,21 @@ function createTargetArtistObjects(targetArtist){
         case 'Francisco de Goya':
             createObjects(assetsGoya)
             break
-
+        case 'Rafael Sanzio':
+            createObjects(assetsRafael)
+            break
+        case 'Caravaggio':
+            createObjects(assetsCaravaggio)
+            break
+        case 'Jacques-Louis David':
+            createObjects(assetsJacques)
+            break
+        case 'Claude Monet':
+            createObjects(assetsMonet)
+            break
+        case 'Pablo Picasso':
+            createObjects(assetsPicasso)
+            break
     }
 
     function createObjects(artist){
