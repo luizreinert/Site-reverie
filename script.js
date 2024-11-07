@@ -599,8 +599,8 @@ function createTargetArtistObjects(targetArtist){
                         "dimensions": "	43.5 cm x 30.5 cm",
                         "localization": "Museu Nacional do Prado, Madrid, Espanha",
                         "citation": "Parte de uma série de seis quadros sobre bruxaria, encomendada pelo Duque e Duquesa de Osuna",
-                        "firstP": "A pintura representa três bruxas seminuas usando sambenitos (um tipo de coroa antigamente usada para penitência na inquisição, uma forma de humilhar o portador durante sua procissão para a condenação), carregando uma figura se contorcendo, com suas bocas próximas a vítima, como se forrem devorá-la ou sugar seu sangue.\n\n Abaixo, duas figuras em trajes de camponeses recuam da cena: uma se jogou no chão cobrindo os ouvidos, a outra tenta escapar cobrindo-se com um cobertor, fazendo o gesto de figa para afastar o mau-olhado",
-                        "secondP" : ""
+                        "firstP": "Em 'Voo das Bruxas', Goya mergulha nas profundezas da superstição e do misticismo espanhol do final do século XVIII. A cena apresenta três figuras sombrias e encapuzadas pairando sobre um homem indefeso, que se protege com um gesto de terror enquanto uma bruxa o segura no ar. Os rostos das figuras, com expressões intensas, acrescentam uma aura de mistério e inquietação.",
+                        "secondP": "O cenário noturno e os tons escuros reforçam a sensação de medo e opressão. Goya utiliza uma composição que dá dinamismo à cena e insere o observador em um ambiente onde o sobrenatural parece ameaçadoramente próximo. A obra reflete tanto o fascínio quanto o ceticismo de Goya em relação às crenças populares, abordando temas de superstição com uma carga psicológica poderosa.",
                     },
     
                     moldura2 : {
@@ -612,10 +612,9 @@ function createTargetArtistObjects(targetArtist){
                         "technique": "Óleo sobre tela a partir de um afresco",
                         "dimensions": "43.3 x 30.5 cm",
                         "localization": "Museu Lázaro Galdiano, Madrid, Espanha",
-                        "citation": "Parte de uma série de seis quadros sobre bruxaria, encomendada pelo Duque e Duquesa de Osuna",
+                        "citation": "Uma das obras mais icônicas de Goya, representando o medo e a superstição da sociedade espanhola do século XVIII.",
                         "firstP": "A tela retrata “El Gran Cabrón” (O Grande Bode), uma das formas representadas por Satanás, cercado por um grupo de bruxas jovens e idosas em uma paisagem lunar desolada. O bode possui grandes chifres e é coroado com um ramo de folhas de carvalho. À direita, uma velha segura um bebê extremamente faminto, mas aparentemente ainda vivo, enquanto uma bruxa mais jovem à sua direita faz o mesmo com uma criança mais saudável, implicando que elas seguirão o mesmo destino.",
                         "secondP" : "O Diabo parece atuar como uma espécie de sacerdote em uma cerimônia de iniciação para as crianças. O corpo morto de um bebê é visto à esquerda, e outras bruxas, jovens e idosas, estão presentes na cena. A pintura é repleta de símbolos invertidos, como o bode estendendo seu casco esquerdo em direção à criança e a lua minguante voltada para fora do quadro no canto superior esquerdo. Goya usou a imagem de covens de bruxas em várias obras, incluindo as famosas “Pinturas Negras”. Essas pinturas podem ser vistas como uma crítica às superstições prevalentes na Espanha da época."
-        
                     },
     
                     moldura3 : {
@@ -712,58 +711,58 @@ function createTargetArtistObjects(targetArtist){
     
                     moldura1: {
                         "element": this.moldura1,
-                        "imageUrl": "url('images/rafael-sanzio/artworks-images/madona-sistina.jpg')",
-                        "bgColor": "#1e4218",
-                        "title": "Madona Sistina",
-                        "date": "1512",
+                        "imageUrl": "url('images/caravaggio/artworks-images/conversao-paulo.jpg')",
+                        "bgColor": "#2f2b29",
+                        "title": "Conversão de São Paulo",
+                        "date": "1601",
                         "technique": "Óleo sobre tela",
-                        "dimensions": "265 x 196 cm",
-                        "localization": "Pinacoteca dos Mestres Antigos, Dresden, Alemanha",
-                        "citation": "Criada para o altar da Igreja de San Sisto, em Piacenza, encomendada pelo Papa Júlio II.",
-                        "firstP": "A Madona Sistina é uma das obras mais reverenciadas de Rafael, retratando a Virgem Maria carregando o Menino Jesus em uma postura de serenidade, enquanto olha diretamente para o espectador. Ao seu lado, estão São Sixto e Santa Bárbara, ambos figuras de devoção na Igreja Católica. Rafael consegue capturar a suavidade e compaixão de Maria com um detalhamento meticuloso e uma paleta de cores sublime, que reforça a atmosfera celestial da pintura.",
-                        "secondP": "Abaixo da Virgem e do Menino, dois querubins repousam, apoiando-se no parapeito com expressões pensativas, adicionando uma camada de contemplação à cena. Estes anjos, apesar de pequenos, ganharam fama própria e são amplamente reproduzidos na cultura popular. A composição equilibrada de Rafael e o uso magistral do espaço criam um fluxo visual que guia o olhar do observador ao centro da obra, destacando a figura da Madona e o menino Jesus como símbolos de fé e esperança."
+                        "dimensions": "230 x 175 cm",
+                        "localization": "Santa Maria del Popolo, Roma, Itália",
+                        "citation": "Pintada para a Capela Cerasi, representa o momento dramático da conversão do apóstolo Paulo.",
+                        "firstP": "A obra retrata o instante dramático em que Paulo, caído no chão, é cegado por uma luz divina que o chama à conversão. A pintura capta o santo em sua vulnerabilidade, com as mãos erguidas ao céu, enquanto o cavalo e o serviçal parecem alheios à experiência espiritual. O uso intenso do claro-escuro é um destaque, projetando Paulo em meio à escuridão, simbolizando a passagem da ignorância para a iluminação.",
+                        "secondP": "Caravaggio aplica uma composição simples, mas eficaz, com foco na emoção humana e na luz divina. A escolha de representar o santo sem os tradicionais símbolos gloriosos, em uma posição de humildade e rendição, aproxima o espectador do evento milagroso, revelando o poder da fé que transcende a narrativa tradicional."
                     },
                     
                     moldura2: {
                         "element": this.moldura2,
-                        "imageUrl": "url('images/rafael-sanzio/artworks-images/visao-ezequiel.jpg')",
-                        "bgColor": "#464d7a",
-                        "title": "Visão de Ezequiel",
-                        "date": "1518",
-                        "technique": "Óleo sobre painel",
-                        "dimensions": "40 x 30 cm",
-                        "localization": "Palazzo Pitti, Florença, Itália",
-                        "citation": "Inspirada pelo Livro de Ezequiel, que descreve a visão de um trono celeste, encomendado pela família Medici.",
-                        "firstP": "A obra retrata a grandiosa visão do profeta Ezequiel, uma passagem bíblica onde ele vê a glória de Deus rodeado por querubins e anjos. Deus aparece como uma figura imponente no centro, elevado sobre um carro de fogo. Ao seu redor, criaturas celestiais carregam-no em uma tempestade luminosa, representando a magnitude e o mistério divino.",
-                        "secondP": "A técnica de Rafael destaca a luz divina que envolve o grupo central, simbolizando a presença espiritual que transcende o humano. Os detalhes dos rostos, as poses dramáticas e as cores profundas refletem a influência do Renascimento sobre o artista, que enfatiza o poder místico da experiência espiritual de Ezequiel."
+                        "imageUrl": "url('images/caravaggio/artworks-images/pequeno-baco.jpg')",
+                        "bgColor": "#6b4b3a",
+                        "title": "Pequeno Baco Doente",
+                        "date": "1593",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "67 x 53 cm",
+                        "localization": "Galeria Borghese, Roma, Itália",
+                        "citation": "Autorretrato de Caravaggio como Baco, possivelmente pintado durante uma doença.",
+                        "firstP": "Em 'Pequeno Baco Doente', Caravaggio se representa como o deus Baco, mas com uma aparência pálida e exausta. Vestido com folhas de videira e uma túnica simples, o jovem segura um cacho de uvas que alude à embriaguez e à decadência. Ao contrário das representações tradicionais, este Baco exibe um rosto doente, transmitindo uma sensação de vulnerabilidade e decadência que espelha o estado físico do próprio artista.",
+                        "secondP": "O fundo escuro destaca a figura em primeiro plano, um recurso típico de Caravaggio que adiciona intensidade à cena. Essa abordagem realista e introspectiva é um reflexo da turbulenta vida do artista, que muitas vezes desafiava os padrões idealizados do Renascimento com representações cruas e humanas, enfatizando a fragilidade da existência humana."
                     },
     
                     moldura3: {
                         "element": this.moldura3,
-                        "imageUrl": "url('images/rafael-sanzio/artworks-images/sao-jorge.jpg')",
-                        "bgColor": "#346b29",
-                        "title": "São Jorge e o Dragão",
-                        "date": "1505",
-                        "technique": "Óleo sobre madeira",
-                        "dimensions": "28.5 x 21.5 cm",
-                        "localization": "Museu do Louvre, Paris, França",
-                        "citation": "Possivelmente uma encomenda da corte de Urbino, simbolizando a luta entre o bem e o mal.",
-                        "firstP": "Nesta obra, São Jorge aparece em plena batalha contra o dragão, um símbolo clássico do mal, armado com uma lança e montado em um cavalo branco. O cenário é de grande tensão, com o dragão curvando-se ao chão e São Jorge em um movimento decisivo, prestes a vencê-lo. Rafael aplica detalhes cuidadosos na armadura do santo e nas escamas do dragão, criando um contraste entre o herói e a fera.",
-                        "secondP": "O fundo da obra, com tons verdes e azulados, remete a uma paisagem serena, que contrasta com a ação violenta do primeiro plano. Esta composição cria uma narrativa visual que celebra a coragem e a virtude, qualidades personificadas por São Jorge, que, segundo a lenda, salvou uma cidade da ameaça do dragão."
+                        "imageUrl": "url('images/caravaggio/artworks-images/garoto-mordido.jpg')",
+                        "bgColor": "#334d2c",
+                        "title": "Garoto Mordido por um Lagarto",
+                        "date": "1595",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "66 x 52 cm",
+                        "localization": "Fondazione Roberto Longhi, Florença, Itália",
+                        "citation": "A pintura captura a reação humana de dor e surpresa, mostrando a habilidade de Caravaggio em capturar emoções fugazes.",
+                        "firstP": "Neste quadro, um jovem reage de forma dramática ao ser mordido por um lagarto escondido entre flores. A expressão de dor e surpresa é capturada com grande realismo, representando o momento efêmero da dor física. O uso de luz intensa destaca o rosto e a mão do jovem, enquanto o fundo escuro intensifica a cena e isola o personagem do entorno, enfatizando sua emoção.",
+                        "secondP": "A obra reflete a fascinação de Caravaggio com a realidade crua e os detalhes do corpo humano, mostrando sua habilidade em capturar reações genuínas. A simbologia do lagarto escondido e das flores murchas sugere a efemeridade da juventude e da beleza, um tema recorrente na obra do artista."
                     },
-    
+
                     moldura4: {
                         "element": this.moldura4,
-                        "imageUrl": "url('images/rafael-sanzio/artworks-images/casamento-virgem.jpg')",
-                        "bgColor": "#a38d5a",
-                        "title": "Casamento da Virgem",
-                        "date": "1504",
-                        "technique": "Óleo sobre madeira",
-                        "dimensions": "170 x 117 cm",
-                        "localization": "Pinacoteca de Brera, Milão, Itália",
-                        "citation": "Criada para a Igreja de San Francesco em Città di Castello, marcando o estilo clássico e harmonioso de Rafael.",
-                        "firstP": "O 'Casamento da Virgem' é uma obra-prima que retrata o momento em que José e Maria se casam, abençoado por um sacerdote ao centro da cena. Atrás do casal, um templo com uma cúpula circular cria profundidade, destacando-se como símbolo de unidade espiritual e terrena. Rafael utiliza a perspectiva de forma exemplar, organizando figuras em camadas que dão à cena uma sensação de harmonia e equilíbrio.",
-                        "secondP": "A atenção aos detalhes no vestuário dos personagens e a expressão serena da Virgem revelam a habilidade do artista em transmitir emoções sutis e a importância do momento. A escolha das cores suaves, com tons terrosos e dourados, intensifica a atmosfera sagrada e serena da obra, estabelecendo Rafael como um mestre na fusão entre arquitetura e narrativa visual."
+                        "imageUrl": "url('images/caravaggio/artworks-images/sepultamento-cristo.jpg')",
+                        "bgColor": "#1d1a18",
+                        "title": "O Sepultamento de Cristo",
+                        "date": "1603",
+                        "technique": "Óleo sobre tela",
+                        "dimensions": "300 x 203 cm",
+                        "localization": "Pinacoteca Vaticana, Cidade do Vaticano",
+                        "citation": "Encomendada para a Capela Santa Maria in Vallicella, representa o momento da deposição de Cristo no túmulo.",
+                        "firstP": "A obra ilustra o corpo de Cristo sendo cuidadosamente colocado em seu túmulo. Caravaggio utiliza figuras em tamanho real para envolver o espectador na cena, criando uma sensação de proximidade com o drama. Maria e os discípulos expressam dor e tristeza, enquanto o corpo de Cristo é iluminado por uma luz que contrasta com o fundo sombrio, realçando sua forma física e simbolizando seu sacrifício.",
+                        "secondP": "A composição diagonal e o realismo intenso nas expressões e gestos reforçam o impacto emocional. Caravaggio abandona idealizações religiosas e coloca ênfase na humanidade de Cristo e na dor de seus seguidores, evocando empatia do observador. A obra é considerada uma das representações mais comoventes da Paixão de Cristo, por sua profundidade emocional e inovação técnica."
                     },
                 },
 

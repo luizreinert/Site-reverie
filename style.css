@@ -393,18 +393,15 @@ body, html{
     font-size: calc(3.5vw + 5vh);
 }
 
-.artist-name-vg h1{
+.artist-name-vg {
     background: var(--posimpressionismo-main-color);
 }
 
-.artist-name-fg h1{
+.artist-name-fg {
     background: var(--romantismo-main-color);
 }
 
 .artist-name-rs{
-    align-self: center;
-    height: 50%;
-    padding: 50px;
     background: var(--renascimento-main-color);
 }
 
@@ -448,7 +445,7 @@ body, html{
 }
 
 [class^="expand-main"] ion-icon{
-    font-size: 50pt;
+    font-size: calc(3.5vw + 5vh);
     align-self: center;
     transform: rotate(180deg);
 }
@@ -522,13 +519,11 @@ body, html{
     background: url(images/van-gogh/van-gogh-divider-paint.png) no-repeat -50px 200px ;
 }
 
-.artist-picture-left-fg{
-    transform: scaleX(-1);
+.artist-picture-right-fg{
     background: url(images/goya/goya-divider-paint.png) no-repeat -30px 200px;
 }
 
-.artist-picture-left-rs{
-    transform: scaleX(-1);
+.artist-picture-right-rs{
     background: url(images/rafael-sanzio/rafael-divider-paint.png) no-repeat -50px 200px;
 }
 
