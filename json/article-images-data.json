@@ -1,0 +1,377 @@
+{
+    "vg" : {
+        "comedoresBatata" : {
+            "painting" : "comedores-batata",
+            "paintingUrl" : "images/van-gogh/comedores-batata.jpg",
+            "paintingTitle" : "Os Comedores de Batatas (1885)",
+            "paintingLegend" : "Vincent van Gogh retrata a vida simples e sofrida dos camponeses, destacando a textura e o peso emocional do cotidiano rural."
+
+        },
+
+        "rodano" : {
+            "painting" : "rodano",
+            "paintingUrl" : "images/van-gogh/ródano.jpg",
+            "paintingTitle" : "A Noite Estrelada sobre o Ródano (1888)",
+            "paintingLegend" : "Vincent van Gogh captura o céu estrelado refletido no rio, destacando o uso expressivo de cores e luz."
+
+        },
+
+        "casaAmarela" : {
+            "painting" : "casa-amarela",
+            "paintingUrl" : "images/van-gogh/casa-amarela.jpg",
+            "paintingTitle" : "A Casa Amarela (1888)",
+            "paintingLegend" : "Van Gogh retrata sua casa em Arles, destacando o uso vibrante de cores e a simplicidade da arquitetura no contexto da paisagem ensolarada."
+        },
+    
+        "girassois" : {
+            "painting" : "girassois",
+            "paintingUrl" : "images/van-gogh/girassois.jpg",
+            "paintingTitle" : "Girassóis (1888)",
+            "paintingLegend" : "Vincent van Gogh exibe um buquê de girassóis com pinceladas enérgicas e uma paleta de amarelos radiantes."
+        },
+    
+        "noiteEstrelada" : {
+            "painting" : "noite-estrelada",
+            "paintingUrl" : "images/van-gogh/noite-estrelada.jpg",
+            "paintingTitle" : "A Noite Estrelada (1889)",
+            "paintingLegend" : "Vincent van Gogh ilustra um céu noturno turbulento sobre Saint-Rémy-de-Provence, com um jogo dramático de luz e cor."
+        },
+    
+        "campoTrigoCorvos" : {
+            "painting" : "campo-trigo-corvos",
+            "paintingUrl" : "images/van-gogh/campo-trigo-corvos.jpg",
+            "paintingTitle" : "Campo de Trigo com Corvos (1890)",
+            "paintingLegend" : "Vincent van Gogh captura um campo de trigo sob um céu ameaçador, com corvos sobrevoando, refletindo uma atmosfera de tensão e movimento."
+        },
+    
+        "retratoDrGachet" : {
+            "painting" : "retrato-dr-gachet",
+            "paintingUrl" : "images/van-gogh/retrato-dr-gachet.jpg",
+            "paintingTitle" : "Retrato do Dr. Gachet (1890)",
+            "paintingLegend" : "Vincent van Gogh retrata o Dr. Paul Gachet, seu médico, com uma expressão melancólica e um uso intenso de cor para transmitir profundidade emocional."
+        },
+
+        "quarto" : {
+            "painting" : "quarto",
+            "paintingUrl" : "images/van-gogh/quarto.jpg",
+            "paintingTitle" : "Quarto em Arles (1888)",
+            "paintingLegend" : "Vincent van Gogh apresenta seu quarto em Arles com uma paleta de cores vibrantes e formas simplificadas, transmitindo uma sensação de conforto e pessoalidade."
+        }
+    },
+
+    "fg" : {
+        "parassol" : {
+            "painting" : "parassol",
+            "paintingUrl" : "images/goya/article-images/parassol.jpg",
+            "paintingTitle" : "O Parassol (1777)",
+            "paintingLegend" : "Captura um momento de intimidade e lazer entre as classes altas da sociedade espanhola da época. A pintura reflete o gosto por cenas ao ar livre, comuns entre a aristocracia. Foi concebida como uma série de tapeçarias destinadas ao Palácio Real de El Pardo"
+        },
+
+        "familiaCarlosIV" : {
+            "painting" : "familia",
+            "paintingUrl" : "images/goya/article-images/familia-carlos.jpg",
+            "paintingTitle" : "A Família de Carlos IV (1800)",
+            "paintingLegend" : "A obra expõe a realeza com uma franqueza inédita, destacando suas imperfeições em vez de idealizar. Goya inclui-se como observador ao fundo, reforçando a distância entre o pintor e a corte, que parece rígida e fria."
+        },
+
+        "colosso" : {
+            "painting" : "colosso",
+            "paintingUrl" : "images/goya/article-images/colosso.jpg",
+            "paintingTitle" : "O Colosso (1808-1812)",
+            "paintingLegend" : "Retrata uma figura monumental e sombria sobre uma paisagem em fuga, transmitindo o terror e a impotência diante das forças destrutivas das guerras napoleônicas."
+        },
+
+        "desastresGuerra" : {
+            "painting" : "desastres-guerra",
+            "paintingUrl" : "images/goya/article-images/desastres-guerra.jpg",
+            "paintingTitle" : "Os Desastres da Guerra, nº 33 (1808-1812)",
+            "paintingLegend" : "A 33º gravura da série “Os Desastres da Guerra” retrata um esquartejamento, refletindo a brutalidade e a barbárie a que se chegou na Guerra da Independência Espanhola. "
+
+        },
+
+        "cão" : {
+            "painting" : "cão",
+            "paintingUrl" : "images/goya/article-images/cão.jpg",
+            "paintingTitle" : "O Cão (1819-1823)",
+            "paintingLegend" : "A obra, profundamente enigmática e melancólica, mostra apenas a cabeça de um cão parcialmente submersa em um fundo desolado, transmitindo uma sensação de abandono e impotência."
+
+        }
+    },
+
+    "rs" : {
+        "madonna" : {
+            "painting" : "madona",
+            "paintingUrl" : "images/rafael-sanzio/article-images/madona.jpg",
+            "paintingTitle" : "Madona com o Menino (1504-1505)",
+            "paintingLegend" : "Uma obra de serenidade e espiritualidade, capturando o laço sagrado entre mãe e filho. As feições delicadas e o uso suave de cores revelam a habilidade de Rafael em humanizar temas sacros."
+        },
+
+        "escolaAtenas" : {
+            "painting" : "escola-atenas",
+            "paintingUrl" : "images/rafael-sanzio/article-images/escola-atenas.jpg",
+            "paintingTitle" : "Escola de Atenas (1510-1511)",
+            "paintingLegend" : "Tributo aos pensadores da Grécia Antiga, onde Rafael harmoniza filosofia e arquitetura. Neste afresco monumental, as figuras simbolizam a busca pelo conhecimento e a perfeição do pensamento clássico."
+        },
+
+        "disputa" : {
+            "painting" : "disputa",
+            "paintingUrl" : "images/rafael-sanzio/article-images/disputa.jpg",
+            "paintingTitle" : "A Disputa do Santíssimo Sacramento (1509-1510)",
+            "paintingLegend" : "Uma composição que une o celestial e o terreno. Rafael representa santos, teólogos e Cristo em uma disposição hierárquica, elevando a experiência espiritual."
+        },
+
+        "retratoBaldassere" : {
+            "painting" : "retrato-baldassere",
+            "paintingUrl" : "images/rafael-sanzio/article-images/retrato-baldassere.jpg",
+            "paintingTitle" : "Retrato de Baldassare Castiglione (1514-1515)",
+            "paintingLegend" : "Neste retrato, Rafael transmite a dignidade e introspecção do intelectual renascentista, equilibrando vivacidade e idealização."
+        },
+
+        "retratoPapa" : {
+            "painting" : "retrato-papa",
+            "paintingUrl" : "images/rafael-sanzio/article-images/retrato-papa.jpg",
+            "paintingTitle" : "Retrato do Papa Leão X com Dois Cardeais (1518-1519)",
+            "paintingLegend" : "Rafael capta a autoridade e a opulência papal com detalhes ricos. O Papa e seus cardeais, em trajes requintados, refletem a complexidade do poder eclesiástico."
+        },
+
+        "transfiguração" : {
+            "painting" : "transfiguração",
+            "paintingUrl" : "images/rafael-sanzio/article-images/transfiguração.jpg",
+            "paintingTitle" : "A Transfiguração (1517-1520)",
+            "paintingLegend" : "Última obra-prima de Rafael, que explora o divino com intensidade espiritual. Luz e sombra contrastam para expressar o encontro entre o celestial e o terreno."
+        }
+    },
+
+    "cr" : {
+        "rapazCesto" : {
+            "painting" : "rapaz-cesto",
+            "paintingUrl" : "images/caravaggio/article-images/rapaz-cesto.jpg",
+            "paintingTitle" : "Rapaz com Cesto de Frutas (1593)",
+            "paintingLegend" : "Retrata um jovem segurando frutas maduras com precisão realista, destacando o domínio de Caravaggio na representação de texturas e detalhes."
+        },
+
+        "trapaceiros" : {
+            "painting" : "trapaceiros",
+            "paintingUrl" : "images/caravaggio/article-images/trapaceiros.jpg",
+            "paintingTitle" : "Os Trapaceiros (1595)",
+            "paintingLegend" : "Retrata uma cena de trapaça e engano entre jogadores de cartas, capturando com precisão as expressões e gestos dos personagens."
+        },
+
+        "medusa" : {
+            "painting" : "medusa",
+            "paintingUrl" : "images/caravaggio/article-images/medusa.jpg",
+            "paintingTitle" : "Medusa (1597-1598)",
+            "paintingLegend" : "O momento aterrador da decapitação de Medusa, capturando seu olhar de horror e dor enquanto o sangue escorre de sua cabeça. A obra explora o terror e a intensidade das emoções humanas através do uso dramático de luz e sombra."
+        },
+
+        "juditeHolofernes" : {
+            "painting" : "judite-holofernes",
+            "paintingUrl" : "images/caravaggio/article-images/judite-holofernes.jpg",
+            "paintingTitle" : "Judite e Holofernes (1598-1599)",
+            "paintingLegend" : "Judite, com expressão de determinação e horror, enquanto decapita Holofernes em uma cena de tensão brutal, onde luz e sombra intensificam o drama e o impacto emocional do momento."
+        },
+
+        "vocacaoMateus" : {
+            "painting" : "vocacao-mateus",
+            "paintingUrl" : "images/caravaggio/article-images/vocacao-mateus.jpg",
+            "paintingTitle" : "A Vocação de São Mateus (1599-1600)",
+            "paintingLegend" : "Ilumina São Mateus em meio à escuridão, capturando o momento em que ele é chamado por Cristo, com um uso dramático da luz e da sombra."
+        },
+
+        "daviGolias" : {
+            "painting" : "davi-golias",
+            "paintingUrl" : "images/caravaggio/article-images/davi-golias.jpg",
+            "paintingTitle" : "Davi com a Cabeça de Golias (1610)",
+            "paintingLegend" : "Davi segura a cabeça de Golias com uma expressão de pesar, enquanto o rosto de Golias, possivelmente um autorretrato de Caravaggio, reflete derrota e arrependimento, trazendo um tom sombrio e introspectivo à obra."
+        },
+
+        "salome" : {
+            "painting" : "salome",
+            "paintingUrl" : "images/caravaggio/article-images/salome.jpg",
+            "paintingTitle" : "Salomé com a Cabeça de João Batista (1609) ",
+            "paintingLegend" : "Com uma expressão de frieza e desolação, Salomé segura a cabeça de João Batista, enquanto o jogo de luz e sombra acentua o peso sombrio do momento, refletindo a crueldade e a resignação presentes na cena."
+        },
+
+        "decapitacao" : {
+            "painting" : "decapitacao",
+            "paintingUrl" : "images/caravaggio/article-images/decapitacao.jpg",
+            "paintingTitle" : "A Decapitação de São João Batista (1608)",
+            "paintingLegend" : "Captura o momento sombrio do martírio de São João, evidenciando a brutalidade do ato com um jogo intenso de luz e sombra, que ressalta o drama e a fragilidade da vida humana."
+        }
+    },
+
+    "jd" : {
+        "belisario" : {
+            "painting" : "belisario",
+            "paintingUrl" : "images/Jacques-louis-david/article-images/belisario.jpg",
+            "paintingTitle" : "Belisário Pedindo Esmola (1781)",
+            "paintingLegend" : "O general Belisário, agora cego e desamparado, implora por ajuda. David expressa a tragédia da queda e a compaixão em um cenário austero."
+        },
+
+        "andromaca" : {
+            "painting": "andromaca",
+            "paintingUrl": "images/Jacques-louis-david/article-images/andromaca.jpg",
+            "paintingTitle": "Andrômaca Chorando sobre o Corpo de Heitor (1783)",
+            "paintingLegend": "Andrômaca lamenta a morte de Heitor, em uma cena onde o luto e a perda são representados com dignidade e emoção contida."
+        },
+
+        "juramentoHoracios": {
+            "painting": "juramento-horacios",
+            "paintingUrl": "images/Jacques-louis-david/article-images/juramento-horacios.jpg",
+            "paintingTitle": "Juramento dos Horácios (1784)",
+            "paintingLegend": "Três irmãos juram lutar por Roma, em uma cena que exalta a lealdade e o dever cívico com uma composição simétrica e solene."
+        },
+
+        "brutus": {
+            "painting": "brutus",
+            "paintingUrl": "images/Jacques-louis-david/article-images/brutus.jpg",
+            "paintingTitle": "Brutus Recebendo os Corpos de Seus Filhos (1789)",
+            "paintingLegend": "Brutus encara o sacrifício ao receber os corpos dos filhos traidores, representando o conflito entre o dever e o afeto."
+        },
+
+        "marat": {
+            "painting": "marat",
+            "paintingUrl": "images/Jacques-louis-david/article-images/marat.jpg",
+            "paintingTitle": "A Morte de Marat (1793)",
+            "paintingLegend": "Marat, assassinado em sua banheira, é retratado como mártir revolucionário, em uma cena de serenidade trágica e simbólica."
+        },
+        "napoleaoAlpes" : {
+            "painting": "napoleao-alpes",
+            "paintingUrl": "images/Jacques-louis-david/article-images/napoleao-alpes.jpg",
+            "paintingTitle": "Napoleão Cruzando os Alpes (1801)",
+            "paintingLegend": "Napoleão é representado como um líder heroico e determinado, desafiando os Alpes em um gesto de coragem e força."
+        },
+
+        "napoleaoCoroacao": {
+            "painting": "napoleao-coroacao",
+            "paintingUrl": "images/Jacques-louis-david/article-images/napoleao-coroacao.jpg",
+            "paintingTitle": "A Coroação de Napoleão (1807)",
+            "paintingLegend": "A obra retrata o momento da coroação de Napoleão Bonaparte como Imperador da França na Catedral de Notre-Dame de Paris, onde David captura o esplendor e a formalidade do Império."
+        },
+
+        "amorPsique": {
+            "painting": "amor-psique",
+            "paintingUrl": "images/Jacques-louis-david/article-images/amor-psique.jpg",
+            "paintingTitle": "Amor e Psiquê (1817)",
+            "paintingLegend": "David representa a cena com uma beleza idealizada, ressaltando a inocência e a pureza desse amor mitológico."
+        },
+
+        "marteVenus" : {
+            "painting": "marte-venus",
+            "paintingUrl": "images/Jacques-louis-david/article-images/marte-venus.jpg",
+            "paintingTitle": "Marte Desarmado por Vênus(1824)",
+            "paintingLegend": "Marte rende-se à paz e ao amor, desarmado por Vênus, em uma obra final que exalta a harmonia e serenidade."
+        }
+    },
+
+    "cm" : {
+        "nenufares" : {
+            "painting": "nenufares",
+            "paintingUrl": "images/monet/article-images/nenufares.jpg",
+            "paintingTitle": "Nenúfares com reflexos de um salgueiro (1916-1919)",
+            "paintingLegend": "Nenúfares flutuam sobre a água em um momento sereno, destacando a habilidade de Monet em capturar reflexos e tranquilidade na natureza."
+        },
+
+        "estacaoTrem": {
+            "painting": "estacao-trem",
+            "paintingUrl": "images/monet/article-images/estacao-trem.jpg",
+            "paintingTitle": "A Estação de Trem de Saint-Lazare (1877)",
+            "paintingLegend": "A movimentação dos trens e a atmosfera vaporosa envolvem a cena, capturando a energia e a modernidade da vida urbana do século XIX."
+        },
+
+        "jardimArtista": {
+            "painting": "jardim-artista",
+            "paintingUrl": "images/monet/article-images/jardim-artista.jpg",
+            "paintingTitle": "O Jardim do Artista em Giverny (1900)",
+            "paintingLegend": "Uma representação vibrante do jardim de Claude Monet em Giverny, onde as cores e as formas dançam em harmonia sob a luz do sol."
+        },
+
+        "mulherGuardaSol": {
+            "painting": "mulher-guarda-sol",
+            "paintingUrl": "images/monet/article-images/mulher-guarda-sol.jpg",
+            "paintingTitle": "A Mulher com Guarda-Sol (1875)",
+            "paintingLegend": "Camille Monet caminha sob a luz do sol junto ao seu filho, segurando um guarda-sol, enquanto a luz e a sombra dançam sobre sua figura, capturando um instante efêmero de graça."
+        },
+
+        "nascerSol": {
+            "painting": "nascer-sol",
+            "paintingUrl": "images/monet/article-images/nascer-sol.jpg",
+            "paintingTitle": "Impressão, Nascer do Sol (1872)",
+            "paintingLegend": "Uma cena matinal no porto de Le Havre, onde a luz e a atmosfera se entrelaçam, dando nome ao movimento Impressionista."
+        },
+
+        "catedralRouen": {
+            "painting": "catedral-rouen",
+            "paintingUrl": "images/monet/article-images/catedral-rouen.jpg",
+            "paintingTitle": "A Catedral de Rouen (1893)",
+            "paintingLegend": "A fachada da catedral é revelada em uma variedade de luzes e sombras, mostrando a habilidade de Monet em capturar a mudança de atmosfera em diferentes momentos do dia."
+        }
+    },
+
+    "pp" : {
+        "laVie": {
+            "painting": "la-vie",
+            "paintingUrl": "images/picasso/article-images/la-vie.jpg",
+            "paintingTitle": "La Vie (1903)",
+            "paintingLegend": "Uma obra profunda que simboliza a tristeza e complexidade da existência humana, marcando o ápice do Período Azul."
+        },
+    
+        "velhoGuitarrista": {
+            "painting": "velho-guitarrista",
+            "paintingUrl": "images/picasso/article-images/velho-guitarrista.jpg",
+            "paintingTitle": "Velho Guitarrista Cego (1903-1904)",
+            "paintingLegend": "Em tons de azul melancólicos, um homem frágil toca sua guitarra, evocando solidão. Essa obra reflete o sentimento de desolação do Período Azul de Picasso."
+        },
+    
+        "acrobata": {
+            "painting": "acrobata",
+            "paintingUrl": "images/picasso/article-images/acrobata.jpg",
+            "paintingTitle": "Acrobata e Jovem Arlequim (1905)",
+            "paintingLegend": "Esta pintura explora a vulnerabilidade e fragilidade das figuras circenses, características do Período Rosa de Picasso."
+        },
+    
+        "lesDemoiselles": {
+            "painting": "les-demoiselles",
+            "paintingUrl": "images/picasso/article-images/les-demoiselles.jpg",
+            "paintingTitle": "Les Demoiselles d'Avignon (1907)",
+            "paintingLegend": "Com traços angulares e olhares penetrantes, cinco figuras femininas se fragmentam em formas ousadas. Picasso rompe a tradição, inaugurando o Cubismo e desafiando a representação clássica do corpo humano."
+        },
+    
+        "doraMaar": {
+            "painting": "dora-maar",
+            "paintingUrl": "images/picasso/article-images/dora-maar.jpg",
+            "paintingTitle": "Cabeça de Mulher - Dora Maar (1941)",
+            "paintingLegend": "Picasso usa planos assimétricos e cores vibrantes para retratar sua musa, Dora Maar, misturando intensidade e mistério em uma imagem de tristeza e contemplação."
+        },
+    
+        "mulherChorando": {
+            "painting": "mulher-chorando",
+            "paintingUrl": "images/picasso/article-images/mulher-chorando.jpg",
+            "paintingTitle": "A Mulher que Chora (1937)",
+            "paintingLegend": "O rosto anguloso e as lágrimas cristalizadas expressam uma dor profunda. Picasso captura o luto em linhas fraturadas, simbolizando o impacto emocional da guerra civil."
+        },
+    
+        "retratoAmbroise": {
+            "painting": "retrato-ambroise",
+            "paintingUrl": "images/picasso/article-images/retrato-ambroise.jpg",
+            "paintingTitle": "Retrato de Ambroise Vollard (1910)",
+            "paintingLegend": "Uma obra cubista que desconstrói a figura de Vollard, influente marchand de Picasso, em fragmentos geométricos complexos."
+        },
+    
+        "violino": {
+            "painting": "violino",
+            "paintingUrl": "images/picasso/article-images/violino.jpg",
+            "paintingTitle": "Violino e Uvas (1912)",
+            "paintingLegend": "Pintura cubista que decompõe o violino em formas abstratas, explorando a geometria e perspectiva fragmentada."
+        },
+
+        "guernica" : {
+            "painting": "guernica",
+            "paintingUrl": "images/picasso/article-images/guernica.jpg",
+            "paintingTitle": "Guernica (1937)",
+            "paintingLegend": "Em tons de preto, branco e cinza, Guernica expressa o horror da guerra e a angústia do bombardeio sobre a cidade basca. As figuras distorcidas e as expressões de desespero denunciam a violência e a opressão.<"
+
+        }
+    }
+    
+}

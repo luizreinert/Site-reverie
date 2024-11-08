@@ -1245,15 +1245,6 @@ body, html{
     }
 }
 
-/*Query para cada palavra do nome do artista ficar separado em linhas quando o display é grande*/
-@media (min-width: 991.98px){
-    [class^="artist-name"] h1{
-        font-size: calc(3.5vw + 5vh);
-    }
-
-
-}
-
 /* Médio */
 @media (min-width: 992px) and (max-width: 1399.98px) {
     header input{
@@ -1261,51 +1252,6 @@ body, html{
         text-indent: 4%;
         height: 40px;
         min-width: 330px;
-    }
-
-    .navbar-nav li:hover{
-        transition: 0.3s all linear;
-        border-left: 2px solid white;
-        text-indent: 5%;
-    }
-
-    .navbar-nav li:not(:hover){
-        transition: 0.3s all;
-    }
-
-    .navbar-link{
-        color: white;
-        text-decoration: none;
-        font-weight: 300;
-    }
-    
-    ul .nav-item{
-        margin: 0px 20px;
-    }
-
-    .menu-toggler-icon{
-        display: inline-block;
-        width: 35px;
-        height: 35px;
-        background: url(images/assets/menu-hamburguer.png) no-repeat center;
-        background-size: cover;
-        position: relative;
-        right: 10%;
-        margin-top: 12px;
-    }
-
-    .container-atenas{
-        z-index: 0;
-    }
-
-    .container-atenas h1, h3{
-        text-align: center;
-        text-justify: inter-word;
-        z-index: 0;
-    }
-
-    .navbar-xl, header > .search{
-        display: none !important;
     }
 
     .button-min{

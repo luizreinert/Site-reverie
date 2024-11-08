@@ -1,0 +1,421 @@
+{
+    "vg" : {
+        "firstBg" : "url('images/van-gogh/van-gogh-first-bg.png') no-repeat fixed center / cover",
+
+        "moldura1" : {
+            "element" : "this.moldura1",
+            "imageUrl" : "url(images/van-gogh/ródano.jpg)",
+            "bgColor" : "#19566a",
+            "title": "Noite Estrelada Sobre o Ródano",
+            "date": "1888",
+            "technique": "Óleo sobre tela",
+            "dimensions": "72.5 cm x 92 cm",
+            "localization": "Museu de Orsay, Paris, França",
+            "citation": "“Uma vez fui dar um passeio pela praia deserta, à noite. Não foi alegre, nem triste, foi belo.”",
+            "firstP": "A obra é uma representação noturna do rio Ródano em Arles, França. Com pinceladas intensas e uma paleta de cores exuberante, van Gogh retrata o céu estrelado em tons de azul profundo e amarelo vibrante, enquanto as luzes das estrelas e das casas à beira do rio se refletem nas águas serenas.",
+            "secondP": "Uma curiosidade é que van Gogh expressou em cartas a seu irmão, Theo, seu desejo de capturar a “poesia” da noite. Esta obra reflete não apenas a beleza da paisagem noturna, mas também a visão única e emocional do artista sobre o mundo ao seu redor. Com sua magia instantânea, continua a cativar espectadores e a transmitir a intensidade da experiência artística de van Gogh."
+        },
+    
+        "moldura2" : {
+            "element" : "this.moldura2",
+            "imageUrl" : "url('images/van-gogh/igreja.jpg')",
+            "bgColor" : "#77774f",
+            "title": "A Igreja de Auvers",
+            "date": "1890",
+            "technique": "Óleo sobre tela",
+            "dimensions": "74 cm x 94 cm",
+            "localization": "Museu de Orsay, Paris, França",
+            "citation": "“Tenho um quadro maior da igreja, com um efeito em que a construção parece ser violeta, contra um céu azul escuro, cobalto puro; as janelas parecem manchas de azul-marinho, o telhado é violeta e, em uma parte, alaranjado”",
+            "firstP": "A obra é uma paisagem de um vilarejo perto de Paris, chamado Auvers-sur-Oise. Van Gogh viveu no local em seus três últimos meses de vida após ficar internado por um ano em uma instituição em Saint-Rémy.",
+            "secondP": "O pintor se mudou para o vilarejo para ficar mais perto de seu médico, o doutor Paul Gachet. O médico era homeopata e havia sido recomendado por Camille Pissarro. Essa pintura, junto a outras desse período de cerca de dois meses de criação intensa em Auvers-sur-Oise, totalizando 70 obras, ou seja, mais de uma por dia. Podem ser vistos como os últimos esforços expressivos e inconscientes do artista antes de sua morte."
+        },
+    
+        "moldura3" : {
+            "element" : "this.moldura3",
+            "imageUrl" : "url('images/van-gogh/oliveiras.jpg')",
+            "bgColor" : "#175e2b",
+            "title": "As Oliveiras",
+            "date": "1889",
+            "technique": "Óleo sobre tela",
+            "dimensions": "72,6 cm x 91,4 cm",
+            "localization": "Museu de Arte Moderna, Nova Iorque, Estados Unidos",
+            "citation": "“As oliveiras com a nuvem branca e as montanhas ao fundo (...) são exageros do ponto de vista da disposição geral; os contornos são acentuados assim como em algumas xilogravuras antigas.”",
+            "firstP": "Após van Gogh voluntariamente entrar no asilo em Saint-Rémy, no sul da França, na primavera de 1889, ele escreveu para seu irmão Theo: \"Eu fiz uma paisagem com oliveiras e também um novo estudo de um céu estrelado.\" Mais tarde, quando as pinturas tinham secado, ele enviou ambas para Theo em Paris.",
+            "secondP": "Os historiadores da arte acreditam que para Van Gogh a oliveira era algo sagrado, simbolizando tanto o divino quanto o \"o ciclo da vida\". Essa noção foi descrita de maneira primorosa em uma carta que ele escreveu a seu irmão Theo: \"O farfalhar do olival tem algo muito secreto e imensamente antigo. É bonito demais para ousarmos pintá-lo ou poder imaginá-lo.\""
+        },
+    
+        "moldura4" : {
+            "element" : "this.moldura4",
+            "imageUrl" : "url('images/van-gogh/casas-auvers.jpg')",
+            "bgColor" : "#b8aac1",
+            "title": "Casas em Auvers",
+            "date": "1890",
+            "technique": "Óleo sobre tela",
+            "dimensions": "73 cm x 61 cm",
+            "localization": "Museu de Arte de Toledo, Ohio, Estados Unidos",
+            "citation": "“(…) Há muitas vilas e diversas moradias modernas e de classe média, muito animadas, ensolaradas e cobertas de flores.”",
+            "firstP": "Retrata uma cena rural em Auvers-sur-Oise, uma vila nos arredores de Paris, onde Van Gogh passou os últimos meses de sua vida. A obra mostra casas modestas com telhados vermelhos e chaminés fumegantes, cercadas por árvores e vegetação.",
+            "secondP": "A pincelada vigorosa e expressiva característica de Van Gogh é evidente na obra, com uso intenso de cores e texturas para transmitir uma sensação de movimento e vida. A perspectiva distorcida das casas e o céu tumultuado refletem o estado emocional do artista, que lutava contra problemas de saúde mental. A pintura é um testemunho da intensidade de suas emoções e de sua busca por beleza e significado mesmo em meio ao sofrimento."
+        }
+    },
+
+    "fg" : {
+        "firstBg" : "url('images/goya/artworks-images/goya-first-bg.jpg') no-repeat fixed center / cover",
+
+        "moldura1" : {
+            "element" : "this.moldura1",
+            "imageUrl" : "url('images/goya/artworks-images/voo-das-bruxas.jpg')",
+            "bgColor" : "#745516",
+            "title": "O Voo Das Bruxas",
+            "date": "1798",
+            "technique": "Óleo sobre tela",
+            "dimensions": "43.5 cm x 30.5 cm",
+            "localization": "Museu Nacional do Prado, Madrid, Espanha",
+            "citation": "Parte de uma série de seis quadros sobre bruxaria, encomendada pelo Duque e Duquesa de Osuna",
+            "firstP": "Em 'Voo das Bruxas', Goya mergulha nas profundezas da superstição e do misticismo espanhol do final do século XVIII. A cena apresenta três figuras sombrias e encapuzadas pairando sobre um homem indefeso, que se protege com um gesto de terror enquanto uma bruxa o segura no ar. Os rostos das figuras, com expressões intensas, acrescentam uma aura de mistério e inquietação.",
+            "secondP": "O cenário noturno e os tons escuros reforçam a sensação de medo e opressão. Goya utiliza uma composição que dá dinamismo à cena e insere o observador em um ambiente onde o sobrenatural parece ameaçadoramente próximo. A obra reflete tanto o fascínio quanto o ceticismo de Goya em relação às crenças populares, abordando temas de superstição com uma carga psicológica poderosa."
+        },
+
+        "moldura2" : {
+            "element" : "this.moldura2",
+            "imageUrl" : "url('images/goya/artworks-images/sabá-bruxas.jpg') ",
+            "bgColor" : "#576a52",
+            "title": "Sabá das Bruxas",
+            "date": "1798",
+            "technique": "Óleo sobre tela a partir de um afresco",
+            "dimensions": "43.3 x 30.5 cm",
+            "localization": "Museu Lázaro Galdiano, Madrid, Espanha",
+            "citation": "Uma das obras mais icônicas de Goya, representando o medo e a superstição da sociedade espanhola do século XVIII.",
+            "firstP": "A tela retrata “El Gran Cabrón” (O Grande Bode), uma das formas representadas por Satanás, cercado por um grupo de bruxas jovens e idosas em uma paisagem lunar desolada. O bode possui grandes chifres e é coroado com um ramo de folhas de carvalho. À direita, uma velha segura um bebê extremamente faminto, mas aparentemente ainda vivo, enquanto uma bruxa mais jovem à sua direita faz o mesmo com uma criança mais saudável, implicando que elas seguirão o mesmo destino.",
+            "secondP" : "O Diabo parece atuar como uma espécie de sacerdote em uma cerimônia de iniciação para as crianças. O corpo morto de um bebê é visto à esquerda, e outras bruxas, jovens e idosas, estão presentes na cena. A pintura é repleta de símbolos invertidos, como o bode estendendo seu casco esquerdo em direção à criança e a lua minguante voltada para fora do quadro no canto superior esquerdo. Goya usou a imagem de covens de bruxas em várias obras, incluindo as famosas “Pinturas Negras”. Essas pinturas podem ser vistas como uma crítica às superstições prevalentes na Espanha da época."
+        },
+
+        "moldura3" : {
+            "element" : "this.moldura3",
+            "imageUrl" : "url('images/goya/artworks-images/feitiço.jpg')",
+            "bgColor" : "#3b4851",
+            "title": "O Feitiço",
+            "date": "1798",
+            "technique": "Óleo sobre tela",
+            "dimensions": "43.5 cm x 30.5 cm",
+            "localization": "Museu Lázaro Galdiano, Madrid, Espanha",
+            "citation": "Parte de uma série de seis quadros sobre bruxaria, encomendada pelo Duque e Duquesa de Osuna",
+            "firstP": "A obra retrata um grupo de bruxas praticando magia em plena noite com um homem aterrorizado com uma veste branco. Enquanto uma bruxa roga um feitiço segurando uma vela, outra carrega um cesto com crianças e com uma coruja pousada em sua cabeça. Do outro lado, uma bruxa está espetando um boneco com uma agulha, enquanto dois morcegos levantam seu manto.",
+            "secondP": "No centro da pintura, uma idosa com uma túnica amarela se aproxima do homem agachado. Na parte superior, há uma figura incompleta, com ossos nas mãos, observando a cena, identificada por alguns como o diabo ou a lider do Sabá. Ao seu redor, morcegos e corujas voam. A composição do quadro é formada por dois triângulos equiláteros entrelaçados com um círculo no centro, criado pelas figuras principais.\n\n\u2000\u2000Essa composição, a mesma que Goya utiliza em outras obras da série das Pinturas Negras, evoca o Selo de Salomão, um símbolo mágico frequentemente usado na bruxaria tanto para invocar o diabo quanto para enfeitiçar um inimigo."
+        },
+
+        "moldura4" : {
+            "element" : "this.moldura4",
+            "imageUrl" : "url('images/goya/artworks-images/saturno.jpg')",
+            "bgColor" : "#921d00",
+            "title": "Saturno Devorando um Filho",
+            "date": "1820-1823",
+            "technique": "Óleo sobre reboco trasladado a tela",
+            "dimensions": "143.5 cm x 81.4 cm",
+            "localization": "Museu Nacional do Prado, Madrid, Espanha",
+            "citation": "Uma das pinturas mais icônicas de Francisco de Goya, pertencente à série das Pinturas Negras",
+            "firstP": "A composição é centrada na figura grotesca de Saturno, um deus romano, representado como uma figura idosa e monstruosa, devorando um de seus filhos. Na mitologia romana, Saturno (ou Cronos na mitologia grega) devorava seus filhos por medo de ser destronado por eles, conforme a profecia. Goya retrata Saturno não como um deus poderoso e temível, mas como uma figura grotesca e desesperada, refletindo talvez a inevitabilidade do tempo e a futilidade da luta contra ele.",
+            "secondP": "Goya pintou essa obra em um período de sua vida marcado por doenças físicas e mentais, além de uma profunda desilusão com a política e a sociedade da época. A série das Pinturas Negras como um todo revela suas preocupações com a mortalidade, a decadência e a corrupção da humanidade."
+        }
+    },
+
+    "rs" : {
+        "firstBg" : "url('images/rafael-sanzio/artworks-images/rs-first-bg.jpeg') no-repeat fixed center / cover",
+
+        "moldura1": {
+            "element": "this.moldura1",
+            "imageUrl": "url('images/rafael-sanzio/artworks-images/madona-sistina.jpg')",
+            "bgColor": "#1e4218",
+            "title": "Madona Sistina",
+            "date": "1512",
+            "technique": "Óleo sobre tela",
+            "dimensions": "265 x 196 cm",
+            "localization": "Pinacoteca dos Mestres Antigos, Dresden, Alemanha",
+            "citation": "Criada para o altar da Igreja de San Sisto, em Piacenza, encomendada pelo Papa Júlio II.",
+            "firstP": "A Madona Sistina é uma das obras mais reverenciadas de Rafael, retratando a Virgem Maria carregando o Menino Jesus em uma postura de serenidade, enquanto olha diretamente para o espectador. Ao seu lado, estão São Sixto e Santa Bárbara, ambos figuras de devoção na Igreja Católica. Rafael consegue capturar a suavidade e compaixão de Maria com um detalhamento meticuloso e uma paleta de cores sublime, que reforça a atmosfera celestial da pintura.",
+            "secondP": "Abaixo da Virgem e do Menino, dois querubins repousam, apoiando-se no parapeito com expressões pensativas, adicionando uma camada de contemplação à cena. Estes anjos, apesar de pequenos, ganharam fama própria e são amplamente reproduzidos na cultura popular. A composição equilibrada de Rafael e o uso magistral do espaço criam um fluxo visual que guia o olhar do observador ao centro da obra, destacando a figura da Madona e o menino Jesus como símbolos de fé e esperança."
+        },
+        
+        "moldura2": {
+            "element": "this.moldura2",
+            "imageUrl": "url('images/rafael-sanzio/artworks-images/visao-ezequiel.jpg')",
+            "bgColor": "#464d7a",
+            "title": "Visão de Ezequiel",
+            "date": "1518",
+            "technique": "Óleo sobre painel",
+            "dimensions": "40 x 30 cm",
+            "localization": "Palazzo Pitti, Florença, Itália",
+            "citation": "Inspirada pelo Livro de Ezequiel, que descreve a visão de um trono celeste, encomendado pela família Medici.",
+            "firstP": "A obra retrata a grandiosa visão do profeta Ezequiel, uma passagem bíblica onde ele vê a glória de Deus rodeado por querubins e anjos. Deus aparece como uma figura imponente no centro, elevado sobre um carro de fogo. Ao seu redor, criaturas celestiais carregam-no em uma tempestade luminosa, representando a magnitude e o mistério divino.",
+            "secondP": "A técnica de Rafael destaca a luz divina que envolve o grupo central, simbolizando a presença espiritual que transcende o humano. Os detalhes dos rostos, as poses dramáticas e as cores profundas refletem a influência do Renascimento sobre o artista, que enfatiza o poder místico da experiência espiritual de Ezequiel."
+        },
+
+        "moldura3": {
+            "element": "this.moldura3",
+            "imageUrl": "url('images/rafael-sanzio/artworks-images/sao-jorge.jpg')",
+            "bgColor": "#346b29",
+            "title": "São Jorge e o Dragão",
+            "date": "1505",
+            "technique": "Óleo sobre madeira",
+            "dimensions": "28.5 x 21.5 cm",
+            "localization": "Museu do Louvre, Paris, França",
+            "citation": "Possivelmente uma encomenda da corte de Urbino, simbolizando a luta entre o bem e o mal.",
+            "firstP": "Nesta obra, São Jorge aparece em plena batalha contra o dragão, um símbolo clássico do mal, armado com uma lança e montado em um cavalo branco. O cenário é de grande tensão, com o dragão curvando-se ao chão e São Jorge em um movimento decisivo, prestes a vencê-lo. Rafael aplica detalhes cuidadosos na armadura do santo e nas escamas do dragão, criando um contraste entre o herói e a fera.",
+            "secondP": "O fundo da obra, com tons verdes e azulados, remete a uma paisagem serena, que contrasta com a ação violenta do primeiro plano. Esta composição cria uma narrativa visual que celebra a coragem e a virtude, qualidades personificadas por São Jorge, que, segundo a lenda, salvou uma cidade da ameaça do dragão."
+        },
+
+        "moldura4": {
+            "element": "this.moldura4",
+            "imageUrl": "url('images/rafael-sanzio/artworks-images/casamento-virgem.jpg')",
+            "bgColor": "#a38d5a",
+            "title": "Casamento da Virgem",
+            "date": "1504",
+            "technique": "Óleo sobre madeira",
+            "dimensions": "170 x 117 cm",
+            "localization": "Pinacoteca de Brera, Milão, Itália",
+            "citation": "Criada para a Igreja de San Francesco em Città di Castello, marcando o estilo clássico e harmonioso de Rafael.",
+            "firstP": "O 'Casamento da Virgem' é uma obra-prima que retrata o momento em que José e Maria se casam, abençoado por um sacerdote ao centro da cena. Atrás do casal, um templo com uma cúpula circular cria profundidade, destacando-se como símbolo de unidade espiritual e terrena. Rafael utiliza a perspectiva de forma exemplar, organizando figuras em camadas que dão à cena uma sensação de harmonia e equilíbrio.",
+            "secondP": "A atenção aos detalhes no vestuário dos personagens e a expressão serena da Virgem revelam a habilidade do artista em transmitir emoções sutis e a importância do momento. A escolha das cores suaves, com tons terrosos e dourados, intensifica a atmosfera sagrada e serena da obra, estabelecendo Rafael como um mestre na fusão entre arquitetura e narrativa visual."
+        }
+    },
+
+    "cr" : {
+        "firstBg" : "url('images/caravaggio/artworks-images/first-bg-cr.jpg') no-repeat fixed top / cover",
+
+        "moldura1": {
+            "element": "this.moldura1",
+            "imageUrl": "url('images/caravaggio/artworks-images/conversao-paulo.jpg')",
+            "bgColor": "#2f2b29",
+            "title": "Conversão de São Paulo",
+            "date": "1601",
+            "technique": "Óleo sobre tela",
+            "dimensions": "230 x 175 cm",
+            "localization": "Santa Maria del Popolo, Roma, Itália",
+            "citation": "Pintada para a Capela Cerasi, representa o momento dramático da conversão do apóstolo Paulo.",
+            "firstP": "A obra retrata o instante dramático em que Paulo, caído no chão, é cegado por uma luz divina que o chama à conversão. A pintura capta o santo em sua vulnerabilidade, com as mãos erguidas ao céu, enquanto o cavalo e o serviçal parecem alheios à experiência espiritual. O uso intenso do claro-escuro é um destaque, projetando Paulo em meio à escuridão, simbolizando a passagem da ignorância para a iluminação.",
+            "secondP": "Caravaggio aplica uma composição simples, mas eficaz, com foco na emoção humana e na luz divina. A escolha de representar o santo sem os tradicionais símbolos gloriosos, em uma posição de humildade e rendição, aproxima o espectador do evento milagroso, revelando o poder da fé que transcende a narrativa tradicional."
+        },
+        
+        "moldura2": {
+            "element": "this.moldura2",
+            "imageUrl": "url('images/caravaggio/artworks-images/pequeno-baco.jpg')",
+            "bgColor": "#6b4b3a",
+            "title": "Pequeno Baco Doente",
+            "date": "1593",
+            "technique": "Óleo sobre tela",
+            "dimensions": "67 x 53 cm",
+            "localization": "Galeria Borghese, Roma, Itália",
+            "citation": "Autorretrato de Caravaggio como Baco, possivelmente pintado durante uma doença.",
+            "firstP": "Em 'Pequeno Baco Doente', Caravaggio se representa como o deus Baco, mas com uma aparência pálida e exausta. Vestido com folhas de videira e uma túnica simples, o jovem segura um cacho de uvas que alude à embriaguez e à decadência. Ao contrário das representações tradicionais, este Baco exibe um rosto doente, transmitindo uma sensação de vulnerabilidade e decadência que espelha o estado físico do próprio artista.",
+            "secondP": "O fundo escuro destaca a figura em primeiro plano, um recurso típico de Caravaggio que adiciona intensidade à cena. Essa abordagem realista e introspectiva é um reflexo da turbulenta vida do artista, que muitas vezes desafiava os padrões idealizados do Renascimento com representações cruas e humanas, enfatizando a fragilidade da existência humana."
+        },
+
+        "moldura3": {
+            "element": "this.moldura3",
+            "imageUrl": "url('images/caravaggio/artworks-images/garoto-mordido.jpg')",
+            "bgColor": "#334d2c",
+            "title": "Garoto Mordido por um Lagarto",
+            "date": "1595",
+            "technique": "Óleo sobre tela",
+            "dimensions": "66 x 52 cm",
+            "localization": "Fondazione Roberto Longhi, Florença, Itália",
+            "citation": "A pintura captura a reação humana de dor e surpresa, mostrando a habilidade de Caravaggio em capturar emoções fugazes.",
+            "firstP": "Neste quadro, um jovem reage de forma dramática ao ser mordido por um lagarto escondido entre flores. A expressão de dor e surpresa é capturada com grande realismo, representando o momento efêmero da dor física. O uso de luz intensa destaca o rosto e a mão do jovem, enquanto o fundo escuro intensifica a cena e isola o personagem do entorno, enfatizando sua emoção.",
+            "secondP": "A obra reflete a fascinação de Caravaggio com a realidade crua e os detalhes do corpo humano, mostrando sua habilidade em capturar reações genuínas. A simbologia do lagarto escondido e das flores murchas sugere a efemeridade da juventude e da beleza, um tema recorrente na obra do artista."
+        },
+
+        "moldura4": {
+            "element": "this.moldura4",
+            "imageUrl": "url('images/caravaggio/artworks-images/sepultamento-cristo.jpg')",
+            "bgColor": "#1d1a18",
+            "title": "O Sepultamento de Cristo",
+            "date": "1603",
+            "technique": "Óleo sobre tela",
+            "dimensions": "300 x 203 cm",
+            "localization": "Pinacoteca Vaticana, Cidade do Vaticano",
+            "citation": "Encomendada para a Capela Santa Maria in Vallicella, representa o momento da deposição de Cristo no túmulo.",
+            "firstP": "A obra ilustra o corpo de Cristo sendo cuidadosamente colocado em seu túmulo. Caravaggio utiliza figuras em tamanho real para envolver o espectador na cena, criando uma sensação de proximidade com o drama. Maria e os discípulos expressam dor e tristeza, enquanto o corpo de Cristo é iluminado por uma luz que contrasta com o fundo sombrio, realçando sua forma física e simbolizando seu sacrifício.",
+            "secondP": "A composição diagonal e o realismo intenso nas expressões e gestos reforçam o impacto emocional. Caravaggio abandona idealizações religiosas e coloca ênfase na humanidade de Cristo e na dor de seus seguidores, evocando empatia do observador. A obra é considerada uma das representações mais comoventes da Paixão de Cristo, por sua profundidade emocional e inovação técnica."
+        }
+    },
+
+    "jd" : {
+        "firstBg" : "url('images/Jacques-louis-david/artworks-images/first-bg-jd.jpg') no-repeat fixed center / cover",
+
+        "moldura1": {
+            "element": "this.moldura1",
+            "imageUrl": "url('images/jacques-louis-david/artworks-images/imperador-napoleao.jpg')",
+            "bgColor": "#3a3f48",
+            "title": "O Imperador Napoleão em seu Gabinete de Trabalho",
+            "date": "1812",
+            "technique": "Óleo sobre tela",
+            "dimensions": "203 x 125 cm",
+            "localization": "National Gallery of Art, Washington, D.C., EUA",
+            "citation": "Retrato icônico encomendado por um colaborador próximo de Napoleão, com o intuito de reforçar sua imagem como líder incansável.",
+            "firstP": "Nesta obra, Napoleão é retratado em seu gabinete, vestido com um uniforme militar e segurando uma pena. A cena simboliza sua dedicação incansável ao trabalho em prol da França, evidenciada pelos papéis e documentos espalhados pela mesa. O relógio ao fundo, marcando as quatro da manhã, sugere que o imperador trabalhava longas horas para o bem de seu país.",
+            "secondP": "David utiliza o claro-escuro para destacar a figura de Napoleão, contrastando sua figura com o fundo escuro e criando uma aura de seriedade e poder. A postura resoluta e o olhar determinado do imperador transmitem a força de um líder que governa com disciplina e controle, reforçando sua imagem de estadista firme e dedicado."
+        },
+        
+        "moldura2": {
+            "element": "this.moldura2",
+            "imageUrl": "url('images/jacques-louis-david/artworks-images/leonidas.jpg')",
+            "bgColor": "#5b463a",
+            "title": "Leônidas em Termópilas",
+            "date": "1814",
+            "technique": "Óleo sobre tela",
+            "dimensions": "395 x 531 cm",
+            "localization": "Museu do Louvre, Paris, França",
+            "citation": "Encomendada pelo rei Luís XVIII, a obra exalta a coragem e o sacrifício dos guerreiros espartanos.",
+            "firstP": "A pintura retrata o momento em que Leônidas, rei de Esparta, lidera seus homens nas Termópilas, em um ato de resistência heroica contra as forças persas. O herói espartano está ao centro, armado e preparado para o combate, cercado por guerreiros prontos para sacrificar suas vidas. David compõe a cena com precisão, criando um ambiente solene que evoca a nobreza do sacrifício e a honra espartana.",
+            "secondP": "A utilização de cores quentes e terrenas reflete a dureza do cenário de batalha. A grandiosidade das figuras e os gestos heroicos revelam a influência clássica na obra de David, que celebra a virtude da bravura e a lealdade, atributos fundamentais dos espartanos e representativos dos valores revolucionários franceses que o artista prezava."
+        },
+
+        "moldura3": {
+            "element": "this.moldura3",
+            "imageUrl": "url('images/jacques-louis-david/artworks-images/apolo-diana.jpg')",
+            "bgColor": "#8b6e62",
+            "title": "Apolo e Diana Castigam Níobe Matando seus Filhos",
+            "date": "1772",
+            "technique": "Óleo sobre tela",
+            "dimensions": "180 x 220 cm",
+            "localization": "Palácio de Versalhes, Versalhes, França",
+            "citation": "Obra inspirada na mitologia grega, ilustrando o castigo divino imposto a Níobe por sua arrogância.",
+            "firstP": "A cena mitológica ilustra o momento trágico em que Apolo e Diana, em resposta ao orgulho de Níobe, castigam-na matando seus filhos. David capta o horror da mãe enquanto vê seus filhos caindo, atingidos por flechas dos deuses. O desespero e a dor de Níobe são expressos em seu gesto protetor, enquanto seus filhos, em diferentes estágios de agonia, reforçam a intensidade da tragédia.",
+            "secondP": "O contraste entre o corpo divino de Apolo e o caos mortal abaixo representa a separação entre os mundos divino e humano. David usa luz e sombra para acentuar a tensão emocional da cena, explorando temas de orgulho e punição, bem como a impotência humana diante da vontade divina."
+        },
+        
+        "moldura4": {
+            "element": "this.moldura4",
+            "imageUrl": "url('images/jacques-louis-david/artworks-images/lavoisier.jpg')",
+            "bgColor": "#5d5a56",
+            "title": "Retrato de Antoine Lavoisier e Sua Mulher",
+            "date": "1788",
+            "technique": "Óleo sobre tela",
+            "dimensions": "259 x 194 cm",
+            "localization": "Museu Metropolitano de Arte, Nova Iorque, EUA",
+            "citation": "Pintura que celebra Lavoisier, considerado o pai da química moderna, e sua esposa Marie-Anne, uma mulher culta e sua colaboradora.",
+            "firstP": "Nesta obra, Lavoisier e sua esposa Marie-Anne são retratados em um ambiente de estudo. Lavoisier, rodeado por equipamentos científicos, é representado em um momento de pausa, com sua esposa ao lado, olhando diretamente para o espectador. Marie-Anne, que frequentemente colaborava com seu marido em suas pesquisas, é representada como uma figura importante, ao lado de um homem que revolucionou a ciência.",
+            "secondP": "David utiliza uma composição serena e cores suaves para capturar a intelectualidade e o status social do casal. Os objetos no fundo e a postura dos personagens transmitem o respeito pelo conhecimento científico e a importância do trabalho colaborativo. Este retrato é não só uma representação do casal, mas também um tributo ao avanço da ciência e ao papel das mulheres na esfera intelectual."
+        }
+    }, 
+
+    "cm" : {
+        "firstBg" : "url('images/monet/artworks-images/first-bg-cm.jpg') no-repeat fixed center / cover",
+
+        "moldura1": {
+            "element": "this.moldura1",
+            "imageUrl": "url('images/monet/artworks-images/madame-monet.jpg')",
+            "bgColor": "#c25757",
+            "title": "Madame Monet Trajando um Kimono",
+            "date": "1875",
+            "technique": "Óleo sobre tela",
+            "dimensions": "231 x 142 cm",
+            "localization": "Museum of Fine Arts, Boston, EUA",
+            "citation": "Exemplo do fascínio pela cultura oriental que influenciou muitos artistas impressionistas, incluindo Monet.",
+            "firstP": "Nesta obra, Camille Monet, esposa do artista, é representada usando um exuberante quimono japonês. O fundo, coberto por um painel de leques orientais, realça o exotismo e o apelo estético da cultura japonesa que influenciou Monet e muitos de seus contemporâneos. A escolha de cores vivas e o padrão floral do quimono criam uma composição vibrante e rica em detalhes.",
+            "secondP": "A postura de Madame Monet, combinada com o contexto exótico, sugere o interesse do casal pela moda e cultura orientais, que estavam em voga na época. Monet explora aqui um estilo mais detalhado e uma técnica cuidadosa para acentuar a complexidade das texturas, destacando seu talento para representar superfícies delicadas e padrões decorativos."
+        },
+        
+        "moldura2": {
+            "element": "this.moldura2",
+            "imageUrl": "url('images/monet/artworks-images/pourville.jpg')",
+            "bgColor": "#8bb6e1",
+            "title": "A Caminhada do Penhasco em Pourville",
+            "date": "1882",
+            "technique": "Óleo sobre tela",
+            "dimensions": "65 x 81 cm",
+            "localization": "Museu de Arte de São Paulo, São Paulo, Brasil",
+            "citation": "Pintura realizada durante o verão em Pourville, um dos locais favoritos de Monet para observar a natureza e o mar.",
+            "firstP": "Neste cenário costeiro, Monet retrata o topo de um penhasco em Pourville, com uma jovem caminhando à beira do precipício, em meio à brisa marinha e ao céu claro. A obra capta a serenidade e a vastidão do ambiente, e a técnica de Monet transmite a leveza e a textura do gramado sob a influência do vento.",
+            "secondP": "As pinceladas fluidas e a paleta de cores suaves destacam o movimento das nuvens e do mar, criando um efeito etéreo que evoca o encanto das paisagens costeiras. A simplicidade da composição, com o penhasco e o céu ocupando a maior parte da tela, intensifica o sentimento de liberdade e introspecção que Monet buscava capturar ao pintar ao ar livre."
+        },
+
+        "moldura3": {
+            "element": "this.moldura3",
+            "imageUrl": "url('images/monet/artworks-images/jardim-sainte.jpg')",
+            "bgColor": "#b3b055",
+            "title": "Jardim em Sainte-Adresse",
+            "date": "1867",
+            "technique": "Óleo sobre tela",
+            "dimensions": "98 x 130 cm",
+            "localization": "Museu Metropolitano de Arte, Nova Iorque, EUA",
+            "citation": "Paisagem inspirada pelo jardim da casa de familiares em Sainte-Adresse, onde Monet passou verões em sua juventude.",
+            "firstP": "A pintura mostra um jardim elegante à beira-mar, com figuras relaxando sob a luz suave do verão. Monet explora aqui o jogo de luz e sombra sobre as flores e folhagens, criando uma sensação de harmonia e tranquilidade. As bandeiras ao fundo, agitadas pela brisa, acrescentam uma leve sensação de movimento à cena serena.",
+            "secondP": "O olhar de Monet para os detalhes florais e a textura das plantas transmite a beleza da vida ao ar livre, enfatizando o prazer da companhia e do ócio. A escolha de uma paleta colorida e brilhante reflete a leveza do momento e é um prenúncio de seu estilo impressionista que se consolidaria nos anos seguintes."
+        },
+        
+        "moldura4": {
+            "element": "this.moldura4",
+            "imageUrl": "url('images/monet/artworks-images/rua-montorgueil.jpg')",
+            "bgColor": "#9e1b1e",
+            "title": "A rua Montorgueil, Paris, celebração de 30 de junho de 1878",
+            "date": "1878",
+            "technique": "Óleo sobre tela",
+            "dimensions": "81 x 50 cm",
+            "localization": "Museu de Orsay, Paris, França",
+            "citation": "Pintura criada em homenagem às festividades republicanas em Paris, capturando a energia da multidão e do momento histórico.",
+            "firstP": "Nesta vibrante celebração na Rua Montorgueil, Monet pinta uma multidão sob uma profusão de bandeiras tricolores que cobrem o céu, exaltando o patriotismo e a unidade nacional. A rua está repleta de pessoas em festa, enquanto o jogo de cores e luzes cria uma atmosfera de euforia e movimento.",
+            "secondP": "Monet utiliza pinceladas rápidas e uma paleta audaciosa para dar vida à agitação da cena, retratando o dinamismo e a energia das celebrações republicanas. A composição densa e as cores vibrantes destacam o entusiasmo dos parisienses, tornando-se um testemunho pictórico do espírito revolucionário e da força do movimento impressionista."
+        }
+    }, 
+
+    "pp" : {
+        "firstBg" : "url('images/picasso/heroSectionBg-picasso.jpg') no-repeat fixed center / cover",
+
+        "moldura1": {
+            "element": "this.moldura1",
+            "imageUrl": "url('images/picasso/artworks-images/primeira-comunhao.jpg')",
+            "bgColor": "#636569",
+            "title": "Primeira Comunhão",
+            "date": "1896",
+            "technique": "Óleo sobre tela",
+            "dimensions": "166 x 118 cm",
+            "localization": "Museu Picasso, Barcelona, Espanha",
+            "citation": "Uma das primeiras obras acadêmicas de Picasso, retratando sua irmã Lola em um momento de devoção religiosa.",
+            "firstP": "Neste retrato de inspiração religiosa, Picasso pinta sua irmã Lola ajoelhada para receber a comunhão, cercada de um cenário clássico e solene. A precisão técnica e os detalhes cuidadosos na vestimenta e nos gestos são um exemplo de sua formação acadêmica na época.",
+            "secondP": "Apesar de jovem, Picasso já demonstra habilidade em capturar a intensidade emocional de momentos significativos. A iluminação suave e o simbolismo cristão refletem o estilo tradicional que ele dominaria antes de abraçar as inovações modernistas que definiriam sua carreira."
+        },
+
+        "moldura2": {
+            "element": "this.moldura2",
+            "imageUrl": "url('images/picasso/artworks-images/autorretrato.jpg')",
+            "bgColor": "#3a5981",
+            "title": "Autorretrato",
+            "date": "1901",
+            "technique": "Óleo sobre tela",
+            "dimensions": "81 x 60 cm",
+            "localization": "Museu Picasso, Paris, França",
+            "citation": "Uma obra introspectiva, pintada durante o início do Período Azul de Picasso, marcada por tons sombrios e temas melancólicos.",
+            "firstP": "Neste autorretrato de 1901, Picasso se retrata com um semblante melancólico e paleta dominada por tons de azul. Esse uso de cores frias reflete o início de seu Período Azul, marcado por uma fase de tristeza pessoal e introspecção.",
+            "secondP": "O olhar direto e sério do artista, emoldurado por pinceladas densas, expressa uma sensação de solidão e inquietude. Esse autorretrato é um exemplo notável de como Picasso usava a própria imagem para explorar emoções e estados de espírito, destacando seu talento para transmitir profundidade psicológica através de técnicas minimalistas."
+        },
+
+        "moldura3": {
+            "element": "this.moldura3",
+            "imageUrl": "url('images/picasso/artworks-images/ator.jpg')",
+            "bgColor": "#b9a1a1",
+            "title": "O Ator",
+            "date": "1904-1905",
+            "technique": "Óleo sobre tela",
+            "dimensions": "196 x 115 cm",
+            "localization": "Museu Metropolitano de Arte, Nova Iorque, EUA",
+            "citation": "Pintado durante o Período Rosa, a obra reflete a fascinação de Picasso pelas artes teatrais e pela vida circense.",
+            "firstP": "Nesta pintura, um jovem ator é retratado em pose dramática, com movimentos que sugerem graça e introspecção. Os tons rosados e terrosos refletem o Período Rosa de Picasso, quando ele se voltou a temas de circo e teatro, representando artistas e acrobatas com uma melancolia delicada.",
+            "secondP": "A leveza na paleta e os traços sutis indicam a empatia de Picasso pelos indivíduos marginalizados e as emoções que permeiam a vida artística. A pose alongada do ator e o pano de fundo sugerem uma performance, enquanto seu olhar distante parece refletir um sentimento de solidão e introspecção."
+        },
+        
+        "moldura4": {
+            "element": "this.moldura4",
+            "imageUrl": "url('images/picasso/artworks-images/mulher-espelho.jpg')",
+            "bgColor": "#d88589",
+            "title": "Mulher com Espelho",
+            "date": "1932",
+            "technique": "Óleo sobre tela",
+            "dimensions": "162 x 130 cm",
+            "localization": "Museu de Arte Moderna, Nova Iorque, EUA",
+            "citation": "Obra emblemática do Cubismo e da exploração da identidade feminina, inspirada na companheira de Picasso, Marie-Thérèse Walter.",
+            "firstP": "Nesta obra vibrante e complexa, Picasso retrata uma mulher diante de um espelho, simbolizando a dualidade e as facetas da identidade feminina. O uso de formas geométricas e o desdobramento da imagem no espelho refletem o estilo cubista do artista e seu fascínio pela desconstrução da forma humana.",
+            "secondP": "A mulher observa a própria imagem com um olhar inquisitivo, enquanto o espelho reflete uma versão alterada e simbólica de si mesma. A paleta de cores vivas e as linhas sinuosas conferem uma sensualidade e profundidade à composição, ilustrando a complexidade psicológica das figuras femininas de Picasso."
+        }
+    }
+}
