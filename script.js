@@ -366,7 +366,6 @@ function createTargetArtistObjects(targetArtist){
             this.moldura3 = document.getElementById(`${artist}-m3`)
             this.moldura4 = document.getElementById(`${artist}-m4`)
             this.canvas = document.getElementById(`canvas-1-${artist}`)
-            this.botaoCarousel = document.getElementById(`${artist}-first-arrow`)
             this.arrayMolduras = [this.moldura1, this.moldura2, this.moldura3, this.moldura4]
         
             fetch("json/artworks-data.json")
@@ -501,14 +500,7 @@ function createTargetArtistObjects(targetArtist){
     
         botaoZoom(condition, moldura){
             var btnZoom = document.createElement('button')
-            switch (this.page){
-                case 1:
-                    btnZoom.classList.add('zoom-art')
-                    break
-                case 2 :
-                    btnZoom.classList.add('zoom-art-2')
-                    break
-            }
+            btnZoom.classList.add('zoom-art')
             btnZoom.innerHTML ='<ion-icon name="expand-outline"></ion-icon>'
             btnZoom.addEventListener('mousedown', (e) => {
                 this.fullscreen(moldura)
@@ -530,27 +522,18 @@ function createTargetArtistObjects(targetArtist){
     
         responsive(){
             var lgPos = this.container
-            var smPos = this.canvas
-            var carouselSlideBtn = this.botaoCarousel
             var informationCard = this.information
-            if (window.innerWidth < 991.98){
-                smPos.appendChild(carouselSlideBtn)
-                smPos.appendChild(informationCard)
-            } else {
-                lgPos.appendChild(carouselSlideBtn)
-                lgPos.appendChild(informationCard)
-                this.background.removeEventListener('mousedown', (e) => {
-                    this.canvas.classList.remove('card-gap')
-                    this.information.classList.remove('arte-info-on')
-                    this.canvas.appendChild(this.botaoCarousel)
-                    item.classList.remove('hidden')
-                    e.stopPropagation()
-                })
-                this.arrayMolduras.forEach((item) => {
-                    item.classList.remove('hidden')
-                })
-    
-            }
+            lgPos.appendChild(informationCard)
+            this.background.removeEventListener('mousedown', (e) => {
+                this.canvas.classList.remove('card-gap')
+                this.information.classList.remove('arte-info-on')
+                item.classList.remove('hidden')
+                e.stopPropagation()
+            })
+            this.arrayMolduras.forEach((item) => {
+                item.classList.remove('hidden')
+            })
+
         }
     
         minSizeUi(item, focusedFrame){
@@ -565,15 +548,11 @@ function createTargetArtistObjects(targetArtist){
                     })
                     var information = this.information
                     var canvas = this.canvas
-                    var botaoCarrosel = this.botaoCarousel
                     window.onscroll = function(e) {
                         if (item.classList.contains('hidden') == true && focusedFrame.classList.contains('hidden') == false && this.oldScroll > window.scrollY == true ){
                             if (this.scrollY - this.oldScroll < -10){
                                 information.classList.remove('arte-info-on')
-                                botaoCarrosel.classList.remove('hidden')
                             }
-                        } else if (item.classList.contains('hidden') == false && focusedFrame.classList.contains('hidden') == false) {
-                            botaoCarrosel.classList.remove('hidden')
                         } else {
                             if (information.classList.contains('arte-info-on') == true){
                                 canvas.classList.add('card-gap')
@@ -582,7 +561,6 @@ function createTargetArtistObjects(targetArtist){
                                     case false:
                                         if (this.scrollY - this.oldScroll > 10){
                                             information.classList.add('arte-info-on')
-                                            botaoCarrosel.classList.add('hidden')
                                             canvas.appendChild(information)
                                         }
                                         break
@@ -598,7 +576,6 @@ function createTargetArtistObjects(targetArtist){
                         if (window.innerWidth < 991.98){
                             this.canvas.classList.remove('card-gap')
                             this.information.classList.remove('arte-info-on')
-                            this.canvas.appendChild(this.botaoCarousel)
                             item.classList.remove('hidden')
                         }
                     })
@@ -607,11 +584,11 @@ function createTargetArtistObjects(targetArtist){
         }
     
         main(){
-            this.arrayMolduras.forEach((item) => {
-                item.addEventListener('focus', () => {this.hoverEvent('disable', item)})
-                item.addEventListener('blur', () => {this.hoverEvent('enable', item)})
-                item.addEventListener('focus', () => {this.botaoZoom('add', item)})
-                item.addEventListener('blur', () => {this.botaoZoom('remove', item)})
+            this.arrayMolduras.forEach((selectedFrame) => {
+                selectedFrame.addEventListener('focus', () => {this.hoverEvent('disable', selectedFrame)})
+                selectedFrame.addEventListener('blur', () => {this.hoverEvent('enable', selectedFrame)})
+                selectedFrame.addEventListener('focus', () => {this.botaoZoom('add', selectedFrame)})
+                selectedFrame.addEventListener('blur', () => {this.botaoZoom('remove', selectedFrame)})
             })
             this.framesChange()
             this.carouselAutoScroll()
@@ -619,59 +596,40 @@ function createTargetArtistObjects(targetArtist){
     }
     
     const primeiraPaginaVanGogh = new Molduras(1, 'vg')
-    const segundaPaginaVanGogh = new Molduras(1, 'vg')
     const primeiraPaginaGoya = new Molduras(1, 'fg')
-    const segundaPaginaGoya = new Molduras(1, 'fg')
     const primeiraPaginaRafael = new Molduras(1, 'rs')
-    const segundaPaginaRafael = new Molduras(1, 'rs')
     const primeiraPaginaCaravaggio = new Molduras(1, 'cr')
-    const segundaPaginaCaravaggio = new Molduras(1, 'cr')
     const primeiraPaginaJacques = new Molduras(1, 'jd')
-    const segundaPaginaJacques = new Molduras(1, 'jd')
     const primeiraPaginaMonet = new Molduras(1, 'cm')
-    const segundaPaginaMonet = new Molduras(1, 'cm')
     const primeiraPaginaPicasso = new Molduras(1, 'pp')
-    const segundaPaginaPicasso = new Molduras(1, 'pp')
     
-
-    // Organiza as páginas de cada artista, criando todas as primeiras páginas ao inicializar e as segundas ao clicar no botão de slide //
-    const assetsVanGogh = [primeiraPaginaVanGogh, segundaPaginaVanGogh]
-    const assetsGoya = [primeiraPaginaGoya, segundaPaginaGoya]
-    const assetsRafael = [primeiraPaginaRafael, segundaPaginaRafael]
-    const assetsCaravaggio = [primeiraPaginaCaravaggio, segundaPaginaCaravaggio]
-    const assetsJacques = [primeiraPaginaJacques, segundaPaginaJacques]
-    const assetsMonet = [primeiraPaginaMonet, segundaPaginaMonet]
-    const assetsPicasso = [primeiraPaginaPicasso, segundaPaginaPicasso]
-
     switch (targetArtist){
         case 'Vincent Van Gogh':
-            createObjects(assetsVanGogh)
+            createObjects(primeiraPaginaVanGogh)
             break
         case 'Francisco de Goya':
-            createObjects(assetsGoya)
+            createObjects(primeiraPaginaGoya)
             break
         case 'Rafael Sanzio':
-            createObjects(assetsRafael)
+            createObjects(primeiraPaginaRafael)
             break
         case 'Caravaggio':
-            createObjects(assetsCaravaggio)
+            createObjects(primeiraPaginaCaravaggio)
             break
         case 'Jacques-Louis David':
-            createObjects(assetsJacques)
+            createObjects(primeiraPaginaJacques)
             break
         case 'Claude Monet':
-            createObjects(assetsMonet)
+            createObjects(primeiraPaginaMonet)
             break
         case 'Pablo Picasso':
-            createObjects(assetsPicasso)
+            createObjects(primeiraPaginaPicasso)
             break
     }
 
-    function createObjects(artist){
-        artist.forEach((carouselPage) => {
-            carouselPage.main()
-            carouselPage.responsive()
-        })
+    function createObjects(page){
+        page.main()
+        page.responsive()
     }
     
     // Botão de voltar ao topo da página //
@@ -694,12 +652,6 @@ function createTargetArtistObjects(targetArtist){
             backTopBtn.classList.remove('shown')
         }
     })
-    
-    window.onresize = () => {
-        allAssets.forEach((artists) => {
-            artists.responsive()
-        })
-    }
     
     class ArtistInformations{
         constructor(artist){
@@ -768,16 +720,22 @@ function createTargetArtistObjects(targetArtist){
                         this.expandBtn.classList.remove('expand-active')
                 }
             })
+            this.dividerResponsive()
+            
         }
     
         dividerResponsive(){
             var divider = this.artistDivider
             var midDivider = document.querySelector(`.artist-text-${this.artist}`)
             var expandButton = this.expandBtn
-            if (window.innerWidth < 1399.98){
-                divider.appendChild(expandButton)
-            } else if (window.innerWidth > 1399.98){
-                midDivider.appendChild(expandButton)
+            const isSmallScreen = window.matchMedia("(max-width: 1399.98px)")
+            switch (isSmallScreen.matches){
+                case true:
+                    divider.appendChild(expandButton)
+                    break
+                case false:
+                    midDivider.appendChild(expandButton)
+                    break
             }
             
         }
@@ -816,17 +774,6 @@ function createTargetArtistObjects(targetArtist){
             break
     }
     
-    window.addEventListener("resize", () => {
-        informacoesArtists.forEach((artist) => {
-            artist.dividerResponsive()
-        })
-    })
-    
-    window.addEventListener("load", () => {
-        informacoesArtists.forEach((artist) => {
-            artist.dividerResponsive()
-        })
-    })
     
 }
 
