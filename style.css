@@ -24,15 +24,23 @@ body, html{
 }
 
 .brand-img{
-    transition: all 1s;
-    max-width: 50px;
-    max-height: 50px;
+    transition: width 1s, height 1s, opacity 1s 0.5s, visibility 1s 0.5s;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    visibility: hidden;
+    animation: icon-hidden 1s 1s forwards;
+}
+
+@keyframes icon-hidden{
+    from{height: 50px; width: 50px}
+    to{height: 0px; width: 0px}
 }
 
 .brand-img-grown{
     transition: all 1s;
-    max-width: 90px;
-    max-height: 90px;
+    width: 90px;
+    height: 90px;
 }
 
 
@@ -67,17 +75,7 @@ body, html{
     text-shadow: 4px 5px 0px #000000;
     color: white;
     margin: 0px 0px 0px 10px;
-}
-
-.on-nav-2{
-    transition: none;
-    left: 0px;
-    top: 5px;
-    font-size: 2.7em;
-    align-self: flex-end;
-    text-shadow: 4px 5px 0px #000000;
-    color: white;
-    margin: 0px 0px 0px 10px;
+    justify-self: center;
 }
 
 .title-header-space{

@@ -40,9 +40,9 @@ class heroSectionMenu{
                                 heroBgDiv.classList.add('bg-active')
                                 this.showChosenArtistInfo(this.movementsData[movement], movement)
                             } else if (artist != eval(this.movementsData[movement]["artistMenuOption"])){
-                                this.menuMovements.forEach((teste) => {
-                                    if (teste != artist){
-                                        teste.classList.remove(movement)
+                                this.menuMovements.forEach((movementsIteration) => {
+                                    if (movementsIteration != artist){
+                                        movementsIteration.classList.remove(movement)
                                     }
                                 })
                             }
@@ -145,7 +145,6 @@ class heroSectionMenu{
 
         }
     }
-
     start(){
         this.menuChangeBg()
         this.mobileCase()
@@ -164,7 +163,6 @@ class heroSectionScrollEvents{
         this.containerText = document.getElementById('container-text')
         this.artistsContainer = document.getElementById('artists-menu-container')
         this.heroSection = document.getElementById('hero-section')
-
     }
 
     // Função para não bugar o título, caso o usuário dê refresh no meio da página
@@ -173,15 +171,12 @@ class heroSectionScrollEvents{
             // Efeito do tringulo crescer ao carregar a página
             this.arte1.classList.add('art-clippath-1-grow')
             if(scrollY > 0){
-                this.title.classList.add('on-nav-2')
                 this.navbar.classList.add('navbar-active')
                 this.icon.classList.toggle('brand-img-grown', false)
                 this.icon.classList.toggle('brand-img', true)
                 this.icon.src = "images/assets/logo-museum-white.png";
-
                 this.containerText.classList.add('container-text-hidden')
                 this.titleContainer.classList.add('title-container-active')
-
                 try{
                     const heroBgDiv = document.getElementById('hero-bg-div')
                     heroBgDiv.classList.remove('bg-active')      
@@ -222,7 +217,7 @@ class heroSectionScrollEvents{
                         this.navbar.classList.add('navbar-active')
                         this.icon.src = "images/assets/logo-museum-white.png";
         
-                        // container que o titulo saiu diminui
+                        // container que o titulo saiu desaparece
         
                         this.titleContainer.classList.remove('container-hidden')
                         this.titleContainer.classList.add('container-shown')
@@ -230,7 +225,6 @@ class heroSectionScrollEvents{
                         this.containerText.classList.remove('container-text-shown')
                         this.titleContainer.classList.add('container-hidden')
                         this.titleContainer.classList.remove('container-shown')
-        
                         this.artistsContainer.classList.add('artists-menu-container-active')
         
                         try{
@@ -263,7 +257,7 @@ class heroSectionScrollEvents{
                         this.navbar.classList.add('navbar-active')
                         this.icon.src = "images/assets/logo-museum-white.png";
         
-                        // container que o titulo saiu diminui
+                        // container que o titulo saiu desaparece
         
                         this.titleContainer.classList.remove('container-hidden')
                         this.titleContainer.classList.add('container-shown')
@@ -304,7 +298,6 @@ class heroSectionScrollEvents{
         window.addEventListener('scroll', () => {
             if (scrollY == 0){
                 this.title.classList.remove('on-nav')
-                this.title.classList.remove('on-nav-2')
                 this.navbar.classList.remove('navbar-active')
                 this.icon.classList.toggle('brand-img-grown', true)
                 this.icon.classList.toggle('brand-img', false)
